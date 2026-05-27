@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<problem revision="13" short-name="unique-range-easy" url="https://polygon.codeforces.com/p70qHG6/dohyonne/unique-range-easy">
+    <names>
+        <name language="korean" value="덜 개성있는 구간"/>
+    </names>
+    <statements latex-pdf-mode="obsolete">
+        <statement charset="UTF-8" language="korean" mathjax="true" path="statements/korean/problem.tex" type="application/x-tex"/>
+        <statement charset="UTF-8" language="korean" mathjax="true" path="statements/.html/korean/problem.html" type="text/html"/>
+    </statements>
+    <judging cpu-name="Intel(R) Core(TM) i3-8100 CPU @ 3.60GHz" cpu-speed="3600" input-file="" output-file="" run-count="1">
+        <testset name="tests">
+            <time-limit>1000</time-limit>
+            <memory-limit>1073741824</memory-limit>
+            <test-count>10</test-count>
+            <input-path-pattern>tests/%02d</input-path-pattern>
+            <answer-path-pattern>tests/%02d.a</answer-path-pattern>
+            <tests>
+                <test method="manual" sample="true"/>
+                <test method="manual" sample="true"/>
+                <test method="manual"/>
+                <test method="manual"/>
+                <test method="manual"/>
+                <test method="manual"/>
+                <test method="manual"/>
+                <test method="manual"/>
+                <test method="manual"/>
+                <test method="manual"/>
+            </tests>
+        </testset>
+    </judging>
+    <files>
+        <resources>
+            <file path="files/olymp.sty"/>
+            <file path="files/problem.tex"/>
+            <file path="files/statements.ftl"/>
+            <file path="files/testlib.h" type="h.g++"/>
+        </resources>
+        <executables>
+            <executable>
+                <source path="files/chk_urange.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="files/chk_urange.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/val_urange.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="files/val_urange.exe" type="exe.win32"/>
+            </executable>
+        </executables>
+    </files>
+    <assets>
+        <checker type="testlib">
+            <source path="files/chk_urange.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+            <binary path="check.exe" type="exe.win32"/>
+            <copy path="check.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+            <testset>
+                <test-count>4</test-count>
+                <input-path-pattern>files/tests/checker-tests/%02d</input-path-pattern>
+                <output-path-pattern>files/tests/checker-tests/%02d.o</output-path-pattern>
+                <answer-path-pattern>files/tests/checker-tests/%02d.a</answer-path-pattern>
+                <tests>
+                    <test verdict="ok"/>
+                    <test verdict="wrong-answer"/>
+                    <test verdict="ok"/>
+                    <test verdict="ok"/>
+                </tests>
+            </testset>
+        </checker>
+        <validators>
+            <validator>
+                <source path="files/val_urange.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="files/val_urange.exe" type="exe.win32"/>
+                <testset>
+                    <test-count>2</test-count>
+                    <input-path-pattern>files/tests/validator-tests/%02d</input-path-pattern>
+                    <tests>
+                        <test verdict="valid"/>
+                        <test verdict="invalid"/>
+                    </tests>
+                </testset>
+            </validator>
+        </validators>
+        <solutions>
+            <solution tag="accepted">
+                <source path="solutions/chleee_ac_F.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/chleee_ac_F.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/chorogchip.cpp" type="cpp.g++14"/>
+                <binary path="solutions/chorogchip.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/cologne-soln.py" type="python.pypy3-64"/>
+                <binary path="solutions/cologne-soln.pypys3-64" type="pythonx.pypy3-64"/>
+            </solution>
+            <solution tag="main">
+                <source path="solutions/dohyon_AC.java" type="java21"/>
+                <binary path="solutions/dohyon_AC.jar" type="jar"/>
+            </solution>
+            <solution tag="wrong-answer">
+                <source path="solutions/dohyon_WA_print1.java" type="java21"/>
+                <binary path="solutions/dohyon_WA_print1.jar" type="jar"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/dohyon_cpp.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/dohyon_cpp.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/dohyon_py.py" type="python.3"/>
+                <binary path="solutions/dohyon_py.pys3" type="pythonx.3"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/eg.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/eg.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/hui.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/hui.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/m4us_ac.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/m4us_ac.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/whans_ac.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/whans_ac.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/yclock-cor.py" type="python.pypy3-64"/>
+                <binary path="solutions/yclock-cor.pypys3-64" type="pythonx.pypy3-64"/>
+            </solution>
+        </solutions>
+    </assets>
+    <properties>
+        <property name="tests-wellformed" value="true"/>
+    </properties>
+    <stresses>
+        <stress-count>0</stress-count>
+        <stress-path-pattern>stresses/%03d</stress-path-pattern>
+        <list/>
+    </stresses>
+    <tags>
+        <tag value="constructive"/>
+    </tags>
+</problem>

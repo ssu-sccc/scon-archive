@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<contest url="https://polygon.codeforces.com/c/47455">
+    <names>
+        <name language="korean" value="2025 SCON"/>
+    </names>
+    <problems>
+        <problem index="a" url="https://polygon.codeforces.com/p1juUeY/dohyonne/alphabet-block"/>
+        <problem index="b" url="https://polygon.codeforces.com/p7SjFEr/dohyonne/prize-game"/>
+        <problem index="c" url="https://polygon.codeforces.com/p9tfoCY/m4ushold/seq-min-sum"/>
+        <problem index="d" url="https://polygon.codeforces.com/p1KsviW/rkaskan506/n-way-intersection"/>
+        <problem index="e" url="https://polygon.codeforces.com/p1vhsgf/whans_/even-sccc-scon"/>
+        <problem index="f" url="https://polygon.codeforces.com/p5VBXnG/ab9110033/a-xor-b-equal-c"/>
+        <problem index="g" url="https://polygon.codeforces.com/p9EjTbg/w8385/coloring"/>
+        <problem index="h" url="https://polygon.codeforces.com/p8toSEv/dohyonne/coprime-combination"/>
+        <problem index="i" url="https://polygon.codeforces.com/p4N6BvX/whans_/divideteam"/>
+        <problem index="j" url="https://polygon.codeforces.com/p2MtQHb/dohyonne/delicious-scon"/>
+    </problems>
+</contest>

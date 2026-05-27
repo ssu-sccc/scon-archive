@@ -1,0 +1,1 @@
+{"id":"7af8553cfffd7baca5bda4af56959edd","index":11,"scriptPattern":"gen_delicious_01 200 25000 42 21462","inputFile":"stdin","outputFile":"stdout","memoryLimit":1024,"timeLimit":3000,"totalTimeLimit":120000,"solutionNames":["delicious_AC_deque.java","kyo20111-set.cpp"],"description":"","solutionNamesUid":"","ignoreValidators":false}

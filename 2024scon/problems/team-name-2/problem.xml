@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<problem revision="14" short-name="team-name-2" url="https://polygon.codeforces.com/p5H6Dsp/Justice_Hui/team-name-2">
+    <names>
+        <name language="korean" value="."/>
+    </names>
+    <statements latex-pdf-mode="obsolete">
+        <statement charset="UTF-8" language="korean" mathjax="true" path="statements/korean/problem.tex" type="application/x-tex"/>
+        <statement charset="UTF-8" language="korean" mathjax="true" path="statements/.html/korean/problem.html" type="text/html"/>
+        <statement language="korean" path="statements/.pdf/korean/problem.pdf" type="application/pdf"/>
+    </statements>
+    <judging cpu-name="Intel(R) Core(TM) i3-8100 CPU @ 3.60GHz" cpu-speed="3600" input-file="" output-file="" run-count="1">
+        <testset name="tests">
+            <time-limit>1000</time-limit>
+            <memory-limit>1073741824</memory-limit>
+            <test-count>20</test-count>
+            <input-path-pattern>tests/%02d</input-path-pattern>
+            <answer-path-pattern>tests/%02d.a</answer-path-pattern>
+            <tests>
+                <test method="manual" sample="true"/>
+                <test method="manual"/>
+                <test method="manual"/>
+                <test method="manual"/>
+                <test cmd="gen-max -n=100 -len=20" method="generated"/>
+                <test cmd="gen-rnd -n=100 1" method="generated"/>
+                <test cmd="gen-rnd -n=100 2" method="generated"/>
+                <test cmd="gen-rnd -n=100 3" method="generated"/>
+                <test cmd="gen-rnd -n=100 4" method="generated"/>
+                <test cmd="gen-rnd -n=100 5" method="generated"/>
+                <test cmd="gen-rnd -n=100 6" method="generated"/>
+                <test cmd="gen-rnd -n=100 7" method="generated"/>
+                <test cmd="gen-rnd -n=100 8" method="generated"/>
+                <test cmd="gen-rnd -n=100 9" method="generated"/>
+                <test cmd="gen-rnd -n=100 10" method="generated"/>
+                <test cmd="gen-kill-hyphen-is-a-digit -n=100 1" method="generated"/>
+                <test cmd="gen-kill-hyphen-is-a-digit -n=100 2" method="generated"/>
+                <test cmd="gen-kill-hyphen-is-a-digit -n=100 3" method="generated"/>
+                <test cmd="gen-kill-hyphen-is-a-digit -n=100 4" method="generated"/>
+                <test cmd="gen-kill-hyphen-is-a-digit -n=100 5" method="generated"/>
+            </tests>
+        </testset>
+    </judging>
+    <files>
+        <resources>
+            <file path="files/olymp.sty"/>
+            <file path="files/problem.tex"/>
+            <file path="files/statements.ftl"/>
+            <file path="files/testlib.h" type="h.g++"/>
+        </resources>
+        <executables>
+            <executable>
+                <source path="files/gen-kill-hyphen-is-a-digit.cpp" type="cpp.g++17"/>
+                <binary path="files/gen-kill-hyphen-is-a-digit.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/gen-max.cpp" type="cpp.g++17"/>
+                <binary path="files/gen-max.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/gen-rnd.cpp" type="cpp.g++17"/>
+                <binary path="files/gen-rnd.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/val.cpp" type="cpp.g++17"/>
+                <binary path="files/val.exe" type="exe.win32"/>
+            </executable>
+        </executables>
+    </files>
+    <assets>
+        <checker name="std::lcmp.cpp" type="testlib">
+            <source path="files/check.cpp" type="cpp.g++17"/>
+            <binary path="check.exe" type="exe.win32"/>
+            <copy path="check.cpp"/>
+            <testset>
+                <test-count>1</test-count>
+                <input-path-pattern>files/tests/checker-tests/%02d</input-path-pattern>
+                <output-path-pattern>files/tests/checker-tests/%02d.o</output-path-pattern>
+                <answer-path-pattern>files/tests/checker-tests/%02d.a</answer-path-pattern>
+                <tests>
+                    <test verdict="ok"/>
+                </tests>
+            </testset>
+        </checker>
+        <validators>
+            <validator>
+                <source path="files/val.cpp" type="cpp.g++17"/>
+                <binary path="files/val.exe" type="exe.win32"/>
+                <testset>
+                    <test-count>5</test-count>
+                    <input-path-pattern>files/tests/validator-tests/%02d</input-path-pattern>
+                    <tests>
+                        <test verdict="valid"/>
+                        <test verdict="invalid"/>
+                        <test verdict="invalid"/>
+                        <test verdict="invalid"/>
+                        <test verdict="valid"/>
+                    </tests>
+                </testset>
+            </validator>
+        </validators>
+        <solutions>
+            <solution tag="accepted">
+                <source path="solutions/assert.cpp" type="cpp.g++17"/>
+                <binary path="solutions/assert.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/cologne-soln.rs" type="rust"/>
+                <binary path="solutions/cologne-soln.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/ezon-sol.py" type="python.pypy3"/>
+                <binary path="solutions/ezon-sol.pypys3" type="pythonx.pypy3"/>
+            </solution>
+            <solution tag="rejected">
+                <source path="solutions/ezon-wa.py" type="python.3"/>
+                <binary path="solutions/ezon-wa.pys3" type="pythonx.3"/>
+            </solution>
+            <solution tag="main">
+                <source path="solutions/hui-cpp.cpp" type="cpp.g++17"/>
+                <binary path="solutions/hui-cpp.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/hui-java.java" type="java11"/>
+                <binary path="solutions/hui-java.jar" type="jar"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/hui-py.py" type="python.3"/>
+                <binary path="solutions/hui-py.pys3" type="pythonx.3"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/hui-pypy.py" type="python.pypy3"/>
+                <binary path="solutions/hui-pypy.pypys3" type="pythonx.pypy3"/>
+            </solution>
+            <solution tag="wrong-answer">
+                <source path="solutions/kipa-sol-first-char-not-check.cpp" type="cpp.gcc11-64-winlibs-g++20"/>
+                <binary path="solutions/kipa-sol-first-char-not-check.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="wrong-answer">
+                <source path="solutions/kipa-sol-hyphen-is-a-digit.cpp" type="cpp.gcc11-64-winlibs-g++20"/>
+                <binary path="solutions/kipa-sol-hyphen-is-a-digit.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/kipa-sol.cpp" type="cpp.gcc11-64-winlibs-g++20"/>
+                <binary path="solutions/kipa-sol.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/kyo20111-sol.cpp" type="cpp.g++17"/>
+                <binary path="solutions/kyo20111-sol.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/m4u-sol.cpp" type="cpp.g++17"/>
+                <binary path="solutions/m4u-sol.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/mingyu-ac.cpp" type="cpp.g++17"/>
+                <binary path="solutions/mingyu-ac.exe" type="exe.win32"/>
+            </solution>
+            <solution note="digit &lt; N" tag="wrong-answer">
+                <source path="solutions/wa1.cpp" type="cpp.g++17"/>
+                <binary path="solutions/wa1.exe" type="exe.win32"/>
+            </solution>
+            <solution note="upper &lt; lower" tag="wrong-answer">
+                <source path="solutions/wa2.cpp" type="cpp.g++17"/>
+                <binary path="solutions/wa2.exe" type="exe.win32"/>
+            </solution>
+            <solution note="s.size() &lt; 10" tag="wrong-answer">
+                <source path="solutions/wa3.cpp" type="cpp.g++17"/>
+                <binary path="solutions/wa3.exe" type="exe.win32"/>
+            </solution>
+            <solution note="s.size() &lt;= 11" tag="wrong-answer">
+                <source path="solutions/wa4.cpp" type="cpp.g++17"/>
+                <binary path="solutions/wa4.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/yclock-sol.py" type="python.pypy3"/>
+                <binary path="solutions/yclock-sol.pypys3" type="pythonx.pypy3"/>
+            </solution>
+            <solution tag="rejected">
+                <source path="solutions/yclock-wa-1.py" type="python.pypy3"/>
+                <binary path="solutions/yclock-wa-1.pypys3" type="pythonx.pypy3"/>
+            </solution>
+            <solution tag="rejected">
+                <source path="solutions/yclock-wa-2.py" type="python.pypy3"/>
+                <binary path="solutions/yclock-wa-2.pypys3" type="pythonx.pypy3"/>
+            </solution>
+        </solutions>
+    </assets>
+    <properties>
+        <property name="tests-wellformed" value="true"/>
+    </properties>
+    <stresses>
+        <stress-count>0</stress-count>
+        <stress-path-pattern>stresses/%03d</stress-path-pattern>
+        <list/>
+    </stresses>
+    <tags>
+        <tag value="implementation"/>
+    </tags>
+</problem>

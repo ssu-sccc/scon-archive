@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<problem revision="19" short-name="visit-all-easy" url="https://polygon.codeforces.com/p0l9FNP/kyo20111/visit-all-easy">
+    <names>
+        <name language="korean" value="미로탈출 "/>
+    </names>
+    <statements latex-pdf-mode="obsolete">
+        <statement charset="UTF-8" language="korean" mathjax="true" path="statements/korean/problem.tex" type="application/x-tex"/>
+        <statement charset="UTF-8" language="korean" mathjax="true" path="statements/.html/korean/problem.html" type="text/html"/>
+    </statements>
+    <judging cpu-name="Intel(R) Core(TM) i3-8100 CPU @ 3.60GHz" cpu-speed="3600" input-file="" output-file="" run-count="1">
+        <testset name="tests">
+            <time-limit>1000</time-limit>
+            <memory-limit>268435456</memory-limit>
+            <test-count>7</test-count>
+            <input-path-pattern>tests/%02d</input-path-pattern>
+            <answer-path-pattern>tests/%02d.a</answer-path-pattern>
+            <tests>
+                <test method="manual" sample="true"/>
+                <test cmd="all-gen -N=99" method="generated"/>
+                <test cmd="all-gen -N=100" method="generated"/>
+                <test cmd="rand_gen -N=1000000000" method="generated"/>
+                <test cmd="gen-small-all -mx=9" method="generated"/>
+                <test method="manual"/>
+                <test cmd="gen-small-all -mx=31" method="generated"/>
+            </tests>
+        </testset>
+    </judging>
+    <files>
+        <resources>
+            <file path="files/olymp.sty"/>
+            <file path="files/problem.tex"/>
+            <file path="files/statements.ftl"/>
+            <file path="files/testlib.h" type="h.g++"/>
+        </resources>
+        <executables>
+            <executable>
+                <source path="files/all-gen.cpp" type="cpp.g++17"/>
+                <binary path="files/all-gen.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/gen-small-all.cpp" type="cpp.g++17"/>
+                <binary path="files/gen-small-all.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/rand_gen.cpp" type="cpp.g++17"/>
+                <binary path="files/rand_gen.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/validator.cpp" type="cpp.g++17"/>
+                <binary path="files/validator.exe" type="exe.win32"/>
+            </executable>
+        </executables>
+    </files>
+    <assets>
+        <checker name="std::ncmp.cpp" type="testlib">
+            <source path="files/check.cpp" type="cpp.g++17"/>
+            <binary path="check.exe" type="exe.win32"/>
+            <copy path="check.cpp"/>
+            <testset>
+                <test-count>1</test-count>
+                <input-path-pattern>files/tests/checker-tests/%02d</input-path-pattern>
+                <output-path-pattern>files/tests/checker-tests/%02d.o</output-path-pattern>
+                <answer-path-pattern>files/tests/checker-tests/%02d.a</answer-path-pattern>
+                <tests>
+                    <test verdict="ok"/>
+                </tests>
+            </testset>
+        </checker>
+        <validators>
+            <validator>
+                <source path="files/validator.cpp" type="cpp.g++17"/>
+                <binary path="files/validator.exe" type="exe.win32"/>
+                <testset>
+                    <test-count>2</test-count>
+                    <input-path-pattern>files/tests/validator-tests/%02d</input-path-pattern>
+                    <tests>
+                        <test verdict="valid"/>
+                        <test verdict="valid"/>
+                    </tests>
+                </testset>
+            </validator>
+        </validators>
+        <solutions>
+            <solution tag="accepted">
+                <source path="solutions/cologne-soln.rs" type="rust"/>
+                <binary path="solutions/cologne-soln.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/ezon-sol.py" type="python.3"/>
+                <binary path="solutions/ezon-sol.pys3" type="pythonx.3"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/hard-ac.cpp" type="cpp.g++17"/>
+                <binary path="solutions/hard-ac.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/hui-cpp.cpp" type="cpp.g++17"/>
+                <binary path="solutions/hui-cpp.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="rejected">
+                <source path="solutions/hui-dijkstra.cpp" type="cpp.g++17"/>
+                <binary path="solutions/hui-dijkstra.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/hui-java.java" type="java11"/>
+                <binary path="solutions/hui-java.jar" type="jar"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/hui-py.py" type="python.3"/>
+                <binary path="solutions/hui-py.pys3" type="pythonx.3"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/hui-pypy.py" type="python.pypy3"/>
+                <binary path="solutions/hui-pypy.pypys3" type="pythonx.pypy3"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/m4u-sol.cpp" type="cpp.g++17"/>
+                <binary path="solutions/m4u-sol.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="main">
+                <source path="solutions/mcs.cpp" type="cpp.g++17"/>
+                <binary path="solutions/mcs.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/mingyu-ac4.cpp" type="cpp.g++17"/>
+                <binary path="solutions/mingyu-ac4.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="wrong-answer">
+                <source path="solutions/mingyu-wa1.cpp" type="cpp.g++17"/>
+                <binary path="solutions/mingyu-wa1.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="wrong-answer">
+                <source path="solutions/mingyu-wa2.cpp" type="cpp.g++17"/>
+                <binary path="solutions/mingyu-wa2.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="wrong-answer">
+                <source path="solutions/mingyu-wa3.cpp" type="cpp.g++17"/>
+                <binary path="solutions/mingyu-wa3.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="wrong-answer">
+                <source path="solutions/wa.cpp" type="cpp.g++17"/>
+                <binary path="solutions/wa.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="wrong-answer">
+                <source path="solutions/wa2.cpp" type="cpp.g++17"/>
+                <binary path="solutions/wa2.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="wrong-answer">
+                <source path="solutions/wa3.cpp" type="cpp.g++17"/>
+                <binary path="solutions/wa3.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="wrong-answer">
+                <source path="solutions/wa4.cpp" type="cpp.g++17"/>
+                <binary path="solutions/wa4.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/yclock-sol.py" type="python.pypy3"/>
+                <binary path="solutions/yclock-sol.pypys3" type="pythonx.pypy3"/>
+            </solution>
+            <solution tag="rejected">
+                <source path="solutions/yclock-wa-1.py" type="python.pypy3"/>
+                <binary path="solutions/yclock-wa-1.pypys3" type="pythonx.pypy3"/>
+            </solution>
+            <solution tag="rejected">
+                <source path="solutions/yclock-wa-2.py" type="python.pypy3"/>
+                <binary path="solutions/yclock-wa-2.pypys3" type="pythonx.pypy3"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/yclock-wa-3.py" type="python.pypy3"/>
+                <binary path="solutions/yclock-wa-3.pypys3" type="pythonx.pypy3"/>
+            </solution>
+            <solution tag="rejected">
+                <source path="solutions/yclock-wa-4.py" type="python.pypy3"/>
+                <binary path="solutions/yclock-wa-4.pypys3" type="pythonx.pypy3"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/yclock-wa-5.py" type="python.pypy3"/>
+                <binary path="solutions/yclock-wa-5.pypys3" type="pythonx.pypy3"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/yclock-wa-6.py" type="python.pypy3"/>
+                <binary path="solutions/yclock-wa-6.pypys3" type="pythonx.pypy3"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/yclock-wa-7.py" type="python.pypy3"/>
+                <binary path="solutions/yclock-wa-7.pypys3" type="pythonx.pypy3"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/yclock-wa-8.py" type="python.pypy3"/>
+                <binary path="solutions/yclock-wa-8.pypys3" type="pythonx.pypy3"/>
+            </solution>
+            <solution tag="rejected">
+                <source path="solutions/yclock-wa-9.py" type="python.pypy3"/>
+                <binary path="solutions/yclock-wa-9.pypys3" type="pythonx.pypy3"/>
+            </solution>
+        </solutions>
+    </assets>
+    <properties>
+        <property name="tests-wellformed" value="true"/>
+    </properties>
+    <stresses>
+        <stress-count>5</stress-count>
+        <stress-path-pattern>stresses/%03d</stress-path-pattern>
+        <list>
+            <stress index="5" path="stresses/005"/>
+            <stress index="4" path="stresses/004"/>
+            <stress index="3" path="stresses/003"/>
+            <stress index="2" path="stresses/002"/>
+            <stress index="1" path="stresses/001"/>
+        </list>
+    </stresses>
+    <tags>
+        <tag value="case analysis"/>
+    </tags>
+</problem>

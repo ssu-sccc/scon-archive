@@ -1,0 +1,23 @@
+<HTML><HEAD><META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <META content="no-cache" http-equiv="pragma">
+    <META content="-1" http-equiv="expires">
+    <META content="text/html;charset=UTF-8" http-equiv="content-type">
+    <LINK href="problem-statement.css" rel="stylesheet" type="text/css">
+    <TITLE>덜 개성있는 구간</TITLE>
+    <SCRIPT type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+          tex2jax: {inlineMath: [['$$$','$$$']], displayMath: [['$$$$$$','$$$$$$']]}
+        });
+        </SCRIPT>
+        <SCRIPT async="" src="https://polygon.codeforces.com/lib/MathJax/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript">
+    </SCRIPT>
+</HEAD><BODY>
+    <DIV class="problem-statement"><DIV class="header"><DIV class="title">덜 개성있는 구간</DIV><DIV class="time-limit"><DIV class="property-title">time limit per test</DIV>1 second</DIV><DIV class="memory-limit"><DIV class="property-title">memory limit per test</DIV>1024 megabytes</DIV><DIV class="input-file input-standard"><DIV class="property-title">input</DIV>standard input</DIV><DIV class="output-file output-standard"><DIV class="property-title">output</DIV>standard output</DIV></DIV><DIV class="legend"><P>다음 조건을 만족하는 길이가 $$$N(N \le 5000)$$$인 수열 $$$A = [A_1, A_2, \cdots, A_N](-10^{9} \le A_i \le 10^{9})$$$을 구하여라.</P><P></P><UL> <LI> 수열 $$$A$$$의 모든 원소는 서로 다르다. </LI><LI> $$$1 \le L \le R \le N$$$을 만족하는 모든 정수 쌍 $$$(L, R)$$$에 대하여, $$$\sum_{i=L}^R A_i$$$가 가질 수 있는 서로 다른 값의 개수는 정확히 N개이다. </LI></UL><P></P><P>주어지는 모든 입력에 대해 조건을 만족하는 수열은 항상 존재한다.</P></DIV><P></P><P></P><DIV class="input-specification"><DIV class="section-title">Input</DIV><P></P><P>첫째 줄에 수열 $$$A$$$의 길이를 나타내는 정수 $$$N$$$이 주어진다.</P></DIV><P></P><P></P><DIV class="output-specification"><DIV class="section-title">Output</DIV><P></P><P>첫째 줄에 조건을 만족하는 수열 $$$A$$$의 원소들을 공백으로 구분하여 출력한다.</P><P>위 조건을 만족하는 수열이 여러 개라면 그중 아무거나 출력한다.</P></DIV><P></P><P></P><DIV class="sample-tests"><DIV class="section-title">Examples</DIV><P></P><P></P><DIV class="sample-test"><DIV class="input"><DIV class="title">Input</DIV><PRE class="content" data-content="2
+">
+<DIV class="test-example-line test-example-line-even test-example-line-0">2</DIV></PRE></DIV><DIV class="output"><DIV class="title">Output</DIV><PRE class="content">
+0 1 </PRE></DIV><DIV class="input"><DIV class="title">Input</DIV><PRE class="content" data-content="3
+">
+<DIV class="test-example-line test-example-line-even test-example-line-0">3</DIV></PRE></DIV><DIV class="output"><DIV class="title">Output</DIV><PRE class="content">
+-2 0 2</PRE></DIV></DIV></DIV><P></P><P></P><DIV class="note"><DIV class="section-title">Note</DIV><P></P><P>수열 $$$A = [-2, 0, 2]$$$에서 모든 연속 구간의 합을 구하면 다음과 같다.</P><P></P><UL> <LI> $$$-2$$$: $$$(1, 1)$$$, $$$(1, 2)$$$ </LI><LI> $$$0$$$: $$$(1, 3)$$$, $$$(2, 2)$$$ </LI><LI> $$$2$$$: $$$(2, 3)$$$, $$$(3, 3)$$$ </LI></UL></DIV></DIV><P></P><P>  </P>
+
+</BODY></HTML>

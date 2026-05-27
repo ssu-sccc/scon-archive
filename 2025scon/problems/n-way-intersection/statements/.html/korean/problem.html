@@ -1,0 +1,27 @@
+<HTML><HEAD><META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <META content="no-cache" http-equiv="pragma">
+    <META content="-1" http-equiv="expires">
+    <META content="text/html;charset=UTF-8" http-equiv="content-type">
+    <LINK href="problem-statement.css" rel="stylesheet" type="text/css">
+    <TITLE>$N$거리 건너기</TITLE>
+    <SCRIPT type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+          tex2jax: {inlineMath: [['$$$','$$$']], displayMath: [['$$$$$$','$$$$$$']]}
+        });
+        </SCRIPT>
+        <SCRIPT async="" src="https://polygon.codeforces.com/lib/MathJax/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript">
+    </SCRIPT>
+</HEAD><BODY>
+    <DIV class="problem-statement"><DIV class="header"><DIV class="title">$$$N$$$거리 건너기</DIV><DIV class="time-limit"><DIV class="property-title">time limit per test</DIV>1 second</DIV><DIV class="memory-limit"><DIV class="property-title">memory limit per test</DIV>256 megabytes</DIV><DIV class="input-file input-standard"><DIV class="property-title">input</DIV>standard input</DIV><DIV class="output-file output-standard"><DIV class="property-title">output</DIV>standard output</DIV></DIV><DIV class="legend"><P>한결이는 오늘도 학교에 간다. 왜냐하면 한결이는 졸업과 동시에 입학을 하기 때문이다.</P><P>한결이를 놀리고 싶어하는 OO이는 한결이의 졸업식에서 입학을 축하하는 만행을 저질렀다. 하지만 만행은 그것으로 끝나지 않았다.</P><P>OO이는 한결이가 등교할 때 지나가는 횡단보도를 골라, 이를 특별한 마법으로 "$$$N$$$거리"로 바꿔버렸다. "$$$N$$$거리"는 정$$$N$$$각형 모양의 교차로로, $$$1, 2, \cdots, N$$$번 인도가 시계 방향으로 배치되어 있고, 인도들은 아래와 같이 $$$N$$$개의 횡단보도로 연결되어 있다.</P><P></P><UL> <LI> $$$i (1 \le i \le N-1)$$$번 횡단보도는 $$$i$$$번 인도와 $$$i+1$$$번 인도를 연결한다. </LI><LI> $$$N$$$번 횡단보도는 $$$N$$$번 인도와 $$$1$$$번 인도를 연결한다. </LI></UL><P></P><P>횡단보도에는 신호등이 하나씩 있다. 신호등은 아래 규칙에 따라 돌아가면서 $$$1$$$초씩 초록불이 켜진다.</P><P></P><UL> <LI> 처음에는 $$$A_1$$$번 신호등의 초록불이 켜진다. </LI><LI> $$$A_i$$$번 신호등의 초록불이 꺼짐과 동시에 $$$A_{i+1}$$$번 신호등의 초록불이 켜진다. </LI><LI> 단, $$$i = N$$$ 일 때는 $$$A_N$$$번 신호등의 초록불이 꺼짐과 동시에 $$$A_1$$$번 신호등의 초록불이 켜진다. </LI></UL><P></P><P>한결이는 <SPAN class="tex-font-style-bf">$$$A_1$$$번 신호등의 초록불이 켜짐과 동시에</SPAN> $$$1$$$번 인도에서 출발해 몇 개의 횡단보도를 건너서 $$$M$$$번 인도로 가려고 한다. 시계 방향과 반시계 방향 중 어떤 방향으로 가는 게 더 빠른지 구해보자.</P><P>단, 한결이는 걸음이 매우 빠르기 때문에 인도와 횡단보도 위를 걷는 시간은 무시해도 된다.</P></DIV><P></P><P></P><DIV class="input-specification"><DIV class="section-title">Input</DIV><P></P><P>첫째 줄에는 횡단보도의 개수를 의미하는 $$$N$$$, 한결이가 가야 하는 인도의 번호 $$$M$$$이 공백으로 구분되어 주어진다.</P><P>둘째 줄에는 $$$N$$$거리 신호등의 초록불이 켜지는 순서를 의미하는 $$$N$$$개의 정수 $$$A_1, A_2, \cdots, A_N$$$이 공백으로 구분되어 주어진다.</P></DIV><P></P><P></P><DIV class="output-specification"><DIV class="section-title">Output</DIV><P></P><P>한결이가 $$$1$$$번 인도에서 $$$M$$$번 인도로 가기 위해 반시계 방향을 선택하는 것이 빠르다면 $$$CCW$$$, 시계 방향을 선택하는 것이 빠르다면 $$$CW$$$를 출력한다.</P></DIV><P></P><P></P><DIV class="sample-tests"><DIV class="section-title">Examples</DIV><P></P><P></P><DIV class="sample-test"><DIV class="input"><DIV class="title">Input</DIV><PRE class="content" data-content="4 3
+1 2 3 4
+">
+<DIV class="test-example-line test-example-line-even test-example-line-0">4 3</DIV><DIV class="test-example-line test-example-line-even test-example-line-0">1 2 3 4</DIV></PRE></DIV><DIV class="output"><DIV class="title">Output</DIV><PRE class="content">
+CW
+</PRE></DIV><DIV class="input"><DIV class="title">Input</DIV><PRE class="content" data-content="4 3
+2 1 4 3
+">
+<DIV class="test-example-line test-example-line-even test-example-line-0">4 3</DIV><DIV class="test-example-line test-example-line-even test-example-line-0">2 1 4 3</DIV></PRE></DIV><DIV class="output"><DIV class="title">Output</DIV><PRE class="content">
+CCW
+</PRE></DIV></DIV></DIV><P></P><P></P><DIV class="note"><DIV class="section-title">Note</DIV><P></P><P></P><UL> <LI> $$$3 \le N \le 100\,000$$$ </LI><LI> $$$2 \le M \le N$$$ </LI><LI> $$$1 \le A_i \le N (1 \le i \le N)$$$ </LI><LI> 수열 $$$A$$$의 원소는 서로 다르다. 즉, $$$i \ne j$$$ 이면 $$$A_i \ne A_j$$$이다. </LI><LI> 입력으로 주어지는 수는 모두 정수이다. </LI></UL><P></P><P>TODO: 예제 설명 추가</P></DIV></DIV><P></P><P>  </P>
+
+</BODY></HTML>

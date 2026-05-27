@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<problem revision="15" short-name="create-timetable" url="https://polygon.codeforces.com/p8kQVgt/nlog/create-timetable">
+    <names>
+        <name language="korean" value="시간표 만들기"/>
+    </names>
+    <statements latex-pdf-mode="obsolete">
+        <statement charset="UTF-8" language="korean" mathjax="true" path="statements/korean/problem.tex" type="application/x-tex"/>
+        <statement charset="UTF-8" language="korean" mathjax="true" path="statements/.html/korean/problem.html" type="text/html"/>
+    </statements>
+    <judging cpu-name="Intel(R) Core(TM) i3-8100 CPU @ 3.60GHz" cpu-speed="3600" input-file="" output-file="" run-count="1">
+        <testset name="tests">
+            <time-limit>1000</time-limit>
+            <memory-limit>1073741824</memory-limit>
+            <test-count>36</test-count>
+            <input-path-pattern>tests/%02d</input-path-pattern>
+            <answer-path-pattern>tests/%02d.a</answer-path-pattern>
+            <tests>
+                <test method="manual" sample="true"/>
+                <test cmd="gen_rnd 1" method="generated"/>
+                <test cmd="gen_rnd 2" method="generated"/>
+                <test cmd="gen_rnd 3" method="generated"/>
+                <test cmd="gen_rnd 4" method="generated"/>
+                <test cmd="gen_rnd 5" method="generated"/>
+                <test cmd="gen_rnd 6" method="generated"/>
+                <test cmd="gen_rnd 7" method="generated"/>
+                <test cmd="gen_rnd 8" method="generated"/>
+                <test cmd="gen_rnd 9" method="generated"/>
+                <test cmd="gen_rnd 10" method="generated"/>
+                <test cmd="gen_rnd 11" method="generated"/>
+                <test cmd="gen_rnd 12" method="generated"/>
+                <test cmd="gen_rnd 13" method="generated"/>
+                <test cmd="gen_rnd 14" method="generated"/>
+                <test cmd="gen_rnd 15" method="generated"/>
+                <test cmd="gen_rnd 16" method="generated"/>
+                <test cmd="gen_rnd 17" method="generated"/>
+                <test cmd="gen_rnd 18" method="generated"/>
+                <test cmd="gen_rnd 19" method="generated"/>
+                <test cmd="gen_rnd 20" method="generated"/>
+                <test cmd="gen_kill -cnt=1" method="generated"/>
+                <test cmd="gen_kill -cnt=2" method="generated"/>
+                <test cmd="gen_kill -cnt=3" method="generated"/>
+                <test cmd="gen_kill -cnt=4" method="generated"/>
+                <test cmd="gen_kill -cnt=5" method="generated"/>
+                <test cmd="gen_kill -cnt=6" method="generated"/>
+                <test cmd="gen_kill -cnt=7" method="generated"/>
+                <test cmd="gen_kill -cnt=8" method="generated"/>
+                <test cmd="gen_kill -cnt=9" method="generated"/>
+                <test cmd="gen_kill -cnt=10" method="generated"/>
+                <test cmd="gen_kill -cnt=11" method="generated"/>
+                <test cmd="gen_kill -cnt=12" method="generated"/>
+                <test cmd="gen_kill -cnt=13" method="generated"/>
+                <test cmd="gen_kill -cnt=14" method="generated"/>
+                <test cmd="gen_kill -cnt=15" method="generated"/>
+            </tests>
+        </testset>
+    </judging>
+    <files>
+        <resources>
+            <file path="files/olymp.sty"/>
+            <file path="files/problem.tex"/>
+            <file path="files/statements.ftl"/>
+            <file path="files/testlib.h" type="h.g++"/>
+        </resources>
+        <executables>
+            <executable>
+                <source path="files/gen_kill.cpp" type="cpp.g++17"/>
+                <binary path="files/gen_kill.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/gen_rnd.cpp" type="cpp.g++17"/>
+                <binary path="files/gen_rnd.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/validator.cpp" type="cpp.g++17"/>
+                <binary path="files/validator.exe" type="exe.win32"/>
+            </executable>
+        </executables>
+    </files>
+    <assets>
+        <checker name="std::ncmp.cpp" type="testlib">
+            <source path="files/check.cpp" type="cpp.g++17"/>
+            <binary path="check.exe" type="exe.win32"/>
+            <copy path="check.cpp"/>
+            <testset>
+                <test-count>1</test-count>
+                <input-path-pattern>files/tests/checker-tests/%02d</input-path-pattern>
+                <output-path-pattern>files/tests/checker-tests/%02d.o</output-path-pattern>
+                <answer-path-pattern>files/tests/checker-tests/%02d.a</answer-path-pattern>
+                <tests>
+                    <test verdict="ok"/>
+                </tests>
+            </testset>
+        </checker>
+        <validators>
+            <validator>
+                <source path="files/validator.cpp" type="cpp.g++17"/>
+                <binary path="files/validator.exe" type="exe.win32"/>
+                <testset>
+                    <test-count>2</test-count>
+                    <input-path-pattern>files/tests/validator-tests/%02d</input-path-pattern>
+                    <tests>
+                        <test verdict="valid"/>
+                        <test verdict="valid"/>
+                    </tests>
+                </testset>
+            </validator>
+        </validators>
+        <solutions>
+            <solution note="cologne-slow, check credits/group first" tag="accepted">
+                <source path="solutions/cologne-slow-cut.rs" type="rust"/>
+                <binary path="solutions/cologne-slow-cut.exe" type="exe.win32"/>
+            </solution>
+            <solution note="A = sum(Ai), O(2^A * 1440 * 7)" tag="accepted">
+                <source path="solutions/cologne-slow.rs" type="rust"/>
+                <binary path="solutions/cologne-slow.exe" type="exe.win32"/>
+            </solution>
+            <solution note="A = sum(Ai), O(A^2 2^A)" tag="rejected">
+                <source path="solutions/cologne-soln.rs" type="rust"/>
+                <binary path="solutions/cologne-soln.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/ezon-sol.py" type="python.3"/>
+                <binary path="solutions/ezon-sol.pys3" type="pythonx.3"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/hui-bitmask-cpp.cpp" type="cpp.g++17"/>
+                <binary path="solutions/hui-bitmask-cpp.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/hui-bitmask-java.java" type="java11"/>
+                <binary path="solutions/hui-bitmask-java.jar" type="jar"/>
+            </solution>
+            <solution tag="time-limit-exceeded-or-accepted">
+                <source path="solutions/hui-bitmask-py.py" type="python.3"/>
+                <binary path="solutions/hui-bitmask-py.pys3" type="pythonx.3"/>
+            </solution>
+            <solution note="Generated by AI" tag="accepted">
+                <source path="solutions/hui-bitmask-pypy.py" type="python.pypy3"/>
+                <binary path="solutions/hui-bitmask-pypy.pypys3" type="pythonx.pypy3"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/hui-recursion-cpp.cpp" type="cpp.g++17"/>
+                <binary path="solutions/hui-recursion-cpp.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/m4u-sol.cpp" type="cpp.g++17"/>
+                <binary path="solutions/m4u-sol.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="main">
+                <source path="solutions/main-sol.cpp" type="cpp.g++17"/>
+                <binary path="solutions/main-sol.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/mingyu-ac.cpp" type="cpp.g++17"/>
+                <binary path="solutions/mingyu-ac.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="wrong-answer">
+                <source path="solutions/print-0.py" type="python.3"/>
+                <binary path="solutions/print-0.pys3" type="pythonx.3"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/yclock-sol.py" type="python.pypy3"/>
+                <binary path="solutions/yclock-sol.pypys3" type="pythonx.pypy3"/>
+            </solution>
+        </solutions>
+    </assets>
+    <properties>
+        <property name="tests-wellformed" value="true"/>
+    </properties>
+    <stresses>
+        <stress-count>0</stress-count>
+        <stress-path-pattern>stresses/%03d</stress-path-pattern>
+        <list/>
+    </stresses>
+    <tags>
+        <tag value="2024scon"/>
+    </tags>
+</problem>

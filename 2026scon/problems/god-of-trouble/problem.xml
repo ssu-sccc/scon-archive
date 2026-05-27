@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<problem revision="16" short-name="god-of-trouble" url="https://polygon.codeforces.com/p8t3Y9Y/whans_/god-of-trouble">
+    <names>
+        <name language="korean" value="분탕의 신"/>
+    </names>
+    <statements latex-pdf-mode="obsolete">
+        <statement charset="UTF-8" language="korean" mathjax="true" path="statements/korean/problem.tex" type="application/x-tex"/>
+        <statement charset="UTF-8" language="korean" mathjax="true" path="statements/.html/korean/problem.html" type="text/html"/>
+    </statements>
+    <judging cpu-name="Intel(R) Core(TM) i3-8100 CPU @ 3.60GHz" cpu-speed="3600" input-file="" output-file="" run-count="1">
+        <testset name="tests">
+            <time-limit>1000</time-limit>
+            <memory-limit>268435456</memory-limit>
+            <test-count>33</test-count>
+            <input-path-pattern>tests/%02d</input-path-pattern>
+            <answer-path-pattern>tests/%02d.a</answer-path-pattern>
+            <tests>
+                <test cmd="gen -n=1 -type=0" method="generated" sample="true"/>
+                <test cmd="gen -mode=1 -l=100 -r=1000 -type=0" method="generated"/>
+                <test cmd="gen -n=1000 -type=0" method="generated"/>
+                <test cmd="gen -mode=1 -odd=1 -l=100 -r=1000 -type=0" method="generated"/>
+                <test cmd="gen -n=1000 -odd=1 -type=0" method="generated"/>
+                <test cmd="gen -mode=1 -l=100 -r=1000 -type=1" method="generated"/>
+                <test cmd="gen -n=1000 -type=1" method="generated"/>
+                <test cmd="gen -mode=1 -odd=1 -l=100 -r=1000 -type=1" method="generated"/>
+                <test cmd="gen -n=1000 -odd=1 -type=1" method="generated"/>
+                <test cmd="gen -mode=1 -l=100 -r=1000 -type=2" method="generated"/>
+                <test cmd="gen -n=1000 -type=2" method="generated"/>
+                <test cmd="gen -mode=1 -odd=1 -l=100 -r=1000 -type=2" method="generated"/>
+                <test cmd="gen -n=1000 -odd=1 -type=2" method="generated"/>
+                <test cmd="gen -mode=1 -l=100 -r=1000 -type=3" method="generated"/>
+                <test cmd="gen -n=1000 -type=3" method="generated"/>
+                <test cmd="gen -mode=1 -odd=1 -l=100 -r=1000 -type=3" method="generated"/>
+                <test cmd="gen -n=1000 -odd=1 -type=3" method="generated"/>
+                <test cmd="gen -mode=1 -l=100 -r=1000 -type=4" method="generated"/>
+                <test cmd="gen -n=1000 -type=4" method="generated"/>
+                <test cmd="gen -mode=1 -odd=1 -l=100 -r=1000 -type=4" method="generated"/>
+                <test cmd="gen -n=1000 -odd=1 -type=4" method="generated"/>
+                <test cmd="gen -mode=1 -l=100 -r=1000 -type=5" method="generated"/>
+                <test cmd="gen -n=1000 -type=5" method="generated"/>
+                <test cmd="gen -mode=1 -odd=1 -l=100 -r=1000 -type=5" method="generated"/>
+                <test cmd="gen -n=1000 -odd=1 -type=5" method="generated"/>
+                <test cmd="gen -mode=1 -l=100 -r=1000 -type=6" method="generated"/>
+                <test cmd="gen -n=1000 -type=6" method="generated"/>
+                <test cmd="gen -mode=1 -odd=1 -l=100 -r=1000 -type=6" method="generated"/>
+                <test cmd="gen -n=1000 -odd=1 -type=6" method="generated"/>
+                <test cmd="gen -mode=1 -l=100 -r=1000 -type=7" method="generated"/>
+                <test cmd="gen -n=1000 -type=7" method="generated"/>
+                <test cmd="gen -mode=1 -odd=1 -l=100 -r=1000 -type=7" method="generated"/>
+                <test cmd="gen -n=1000 -odd=1 -type=7" method="generated"/>
+            </tests>
+        </testset>
+    </judging>
+    <files>
+        <resources>
+            <file path="files/constraints.h" type="h.g++"/>
+            <file path="files/olymp.sty"/>
+            <file path="files/problem.tex"/>
+            <file path="files/statements.ftl"/>
+            <file path="files/testlib.h" type="h.g++"/>
+        </resources>
+        <executables>
+            <executable>
+                <source path="files/gen.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="files/gen.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/interactor.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="files/interactor.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/val.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="files/val.exe" type="exe.win32"/>
+            </executable>
+        </executables>
+    </files>
+    <assets>
+        <checker name="std::ncmp.cpp" type="testlib">
+            <source path="files/check.cpp" type="cpp.g++17"/>
+            <binary path="check.exe" type="exe.win32"/>
+            <copy path="check.cpp"/>
+            <testset>
+                <test-count>0</test-count>
+                <input-path-pattern>files/tests/checker-tests/%02d</input-path-pattern>
+                <output-path-pattern>files/tests/checker-tests/%02d.o</output-path-pattern>
+                <answer-path-pattern>files/tests/checker-tests/%02d.a</answer-path-pattern>
+                <tests/>
+            </testset>
+        </checker>
+        <interactor>
+            <source path="files/interactor.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+            <binary path="files/interactor.exe" type="exe.win32"/>
+        </interactor>
+        <validators>
+            <validator>
+                <source path="files/val.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="files/val.exe" type="exe.win32"/>
+                <testset>
+                    <test-count>1</test-count>
+                    <input-path-pattern>files/tests/validator-tests/%02d</input-path-pattern>
+                    <tests>
+                        <test verdict="valid"/>
+                    </tests>
+                </testset>
+            </validator>
+        </validators>
+        <solutions>
+            <solution tag="accepted">
+                <source path="solutions/cologne-soln.py" type="python.pypy3-64"/>
+                <binary path="solutions/cologne-soln.pypys3-64" type="pythonx.pypy3-64"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/dohyon_AC.java" type="java21"/>
+                <binary path="solutions/dohyon_AC.jar" type="jar"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/hui.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/hui.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/m4us_ac.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/m4us_ac.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="rejected">
+                <source path="solutions/m4us_wa.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/m4us_wa.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/whans_ac.java" type="java21"/>
+                <binary path="solutions/whans_ac.jar" type="jar"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/whans_ac_pypy.py" type="python.pypy3-64"/>
+                <binary path="solutions/whans_ac_pypy.pypys3-64" type="pythonx.pypy3-64"/>
+            </solution>
+            <solution tag="main">
+                <source path="solutions/whans_mcs.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/whans_mcs.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="rejected">
+                <source path="solutions/whans_wa.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/whans_wa.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="rejected">
+                <source path="solutions/whans_wa2.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/whans_wa2.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="rejected">
+                <source path="solutions/whans_wa3.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/whans_wa3.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="rejected">
+                <source path="solutions/whans_wa4.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/whans_wa4.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="rejected">
+                <source path="solutions/whans_wa_no_b.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/whans_wa_no_b.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="rejected">
+                <source path="solutions/whans_wa_no_what.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/whans_wa_no_what.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/yclock-cor.py" type="python.pypy3-64"/>
+                <binary path="solutions/yclock-cor.pypys3-64" type="pythonx.pypy3-64"/>
+            </solution>
+            <solution note="질문 두 번씩 안 했음" tag="rejected">
+                <source path="solutions/yclock-wrong.py" type="python.pypy3-64"/>
+                <binary path="solutions/yclock-wrong.pypys3-64" type="pythonx.pypy3-64"/>
+            </solution>
+        </solutions>
+    </assets>
+    <properties>
+        <property name="tests-wellformed" value="true"/>
+    </properties>
+    <stresses>
+        <stress-count>0</stress-count>
+        <stress-path-pattern>stresses/%03d</stress-path-pattern>
+        <list/>
+    </stresses>
+    <tags>
+        <tag value="ad-hoc"/>
+    </tags>
+</problem>

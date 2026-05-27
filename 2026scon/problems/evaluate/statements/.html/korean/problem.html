@@ -1,0 +1,22 @@
+<HTML><HEAD><META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <META content="no-cache" http-equiv="pragma">
+    <META content="-1" http-equiv="expires">
+    <META content="text/html;charset=UTF-8" http-equiv="content-type">
+    <LINK href="problem-statement.css" rel="stylesheet" type="text/css">
+    <TITLE>보안 등급</TITLE>
+    <SCRIPT type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+          tex2jax: {inlineMath: [['$$$','$$$']], displayMath: [['$$$$$$','$$$$$$']]}
+        });
+        </SCRIPT>
+        <SCRIPT async="" src="https://polygon.codeforces.com/lib/MathJax/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript">
+    </SCRIPT>
+</HEAD><BODY>
+    <DIV class="problem-statement"><DIV class="header"><DIV class="title">보안 등급</DIV><DIV class="time-limit"><DIV class="property-title">time limit per test</DIV>1 second</DIV><DIV class="memory-limit"><DIV class="property-title">memory limit per test</DIV>256 megabytes</DIV><DIV class="input-file input-standard"><DIV class="property-title">input</DIV>standard input</DIV><DIV class="output-file output-standard"><DIV class="property-title">output</DIV>standard output</DIV></DIV><DIV class="legend"><P>서버는 시간순으로 주어진 $$$N$$$개의 이벤트를 순서대로 검사한다. 각 이벤트 $$$i$$$에는 신뢰도 $$$A_i$$$가 주어진다.</P><P>서버는 하나의 정수 기준값 $$$T$$$를 정한 뒤, 각 이벤트를 다음과 같이 분류한다.</P><P></P><UL> <LI> $$$A_i \ge T$$$이면 그 이벤트는 <SPAN class="tex-font-style-bf">안전 상태</SPAN>가 된다. </LI><LI> $$$A_i  \lt  T$$$이면 그 이벤트는 <SPAN class="tex-font-style-bf">위험 상태</SPAN>가 된다. </LI></UL><P></P><P>서버에는 보안 <SPAN class="tex-font-style-tt">credit</SPAN>이 있으며, 초기값은 $$$0$$$이다. 이벤트를 하나 검사할 때마다 보안 <SPAN class="tex-font-style-tt">credit</SPAN>은 다음과 같이 변한다.</P><P></P><UL> <LI> 이벤트가 안전 상태이면 <SPAN class="tex-font-style-tt">credit</SPAN>이 $$$1$$$ 증가한다. </LI><LI> 이벤트가 위험 상태이면 <SPAN class="tex-font-style-tt">credit</SPAN>이 $$$1$$$ 감소한다. </LI></UL><P></P><P>검사 도중 어느 순간이라도 <SPAN class="tex-font-style-tt">credit</SPAN>이 음수가 되면 서버는 즉시 다운된다.</P><P>서버는 총 예산 $$$B$$$를 가지고 있으며, 원래는 위험 상태인 이벤트를 패치하여 안전 상태로 바꿀 수 있다.</P><P>이벤트 $$$i$$$가 원래 $$$A_i  \lt  T$$$라면, 그 이벤트를 검사하는 순간에 패치할 수 있다. 이 경우 그 이벤트는 안전 상태로 간주되며, 필요한 비용은 $$$T - A_i$$$이다.</P><P>패치 비용의 총합은 $$$B$$$를 초과할 수 없다.</P><P>모든 이벤트를 끝까지 검사하는 동안 서버가 한 번도 다운되지 않도록 할 수 있는 최대의 정수 기준값 $$$T$$$를 구하여라.</P></DIV><P></P><P></P><DIV class="input-specification"><DIV class="section-title">Input</DIV><P></P><P>첫째 줄에 이벤트의 개수 $$$N$$$과 예산 $$$B$$$가 주어진다. $$$(1 \le N \le 200\,000,\ 0 \le B \le 10^9)$$$</P><P>둘째 줄에 $$$N$$$개의 정수 $$$A_1, A_2, \dots, A_N$$$이 주어진다. $$$(1 \le A_i \le 10^9)$$$</P></DIV><P></P><P></P><DIV class="output-specification"><DIV class="section-title">Output</DIV><P></P><P>조건을 만족하도록 선택할 수 있는 최대의 정수 보안 등급 $$$T$$$를 출력한다.</P></DIV><P></P><P></P><DIV class="sample-tests"><DIV class="section-title">Example</DIV><P></P><P></P><DIV class="sample-test"><DIV class="input"><DIV class="title">Input</DIV><PRE class="content" data-content="6 4
+2 6 2 1 4 4
+">
+<DIV class="test-example-line test-example-line-even test-example-line-0">6 4</DIV><DIV class="test-example-line test-example-line-even test-example-line-0">2 6 2 1 4 4</DIV></PRE></DIV><DIV class="output"><DIV class="title">Output</DIV><PRE class="content">
+5
+</PRE></DIV></DIV></DIV></DIV><P></P><P>  </P>
+
+</BODY></HTML>

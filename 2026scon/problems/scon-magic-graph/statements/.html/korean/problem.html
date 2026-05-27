@@ -1,0 +1,47 @@
+<HTML><HEAD><META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <META content="no-cache" http-equiv="pragma">
+    <META content="-1" http-equiv="expires">
+    <META content="text/html;charset=UTF-8" http-equiv="content-type">
+    <LINK href="problem-statement.css" rel="stylesheet" type="text/css">
+    <TITLE>스콘 마법진</TITLE>
+    <SCRIPT type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+          tex2jax: {inlineMath: [['$$$','$$$']], displayMath: [['$$$$$$','$$$$$$']]}
+        });
+        </SCRIPT>
+        <SCRIPT async="" src="https://polygon.codeforces.com/lib/MathJax/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript">
+    </SCRIPT>
+</HEAD><BODY>
+    <DIV class="problem-statement"><DIV class="header"><DIV class="title">스콘 마법진</DIV><DIV class="time-limit"><DIV class="property-title">time limit per test</DIV>1 second</DIV><DIV class="memory-limit"><DIV class="property-title">memory limit per test</DIV>256 megabytes</DIV><DIV class="input-file input-standard"><DIV class="property-title">input</DIV>standard input</DIV><DIV class="output-file output-standard"><DIV class="property-title">output</DIV>standard output</DIV></DIV><DIV class="legend"><P>올해도 어김없이 SCCC의 회장이 된 문성이는 스콘을 완벽하게 구워내기 위해 마법진을 연구하고 있다. 이 마법진은 $$$1$$$번부터 $$$N$$$번까지 번호가 매겨진 $$$N$$$개의 룬 문자와, 서로 다른 두 룬 문자를 연결하는 $$$M$$$개의 마나 회로로 구성되어 있다.</P><P>처음 마법진을 그렸을 때 모든 룬 문자의 마나는 $$$0$$$이다. 문성이는 맛있는 스콘을 완성하기 위해 마법진에 다음 두 가지 쿼리를 처리하며 상태를 기록해야 한다.</P><P></P><UL> <LI> $$$1~u~x$$$: 룬 문자 $$$u$$$에 마나를 주입하여, 해당 룬의 마나 에너지를 $$$x$$$만큼 증가시킨다. </LI><LI> $$$2~d$$$: 연결된 마나 회로의 수가 정확히 $$$d$$$인 모든 룬을 활성화한다. 이후 활성화된 각 룬과 직접 연결된 인접 룬들의 마나 에너지 총합을 계산한다. <UL> <LI> 하나의 룬이 여러 활성화 룬과 동시에 연결되었다면 연결된 횟수만큼 중복해서 합산한다. </LI><LI> 룬의 활성화는 일시적으로 이루어지며, 에너지를 모두 계산한 직후 활성화되었던 룬들은 다시 원래의 상태로 돌아간다. </LI></UL> </LI></UL></DIV><P></P><P></P><DIV class="input-specification"><DIV class="section-title">Input</DIV><P></P><P>첫째 줄에 룬 문자의 개수 $$$N$$$, 마나 회로의 개수 $$$M$$$, 쿼리의 개수 $$$Q$$$가 공백으로 구분되어 주어진다. </P><P>다음 $$$M$$$개의 줄에는 마나 회로가 연결하는 두 룬 문자 $$$u, v$$$가 주어진다.</P><P>서로 다른 두 룬 문자를 연결하는 마나 회로는 최대 한 개이다.</P><P>다음 $$$Q$$$개의 줄에는 쿼리가 $$$1~u~x$$$ 또는 $$$2~d$$$의 형태로 주어진다.</P><P>2번 쿼리는 반드시 1번 이상 주어진다.</P></DIV><P></P><P></P><DIV class="output-specification"><DIV class="section-title">Output</DIV><P></P><P>$$$2$$$번 쿼리가 주어질 때마다, 조건에 맞춰 계산된 마나 에너지의 총합을 한 줄에 하나씩 출력한다.</P><P>만약 연결된 마나 회로의 수가 $$$d$$$인 룬 문자가 존재하지 않거나, 연결된 인접 룬이 없어 합산할 마나가 없다면 $$$0$$$을 출력한다.</P></DIV><P></P><P></P><DIV class="sample-tests"><DIV class="section-title">Examples</DIV><P></P><P></P><DIV class="sample-test"><DIV class="input"><DIV class="title">Input</DIV><PRE class="content" data-content="4 3 5
+1 2
+1 3
+1 4
+1 2 10
+1 3 20
+2 3
+1 1 50
+2 1
+">
+<DIV class="test-example-line test-example-line-even test-example-line-0">4 3 5</DIV><DIV class="test-example-line test-example-line-even test-example-line-0">1 2</DIV><DIV class="test-example-line test-example-line-even test-example-line-0">1 3</DIV><DIV class="test-example-line test-example-line-even test-example-line-0">1 4</DIV><DIV class="test-example-line test-example-line-even test-example-line-0">1 2 10</DIV><DIV class="test-example-line test-example-line-even test-example-line-0">1 3 20</DIV><DIV class="test-example-line test-example-line-even test-example-line-0">2 3</DIV><DIV class="test-example-line test-example-line-even test-example-line-0">1 1 50</DIV><DIV class="test-example-line test-example-line-even test-example-line-0">2 1</DIV></PRE></DIV><DIV class="output"><DIV class="title">Output</DIV><PRE class="content">
+30
+150
+</PRE></DIV><DIV class="input"><DIV class="title">Input</DIV><PRE class="content" data-content="5 5 6
+1 2
+2 3
+3 4
+4 1
+1 3
+1 1 100
+1 2 200
+1 3 300
+2 0
+2 2
+2 4
+">
+<DIV class="test-example-line test-example-line-even test-example-line-0">5 5 6</DIV><DIV class="test-example-line test-example-line-even test-example-line-0">1 2</DIV><DIV class="test-example-line test-example-line-even test-example-line-0">2 3</DIV><DIV class="test-example-line test-example-line-even test-example-line-0">3 4</DIV><DIV class="test-example-line test-example-line-even test-example-line-0">4 1</DIV><DIV class="test-example-line test-example-line-even test-example-line-0">1 3</DIV><DIV class="test-example-line test-example-line-even test-example-line-0">1 1 100</DIV><DIV class="test-example-line test-example-line-even test-example-line-0">1 2 200</DIV><DIV class="test-example-line test-example-line-even test-example-line-0">1 3 300</DIV><DIV class="test-example-line test-example-line-even test-example-line-0">2 0</DIV><DIV class="test-example-line test-example-line-even test-example-line-0">2 2</DIV><DIV class="test-example-line test-example-line-even test-example-line-0">2 4</DIV></PRE></DIV><DIV class="output"><DIV class="title">Output</DIV><PRE class="content">
+0
+800
+0
+</PRE></DIV></DIV></DIV><P></P><P></P><DIV class="note"><DIV class="section-title">Note</DIV><P></P><P>제한 </P><UL> <LI> 주어지는 모든 수는 정수이다. </LI><LI> $$$1 \le N, Q \le 100,000$$$ </LI><LI> $$$0 \le M \le \min(\frac{N(N-1)}{2}, 200,000)$$$ </LI><LI> $$$1 \le u, v \le N, u \neq v$$$ </LI><LI> $$$1 \le u \le N$$$, $$$1 \le x \le 10^8$$$ </LI><LI> $$$0 \le d \le N-1$$$ </LI></UL></DIV></DIV><P></P><P>  </P>
+
+</BODY></HTML>

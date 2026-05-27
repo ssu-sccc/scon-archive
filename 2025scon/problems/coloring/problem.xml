@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<problem revision="34" short-name="coloring" url="https://polygon.codeforces.com/p9EjTbg/w8385/coloring">
+    <names>
+        <name language="english" value="불꽃놀이의 아름다움 2"/>
+    </names>
+    <statements>
+        <statement charset="UTF-8" language="english" mathjax="true" path="statements/english/problem.tex" type="application/x-tex"/>
+        <statement charset="UTF-8" language="english" mathjax="true" path="statements/.html/english/problem.html" type="text/html"/>
+    </statements>
+    <judging cpu-name="Intel(R) Core(TM) i3-8100 CPU @ 3.60GHz" cpu-speed="3600" input-file="" output-file="" run-count="1">
+        <testset name="tests">
+            <time-limit>1000</time-limit>
+            <memory-limit>268435456</memory-limit>
+            <test-count>36</test-count>
+            <input-path-pattern>tests/%02d</input-path-pattern>
+            <answer-path-pattern>tests/%02d.a</answer-path-pattern>
+            <tests>
+                <test method="manual" sample="true"/>
+                <test method="manual" sample="true"/>
+                <test cmd="gen-opt 10" method="generated"/>
+                <test cmd="gen-opt 20" method="generated"/>
+                <test cmd="gen-opt 100" method="generated"/>
+                <test cmd="gen-opt 200" method="generated"/>
+                <test cmd="gen-opt 1000" method="generated"/>
+                <test cmd="gen-opt 2000" method="generated"/>
+                <test cmd="gen-opt 10000" method="generated"/>
+                <test cmd="gen-opt 20000" method="generated"/>
+                <test cmd="gen-opt 100000" method="generated"/>
+                <test cmd="gen-opt 200000" method="generated"/>
+                <test cmd="gen-rnd junseo" method="generated"/>
+                <test cmd="gen-rnd cologne" method="generated"/>
+                <test cmd="gen-rnd kyo20111" method="generated"/>
+                <test cmd="gen-rnd chleee" method="generated"/>
+                <test cmd="gen-rnd dohyonne" method="generated"/>
+                <test cmd="gen-rnd whans_" method="generated"/>
+                <test cmd="gen-rnd w8385" method="generated"/>
+                <test cmd="gen-rnd Justice_Hui" method="generated"/>
+                <test cmd="gen-rnd ab9110033" method="generated"/>
+                <test cmd="gen-rnd rkaskan506" method="generated"/>
+                <test cmd="gen-rnd m4ushold" method="generated"/>
+                <test cmd="gen-cycle -n=99999" method="generated"/>
+                <test cmd="gen-cycle -n=100000" method="generated"/>
+                <test cmd="gen-cycle -n=199999" method="generated"/>
+                <test cmd="gen-cycle -n=200000" method="generated"/>
+                <test cmd="gen-cycle-shuffle -n=99997" method="generated"/>
+                <test cmd="gen-cycle-shuffle -n=99998" method="generated"/>
+                <test cmd="gen-cycle-shuffle -n=199997" method="generated"/>
+                <test cmd="gen-cycle-shuffle -n=199998" method="generated"/>
+                <test cmd="gen-uf-tle -n=99999" method="generated"/>
+                <test cmd="gen-uf-tle -n=100000" method="generated"/>
+                <test cmd="gen-uf-tle -n=199999" method="generated"/>
+                <test cmd="gen-uf-tle -n=200000" method="generated"/>
+                <test method="manual"/>
+            </tests>
+        </testset>
+    </judging>
+    <files>
+        <resources>
+            <file path="files/graph-generator.h" type="h.g++"/>
+            <file path="files/graph-validator.h" type="h.g++"/>
+            <file path="files/olymp.sty"/>
+            <file path="files/problem.tex"/>
+            <file path="files/statements.ftl"/>
+            <file path="files/testlib.h" type="h.g++"/>
+        </resources>
+        <executables>
+            <executable>
+                <source path="files/gen-cycle-shuffle.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="files/gen-cycle-shuffle.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/gen-cycle.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="files/gen-cycle.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/gen-opt.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="files/gen-opt.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/gen-rnd.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="files/gen-rnd.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/gen-uf-tle.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="files/gen-uf-tle.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/validator.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="files/validator.exe" type="exe.win32"/>
+            </executable>
+        </executables>
+    </files>
+    <assets>
+        <checker name="std::wcmp.cpp" type="testlib">
+            <source path="files/check.cpp" type="cpp.g++17"/>
+            <binary path="check.exe" type="exe.win32"/>
+            <copy path="check.cpp"/>
+            <testset>
+                <test-count>0</test-count>
+                <input-path-pattern>files/tests/checker-tests/%02d</input-path-pattern>
+                <output-path-pattern>files/tests/checker-tests/%02d.o</output-path-pattern>
+                <answer-path-pattern>files/tests/checker-tests/%02d.a</answer-path-pattern>
+                <tests/>
+            </testset>
+        </checker>
+        <validators>
+            <validator>
+                <source path="files/validator.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="files/validator.exe" type="exe.win32"/>
+                <testset>
+                    <test-count>7</test-count>
+                    <input-path-pattern>files/tests/validator-tests/%02d</input-path-pattern>
+                    <tests>
+                        <test verdict="valid"/>
+                        <test verdict="invalid"/>
+                        <test verdict="invalid"/>
+                        <test verdict="invalid"/>
+                        <test verdict="invalid"/>
+                        <test verdict="invalid"/>
+                        <test verdict="valid"/>
+                    </tests>
+                </testset>
+            </validator>
+        </validators>
+        <solutions>
+            <solution tag="accepted">
+                <source path="solutions/cologne-soln-ufd.rs" type="rust"/>
+                <binary path="solutions/cologne-soln-ufd.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="time-limit-exceeded">
+                <source path="solutions/cologne-tle-wrong-ufd-1.rs" type="rust"/>
+                <binary path="solutions/cologne-tle-wrong-ufd-1.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="time-limit-exceeded">
+                <source path="solutions/cologne-tle-wrong-ufd-2.rs" type="rust"/>
+                <binary path="solutions/cologne-tle-wrong-ufd-2.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="time-limit-exceeded">
+                <source path="solutions/cologne-tle-wrong-ufd-3.rs" type="rust"/>
+                <binary path="solutions/cologne-tle-wrong-ufd-3.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="time-limit-exceeded">
+                <source path="solutions/cologne-tle-wrong-ufd-4.rs" type="rust"/>
+                <binary path="solutions/cologne-tle-wrong-ufd-4.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="time-limit-exceeded">
+                <source path="solutions/cologne-tle-wrong-ufd-5.rs" type="rust"/>
+                <binary path="solutions/cologne-tle-wrong-ufd-5.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="time-limit-exceeded">
+                <source path="solutions/cologne-tle-wrong-ufd-6.rs" type="rust"/>
+                <binary path="solutions/cologne-tle-wrong-ufd-6.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="time-limit-exceeded">
+                <source path="solutions/cologne-tle-wrong-ufd-skip-cycle-1.rs" type="rust"/>
+                <binary path="solutions/cologne-tle-wrong-ufd-skip-cycle-1.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="time-limit-exceeded">
+                <source path="solutions/cologne-tle-wrong-ufd-skip-cycle-2.rs" type="rust"/>
+                <binary path="solutions/cologne-tle-wrong-ufd-skip-cycle-2.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="time-limit-exceeded">
+                <source path="solutions/cologne-tle.rs" type="rust"/>
+                <binary path="solutions/cologne-tle.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="rejected">
+                <source path="solutions/cologne-wa-skip-colored.rs" type="rust"/>
+                <binary path="solutions/cologne-wa-skip-colored.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/dohyon_AC.java" type="java21"/>
+                <binary path="solutions/dohyon_AC.jar" type="jar"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/hui.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/hui.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/junseo.cpp" type="cpp.g++17"/>
+                <binary path="solutions/junseo.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/karuna-ac.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/karuna-ac.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/kyo20111-ac.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/kyo20111-ac.exe" type="exe.win32"/>
+            </solution>
+            <solution note="이거 왜 안돌아감" tag="accepted">
+                <source path="solutions/m4us_ac-py.py" type="python.3"/>
+                <binary path="solutions/m4us_ac-py.pys3" type="pythonx.3"/>
+            </solution>
+            <solution tag="main">
+                <source path="solutions/m4us_ac.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/m4us_ac.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/moonlit-AC.py" type="python.3"/>
+                <binary path="solutions/moonlit-AC.pys3" type="pythonx.3"/>
+            </solution>
+            <solution tag="wrong-answer">
+                <source path="solutions/print-2.py" type="python.3"/>
+                <binary path="solutions/print-2.pys3" type="pythonx.3"/>
+            </solution>
+            <solution tag="wrong-answer">
+                <source path="solutions/print-3.py" type="python.3"/>
+                <binary path="solutions/print-3.pys3" type="pythonx.3"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/rkaskan506_ac.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/rkaskan506_ac.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/ryute-ac.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/ryute-ac.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/w8385_AC-py.py" type="python.3"/>
+                <binary path="solutions/w8385_AC-py.pys3" type="pythonx.3"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/w8385_AC.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/w8385_AC.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/whans_ac.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/whans_ac.exe" type="exe.win32"/>
+            </solution>
+        </solutions>
+    </assets>
+    <properties>
+        <property name="tests-wellformed" value="true"/>
+    </properties>
+    <stresses>
+        <stress-count>0</stress-count>
+        <stress-path-pattern>stresses/%03d</stress-path-pattern>
+        <list/>
+    </stresses>
+    <tags>
+        <tag value="graphs"/>
+    </tags>
+</problem>

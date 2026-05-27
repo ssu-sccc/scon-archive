@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<problem revision="5" short-name="visit-all" url="https://polygon.codeforces.com/p0QYmwe/kyo20111/visit-all">
+    <names>
+        <name language="korean" value="미로 탈출"/>
+    </names>
+    <statements latex-pdf-mode="obsolete">
+        <statement charset="UTF-8" language="korean" mathjax="true" path="statements/korean/problem.tex" type="application/x-tex"/>
+        <statement charset="UTF-8" language="korean" mathjax="true" path="statements/.html/korean/problem.html" type="text/html"/>
+    </statements>
+    <judging cpu-name="Intel(R) Core(TM) i3-8100 CPU @ 3.60GHz" cpu-speed="3600" input-file="" output-file="" run-count="1">
+        <testset name="tests">
+            <time-limit>1000</time-limit>
+            <memory-limit>268435456</memory-limit>
+            <test-count>20</test-count>
+            <input-path-pattern>tests/%02d</input-path-pattern>
+            <answer-path-pattern>tests/%02d.a</answer-path-pattern>
+            <tests>
+                <test method="manual" sample="true"/>
+                <test method="manual"/>
+                <test cmd="rand_gen -N=2" method="generated"/>
+                <test cmd="rand_gen -N=3" method="generated"/>
+                <test cmd="rand_gen -N=4" method="generated"/>
+                <test cmd="rand_gen -N=5" method="generated"/>
+                <test cmd="rand_gen -N=6" method="generated"/>
+                <test cmd="rand_gen -N=7" method="generated"/>
+                <test cmd="rand_gen -N=8" method="generated"/>
+                <test cmd="rand_gen -N=9" method="generated"/>
+                <test cmd="rand_gen -N=10" method="generated"/>
+                <test cmd="rand_gen -N=1000000000" method="generated"/>
+                <test cmd="rand_gen -N=999999999" method="generated"/>
+                <test cmd="rand_gen -N=999999998" method="generated"/>
+                <test cmd="rand_gen -N=999999997" method="generated"/>
+                <test cmd="rand_gen -N=999999996" method="generated"/>
+                <test cmd="rand_gen -N=999999995" method="generated"/>
+                <test cmd="rand_gen -N=1000" method="generated"/>
+                <test cmd="rand_gen -N=1000000" method="generated"/>
+                <test cmd="rand0_gen" method="generated"/>
+            </tests>
+        </testset>
+    </judging>
+    <files>
+        <resources>
+            <file path="files/olymp.sty"/>
+            <file path="files/problem.tex"/>
+            <file path="files/statements.ftl"/>
+            <file path="files/testlib.h" type="h.g++"/>
+        </resources>
+        <executables>
+            <executable>
+                <source path="files/rand0_gen.cpp" type="cpp.g++17"/>
+                <binary path="files/rand0_gen.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/rand_gen.cpp" type="cpp.g++17"/>
+                <binary path="files/rand_gen.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/validator.cpp" type="cpp.g++17"/>
+                <binary path="files/validator.exe" type="exe.win32"/>
+            </executable>
+        </executables>
+    </files>
+    <assets>
+        <checker name="std::ncmp.cpp" type="testlib">
+            <source path="files/check.cpp" type="cpp.g++17"/>
+            <binary path="check.exe" type="exe.win32"/>
+            <copy path="check.cpp"/>
+            <testset>
+                <test-count>0</test-count>
+                <input-path-pattern>files/tests/checker-tests/%02d</input-path-pattern>
+                <output-path-pattern>files/tests/checker-tests/%02d.o</output-path-pattern>
+                <answer-path-pattern>files/tests/checker-tests/%02d.a</answer-path-pattern>
+                <tests/>
+            </testset>
+        </checker>
+        <validators>
+            <validator>
+                <source path="files/validator.cpp" type="cpp.g++17"/>
+                <binary path="files/validator.exe" type="exe.win32"/>
+                <testset>
+                    <test-count>2</test-count>
+                    <input-path-pattern>files/tests/validator-tests/%02d</input-path-pattern>
+                    <tests>
+                        <test verdict="valid"/>
+                        <test verdict="invalid"/>
+                    </tests>
+                </testset>
+            </validator>
+        </validators>
+        <solutions>
+            <solution tag="time-limit-exceeded-or-memory-limit-exceeded">
+                <source path="solutions/2n.cpp" type="cpp.g++17"/>
+                <binary path="solutions/2n.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="time-limit-exceeded-or-memory-limit-exceeded">
+                <source path="solutions/cologne-dijkstra.rs" type="rust"/>
+                <binary path="solutions/cologne-dijkstra.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/cologne-soln.rs" type="rust"/>
+                <binary path="solutions/cologne-soln.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="main">
+                <source path="solutions/mcs.cpp" type="cpp.g++17"/>
+                <binary path="solutions/mcs.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/no-fio.cpp" type="cpp.g++17"/>
+                <binary path="solutions/no-fio.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="wrong-answer">
+                <source path="solutions/wa.cpp" type="cpp.g++17"/>
+                <binary path="solutions/wa.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="wrong-answer">
+                <source path="solutions/wa2.cpp" type="cpp.g++17"/>
+                <binary path="solutions/wa2.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="wrong-answer">
+                <source path="solutions/wa3.cpp" type="cpp.g++17"/>
+                <binary path="solutions/wa3.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="wrong-answer">
+                <source path="solutions/wa4.cpp" type="cpp.g++17"/>
+                <binary path="solutions/wa4.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="wrong-answer">
+                <source path="solutions/wa5.cpp" type="cpp.g++17"/>
+                <binary path="solutions/wa5.exe" type="exe.win32"/>
+            </solution>
+        </solutions>
+    </assets>
+    <properties>
+        <property name="tests-wellformed" value="true"/>
+    </properties>
+    <stresses>
+        <stress-count>2</stress-count>
+        <stress-path-pattern>stresses/%03d</stress-path-pattern>
+        <list>
+            <stress index="2" path="stresses/002"/>
+            <stress index="1" path="stresses/001"/>
+        </list>
+    </stresses>
+    <tags>
+        <tag value="case work"/>
+    </tags>
+</problem>

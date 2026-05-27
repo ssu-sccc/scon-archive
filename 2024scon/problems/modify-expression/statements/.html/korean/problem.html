@@ -1,0 +1,47 @@
+<HTML><HEAD><META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <META content="no-cache" http-equiv="pragma">
+    <META content="-1" http-equiv="expires">
+    <META content="text/html;charset=UTF-8" http-equiv="content-type">
+    <LINK href="problem-statement.css" rel="stylesheet" type="text/css">
+    <TITLE>수식 고치기</TITLE>
+    <SCRIPT type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+          tex2jax: {inlineMath: [['$$$','$$$']], displayMath: [['$$$$$$','$$$$$$']]}
+        });
+        </SCRIPT>
+        <SCRIPT async="" src="https://polygon.codeforces.com/lib/MathJax/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript">
+    </SCRIPT>
+</HEAD><BODY>
+    <DIV class="problem-statement"><DIV class="header"><DIV class="title">수식 고치기</DIV><DIV class="time-limit"><DIV class="property-title">time limit per test</DIV>2 seconds</DIV><DIV class="memory-limit"><DIV class="property-title">memory limit per test</DIV>1024 megabytes</DIV><DIV class="input-file input-standard"><DIV class="property-title">input</DIV>standard input</DIV><DIV class="output-file output-standard"><DIV class="property-title">output</DIV>standard output</DIV></DIV><DIV class="legend"><P>T or F or T and F or T and F 와 같이 리터럴은 True 또는 False, 연산자는 or, and로만 구성된 수식이 있다. 연산자 or과 and의 연산자 우선순위가 같고, 왼쪽부터 오른쪽으로 차례로 계산한다고 가정한다. 여러분은 연산자 혹은 리터럴을 바꾸어 수식의 계산 결과가 참 혹은 거짓으로 계산되도록 해야 한다. 이때, 연산자와 리터럴을 바꾸는 횟수는 최소화해야 한다. 식과 원하는 계산 결과가 주어졌을 때, 원하는 계산 결과가 나오도록 리터럴 혹은 연산자를 고치는 최소 횟수를 구하여라.</P></DIV><P></P><P></P><DIV class="sample-tests"><DIV class="section-title">Examples</DIV><P></P><P></P><DIV class="sample-test"><DIV class="input"><DIV class="title">Input</DIV><PRE class="content" data-content="9
+T &amp; F | F | T &amp; F
+T
+">
+<DIV class="test-example-line test-example-line-even test-example-line-0">9</DIV><DIV class="test-example-line test-example-line-even test-example-line-0">T &amp; F | F | T &amp; F</DIV><DIV class="test-example-line test-example-line-even test-example-line-0">T</DIV></PRE></DIV><DIV class="output"><DIV class="title">Output</DIV><PRE class="content">
+1</PRE></DIV><DIV class="input"><DIV class="title">Input</DIV><PRE class="content" data-content="3
+F &amp; F
+T
+">
+<DIV class="test-example-line test-example-line-even test-example-line-0">3</DIV><DIV class="test-example-line test-example-line-even test-example-line-0">F &amp; F</DIV><DIV class="test-example-line test-example-line-even test-example-line-0">T</DIV></PRE></DIV><DIV class="output"><DIV class="title">Output</DIV><PRE class="content">
+2</PRE></DIV><DIV class="input"><DIV class="title">Input</DIV><PRE class="content" data-content="1
+T
+T
+">
+<DIV class="test-example-line test-example-line-even test-example-line-0">1</DIV><DIV class="test-example-line test-example-line-even test-example-line-0">T</DIV><DIV class="test-example-line test-example-line-even test-example-line-0">T</DIV></PRE></DIV><DIV class="output"><DIV class="title">Output</DIV><PRE class="content">
+0</PRE></DIV><DIV class="input"><DIV class="title">Input</DIV><PRE class="content" data-content="1
+T
+F
+">
+<DIV class="test-example-line test-example-line-even test-example-line-0">1</DIV><DIV class="test-example-line test-example-line-even test-example-line-0">T</DIV><DIV class="test-example-line test-example-line-even test-example-line-0">F</DIV></PRE></DIV><DIV class="output"><DIV class="title">Output</DIV><PRE class="content">
+1</PRE></DIV><DIV class="input"><DIV class="title">Input</DIV><PRE class="content" data-content="1
+F
+T
+">
+<DIV class="test-example-line test-example-line-even test-example-line-0">1</DIV><DIV class="test-example-line test-example-line-even test-example-line-0">F</DIV><DIV class="test-example-line test-example-line-even test-example-line-0">T</DIV></PRE></DIV><DIV class="output"><DIV class="title">Output</DIV><PRE class="content">
+1</PRE></DIV><DIV class="input"><DIV class="title">Input</DIV><PRE class="content" data-content="1
+F
+F
+">
+<DIV class="test-example-line test-example-line-even test-example-line-0">1</DIV><DIV class="test-example-line test-example-line-even test-example-line-0">F</DIV><DIV class="test-example-line test-example-line-even test-example-line-0">F</DIV></PRE></DIV><DIV class="output"><DIV class="title">Output</DIV><PRE class="content">
+0</PRE></DIV></DIV></DIV></DIV><P></P><P>  </P>
+
+</BODY></HTML>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<contest url="https://polygon.codeforces.com/c/40664">
+    <names>
+        <name language="korean" value="2024 SCON"/>
+    </names>
+    <problems>
+        <problem index="a" url="https://polygon.codeforces.com/p7QtBVp/sangwon090/irritable-bowel-syndrome"/>
+        <problem index="b" url="https://polygon.codeforces.com/p5H6Dsp/Justice_Hui/team-name-2"/>
+        <problem index="c" url="https://polygon.codeforces.com/p4Thbvn/Justice_Hui/concat"/>
+        <problem index="d" url="https://polygon.codeforces.com/p0l9FNP/kyo20111/visit-all-easy"/>
+        <problem index="e" url="https://polygon.codeforces.com/p5M97Ck/nlog/modify-expression"/>
+        <problem index="f" url="https://polygon.codeforces.com/p7hmppe/Justice_Hui/fibonacci-partition"/>
+        <problem index="g" url="https://polygon.codeforces.com/p8kQVgt/nlog/create-timetable"/>
+        <problem index="h" url="https://polygon.codeforces.com/p0hJV9j/kyo20111/fork"/>
+        <problem index="i" url="https://polygon.codeforces.com/p15qlHn/nlog/beautiful-fireworks"/>
+        <problem index="j" url="https://polygon.codeforces.com/p1ix8PV/kyo20111/or-path"/>
+        <problem index="z" url="https://polygon.codeforces.com/p0QYmwe/kyo20111/visit-all"/>
+    </problems>
+</contest>

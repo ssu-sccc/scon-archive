@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<problem revision="23" short-name="alphabet-block" url="https://polygon.codeforces.com/p1juUeY/dohyonne/alphabet-block">
+    <names>
+        <name language="english" value="알파벳 블록"/>
+    </names>
+    <statements>
+        <statement charset="UTF-8" language="english" mathjax="true" path="statements/english/problem.tex" type="application/x-tex"/>
+        <statement charset="UTF-8" language="english" mathjax="true" path="statements/.html/english/problem.html" type="text/html"/>
+    </statements>
+    <judging cpu-name="Intel(R) Core(TM) i3-8100 CPU @ 3.60GHz" cpu-speed="3600" input-file="" output-file="" run-count="1">
+        <testset name="tests">
+            <time-limit>1000</time-limit>
+            <memory-limit>1073741824</memory-limit>
+            <test-count>13</test-count>
+            <input-path-pattern>tests/%02d</input-path-pattern>
+            <answer-path-pattern>tests/%02d.a</answer-path-pattern>
+            <tests>
+                <test method="manual" sample="true"/>
+                <test method="manual" sample="true"/>
+                <test method="manual" sample="true"/>
+                <test method="manual"/>
+                <test method="manual"/>
+                <test method="manual"/>
+                <test method="manual"/>
+                <test method="manual"/>
+                <test method="manual"/>
+                <test method="manual"/>
+                <test method="manual"/>
+                <test description="x === 1 (mod y)" method="manual"/>
+                <test description="x === -1 (mod y)" method="manual"/>
+            </tests>
+        </testset>
+    </judging>
+    <files>
+        <resources>
+            <file path="files/olymp.sty"/>
+            <file path="files/problem.tex"/>
+            <file path="files/statements.ftl"/>
+            <file path="files/testlib.h" type="h.g++"/>
+        </resources>
+        <executables>
+            <executable>
+                <source path="files/gen_alphabet_01.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="files/gen_alphabet_01.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/val_alphabet.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="files/val_alphabet.exe" type="exe.win32"/>
+            </executable>
+        </executables>
+    </files>
+    <assets>
+        <checker name="std::ncmp.cpp" type="testlib">
+            <source path="files/check.cpp" type="cpp.g++17"/>
+            <binary path="check.exe" type="exe.win32"/>
+            <copy path="check.cpp"/>
+            <testset>
+                <test-count>0</test-count>
+                <input-path-pattern>files/tests/checker-tests/%02d</input-path-pattern>
+                <output-path-pattern>files/tests/checker-tests/%02d.o</output-path-pattern>
+                <answer-path-pattern>files/tests/checker-tests/%02d.a</answer-path-pattern>
+                <tests/>
+            </testset>
+        </checker>
+        <validators>
+            <validator>
+                <source path="files/val_alphabet.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="files/val_alphabet.exe" type="exe.win32"/>
+                <testset>
+                    <test-count>1</test-count>
+                    <input-path-pattern>files/tests/validator-tests/%02d</input-path-pattern>
+                    <tests>
+                        <test verdict="valid"/>
+                    </tests>
+                </testset>
+            </validator>
+        </validators>
+        <solutions>
+            <solution tag="main">
+                <source path="solutions/alphabet.java" type="java21"/>
+                <binary path="solutions/alphabet.jar" type="jar"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/chleee-ac.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/chleee-ac.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/cologne.rs" type="rust"/>
+                <binary path="solutions/cologne.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/hui-constant.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/hui-constant.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/hui-linear.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/hui-linear.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="wrong-answer">
+                <source path="solutions/hui-wa-div-ceil.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/hui-wa-div-ceil.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="wrong-answer">
+                <source path="solutions/hui-wa-div-floor.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/hui-wa-div-floor.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/junseo.cpp" type="cpp.g++17"/>
+                <binary path="solutions/junseo.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/karuna-ac.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/karuna-ac.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/kyo20111-ac.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/kyo20111-ac.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/m4us_ac.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/m4us_ac.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/m4us_ac_2.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/m4us_ac_2.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/moonlit-AC.py" type="python.3"/>
+                <binary path="solutions/moonlit-AC.pys3" type="pythonx.3"/>
+            </solution>
+            <solution tag="wrong-answer">
+                <source path="solutions/print-0.py" type="python.3"/>
+                <binary path="solutions/print-0.pys3" type="pythonx.3"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/rkaskan506_ac.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/rkaskan506_ac.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/ryute-ac.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/ryute-ac.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/w8385_AC-cpp.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/w8385_AC-cpp.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/w8385_AC-py.py" type="python.3"/>
+                <binary path="solutions/w8385_AC-py.pys3" type="pythonx.3"/>
+            </solution>
+            <solution tag="wrong-answer">
+                <source path="solutions/w8385_WA-py.py" type="python.3"/>
+                <binary path="solutions/w8385_WA-py.pys3" type="pythonx.3"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/whans_ac.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/whans_ac.exe" type="exe.win32"/>
+            </solution>
+        </solutions>
+    </assets>
+    <properties>
+        <property name="tests-wellformed" value="true"/>
+    </properties>
+    <stresses>
+        <stress-count>0</stress-count>
+        <stress-path-pattern>stresses/%03d</stress-path-pattern>
+        <list/>
+    </stresses>
+    <tags>
+        <tag value="arithmetics"/>
+        <tag value="math"/>
+    </tags>
+</problem>

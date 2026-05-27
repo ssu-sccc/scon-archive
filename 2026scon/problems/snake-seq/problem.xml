@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<problem revision="44" short-name="snake-seq" url="https://polygon.codeforces.com/p7DECdb/egod1537/snake-seq">
+    <names>
+        <name language="korean" value="뱀 수열"/>
+    </names>
+    <statements latex-pdf-mode="obsolete">
+        <statement charset="UTF-8" language="korean" mathjax="true" path="statements/korean/problem.tex" type="application/x-tex"/>
+        <statement charset="UTF-8" language="korean" mathjax="true" path="statements/.html/korean/problem.html" type="text/html"/>
+    </statements>
+    <judging cpu-name="Intel(R) Core(TM) i3-8100 CPU @ 3.60GHz" cpu-speed="3600" input-file="" output-file="" run-count="1">
+        <testset name="tests">
+            <time-limit>3000</time-limit>
+            <memory-limit>1073741824</memory-limit>
+            <test-count>40</test-count>
+            <input-path-pattern>tests/%02d</input-path-pattern>
+            <answer-path-pattern>tests/%02d.a</answer-path-pattern>
+            <tests>
+                <test method="manual" sample="true"/>
+                <test method="manual" sample="true"/>
+                <test method="manual" sample="true"/>
+                <test method="manual" sample="true"/>
+                <test cmd="gen_extreme 3000 8" method="generated"/>
+                <test cmd="gen_convex 3000" method="generated"/>
+                <test cmd="gen_line 3000" method="generated"/>
+                <test cmd="gen_concave 3000" method="generated"/>
+                <test cmd="gen_maxcoord 3000 1" method="generated"/>
+                <test cmd="gen_maxcoord 3000 2" method="generated"/>
+                <test cmd="gen_small 1 1" method="generated"/>
+                <test cmd="gen_small 2 1" method="generated"/>
+                <test cmd="gen_samex 3000 1" method="generated"/>
+                <test cmd="gen_samey 3000 1" method="generated"/>
+                <test cmd="gen_grid 3000 1" method="generated"/>
+                <test cmd="gen_random 3000 1000000000 1" method="generated"/>
+                <test cmd="gen_random 3000 1000000000 2" method="generated"/>
+                <test cmd="gen_random 3000 1000000000 3" method="generated"/>
+                <test cmd="gen_horizontal 1" method="generated"/>
+                <test cmd="gen_horizontal 5" method="generated"/>
+                <test cmd="gen_horizontal 3000" method="generated"/>
+                <test cmd="gen_vertical 1" method="generated"/>
+                <test cmd="gen_vertical 5" method="generated"/>
+                <test cmd="gen_vertical 3000" method="generated"/>
+                <test cmd="gen_extreme 3000 16" method="generated"/>
+                <test cmd="gen_extreme 3000 4" method="generated"/>
+                <test cmd="gen_extreme 3000 12" method="generated"/>
+                <test cmd="gen_extreme 3000 32" method="generated"/>
+                <test cmd="gen_noisy 3000 18772" method="generated"/>
+                <test cmd="gen_noisy 3000 87354" method="generated"/>
+                <test cmd="gen_noisy 3000 9" method="generated"/>
+                <test cmd="gen_noisy 3000 53000" method="generated"/>
+                <test cmd="gen_noisy 3000 637612" method="generated"/>
+                <test cmd="gen_noisy 3000 24051" method="generated"/>
+                <test cmd="gen_noisy 3000 53702" method="generated"/>
+                <test cmd="gen_noisy 3000 936999" method="generated"/>
+                <test cmd="gen_noisy 3000 1250920" method="generated"/>
+                <test cmd="gen_kill_n2a 3000 1502" method="generated"/>
+                <test cmd="gen_kill_n2a 3000 76592" method="generated"/>
+                <test cmd="gen_kill_n2a 3000 82954" method="generated"/>
+            </tests>
+        </testset>
+    </judging>
+    <files>
+        <resources>
+            <file path="files/olymp.sty"/>
+            <file path="files/problem.tex"/>
+            <file path="files/statements.ftl"/>
+            <file path="files/testlib.h" type="h.g++"/>
+        </resources>
+        <executables>
+            <executable>
+                <source path="files/gen_anti_atan2.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="files/gen_anti_atan2.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/gen_concave.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="files/gen_concave.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/gen_convex.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="files/gen_convex.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/gen_extreme.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="files/gen_extreme.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/gen_grid.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="files/gen_grid.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/gen_horizontal.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="files/gen_horizontal.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/gen_kill_n2a.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="files/gen_kill_n2a.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/gen_line.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="files/gen_line.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/gen_maxcoord.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="files/gen_maxcoord.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/gen_noisy.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="files/gen_noisy.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/gen_random.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="files/gen_random.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/gen_samex.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="files/gen_samex.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/gen_samey.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="files/gen_samey.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/gen_small.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="files/gen_small.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/gen_vertical.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="files/gen_vertical.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/validator.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="files/validator.exe" type="exe.win32"/>
+            </executable>
+        </executables>
+    </files>
+    <assets>
+        <checker name="std::ncmp.cpp" type="testlib">
+            <source path="files/check.cpp" type="cpp.g++17"/>
+            <binary path="check.exe" type="exe.win32"/>
+            <copy path="check.cpp"/>
+            <testset>
+                <test-count>0</test-count>
+                <input-path-pattern>files/tests/checker-tests/%02d</input-path-pattern>
+                <output-path-pattern>files/tests/checker-tests/%02d.o</output-path-pattern>
+                <answer-path-pattern>files/tests/checker-tests/%02d.a</answer-path-pattern>
+                <tests/>
+            </testset>
+        </checker>
+        <validators>
+            <validator>
+                <source path="files/validator.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="files/validator.exe" type="exe.win32"/>
+                <testset>
+                    <test-count>10</test-count>
+                    <input-path-pattern>files/tests/validator-tests/%02d</input-path-pattern>
+                    <tests>
+                        <test verdict="valid"/>
+                        <test verdict="valid"/>
+                        <test verdict="valid"/>
+                        <test verdict="invalid"/>
+                        <test verdict="invalid"/>
+                        <test verdict="invalid"/>
+                        <test verdict="invalid"/>
+                        <test verdict="invalid"/>
+                        <test verdict="invalid"/>
+                        <test verdict="invalid"/>
+                    </tests>
+                </testset>
+            </validator>
+        </validators>
+        <solutions>
+            <solution tag="accepted">
+                <source path="solutions/dohyon_slow2_cpp.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/dohyon_slow2_cpp.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="time-limit-exceeded-or-accepted">
+                <source path="solutions/dohyon_slow2_java.java" type="java21"/>
+                <binary path="solutions/dohyon_slow2_java.jar" type="jar"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/dohyon_slow_cpp.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/dohyon_slow_cpp.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="time-limit-exceeded-or-accepted">
+                <source path="solutions/dohyon_slow_java.java" type="java21"/>
+                <binary path="solutions/dohyon_slow_java.jar" type="jar"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/eg-java-sol.java" type="java21"/>
+                <binary path="solutions/eg-java-sol.jar" type="jar"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/eg-py-sol.py" type="python.pypy3-64"/>
+                <binary path="solutions/eg-py-sol.pypys3-64" type="pythonx.pypy3-64"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/eg-sol-bs.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/eg-sol-bs.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/eg-sol-n3.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/eg-sol-n3.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/eg-sol-opt0.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/eg-sol-opt0.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/eg-sol-opt1.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/eg-sol-opt1.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/eg-sol-opus.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/eg-sol-opus.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="main">
+                <source path="solutions/eg-sol.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/eg-sol.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="rejected">
+                <source path="solutions/eg-tle-atan.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/eg-tle-atan.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="rejected">
+                <source path="solutions/eg-tle-n3-opt0.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/eg-tle-n3-opt0.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="time-limit-exceeded-or-accepted">
+                <source path="solutions/eg-tle-n3-simd-avx512.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/eg-tle-n3-simd-avx512.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="time-limit-exceeded-or-accepted">
+                <source path="solutions/eg-tle-n3-simd.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/eg-tle-n3-simd.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="time-limit-exceeded-or-accepted">
+                <source path="solutions/eg-tle-n3-unroll.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/eg-tle-n3-unroll.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="time-limit-exceeded-or-accepted">
+                <source path="solutions/eg-tle-n3.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/eg-tle-n3.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="rejected">
+                <source path="solutions/eg-wa-n3-150.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/eg-wa-n3-150.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="rejected">
+                <source path="solutions/eg-wa-n3-both-75.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/eg-wa-n3-both-75.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="rejected">
+                <source path="solutions/eg-wa-origin.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/eg-wa-origin.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="rejected">
+                <source path="solutions/eg-wa-overflow.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/eg-wa-overflow.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="rejected">
+                <source path="solutions/eg-wa-precsion.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/eg-wa-precsion.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="rejected">
+                <source path="solutions/eg-wa-random-150.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/eg-wa-random-150.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="rejected">
+                <source path="solutions/eg-wa-slope.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/eg-wa-slope.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="rejected">
+                <source path="solutions/eg-wa-tp.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/eg-wa-tp.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/hui-double.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/hui-double.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/hui-ld.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/hui-ld.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/hui.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/hui.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/hui2.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/hui2.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/whans_ac.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/whans_ac.exe" type="exe.win32"/>
+            </solution>
+            <solution note="n^2 log n" tag="time-limit-exceeded-or-accepted">
+                <source path="solutions/yclock-cor-gpt-slow-1.py" type="python.pypy3-64"/>
+                <binary path="solutions/yclock-cor-gpt-slow-1.pypys3-64" type="pythonx.pypy3-64"/>
+            </solution>
+            <solution note="faster n^2 log n" tag="time-limit-exceeded-or-accepted">
+                <source path="solutions/yclock-cor-gpt-slow-2.py" type="python.pypy3-64"/>
+                <binary path="solutions/yclock-cor-gpt-slow-2.pypys3-64" type="pythonx.pypy3-64"/>
+            </solution>
+            <solution note="more faster n^2 log n" tag="time-limit-exceeded-or-accepted">
+                <source path="solutions/yclock-cor-gpt-slow-3.py" type="python.pypy3-64"/>
+                <binary path="solutions/yclock-cor-gpt-slow-3.pypys3-64" type="pythonx.pypy3-64"/>
+            </solution>
+        </solutions>
+    </assets>
+    <properties>
+        <property name="tests-wellformed" value="true"/>
+    </properties>
+    <stresses>
+        <stress-count>4</stress-count>
+        <stress-path-pattern>stresses/%03d</stress-path-pattern>
+        <list>
+            <stress index="4" path="stresses/004"/>
+            <stress index="3" path="stresses/003"/>
+            <stress index="2" path="stresses/002"/>
+            <stress index="1" path="stresses/001"/>
+        </list>
+    </stresses>
+    <tags>
+        <tag value="dp"/>
+    </tags>
+</problem>

@@ -1,0 +1,29 @@
+\begin{problem}{A=B⊕C}{standard input}{standard output}{1 second}{256 megabytes}
+
+$a$개의 $1$과 $b$개의 0을 사용해 길이가 $a+b$(단, $a+b$는 3의 배수)인 수열을 만들려고 한다. 아래 조건을 만족하도록 수열 $A_1, A_2, \cdots, A_{a+b}$를 구성하는 경우의 수를 구하시오.
+
+\begin{itemize}
+    \item $1 \le k \le (a+b)/3$인 모든 정수 $k$에 대해 $A_{3k-2} = A_{3k-1} \oplus A_{3k}$
+    \item 즉, $A_1 = A_2 \oplus A_3$, $A_4 = A_5 \oplus A_6$, $\cdots$, $A_{a+b-2} = A_{a+b-1} \oplus A_{a+b}$
+\end{itemize}
+
+$\oplus$는 배타적 논리합(XOR) 연산자이다. 즉, 두 피연산자의 값이 다르면 연산의 결과는 $1$, 같으면 $0$이다.
+
+\InputFile
+첫째 줄에 정수 $a$, $b$가 공백으로 구분되어 주어진다.
+
+($0 \le a, b \le 3000$) ($a + b$는 $3$의 배수임이 보장되며, $3 \le a + b$ 이다.)
+
+\OutputFile
+수열을 구성하는 경우의 수를 출력한다. 단, 답이 매우 커질 수 있으므로 $10^9+7$로 나눈 나머지를 출력한다.
+
+\Examples
+
+\begin{example}
+\exmpfile{example.01}{example.01.a}%
+\exmpfile{example.02}{example.02.a}%
+\exmpfile{example.03}{example.03.a}%
+\end{example}
+
+\end{problem}
+

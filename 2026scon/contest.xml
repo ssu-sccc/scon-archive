@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<contest url="https://polygon.codeforces.com/c/56810">
+    <names>
+        <name language="english" value="2026 SCON"/>
+    </names>
+    <problems>
+        <problem index="a" url="https://polygon.codeforces.com/p2Khago/chleee/where-is-my-icp"/>
+        <problem index="b" url="https://polygon.codeforces.com/p1QauWq/dohyonne/soongsil-station"/>
+        <problem index="c" url="https://polygon.codeforces.com/p8no33Q/chorogchip/cream-first-jam-first"/>
+        <problem index="d" url="https://polygon.codeforces.com/p3geykk/whans_/lexicographical-minimum"/>
+        <problem index="e" url="https://polygon.codeforces.com/p5ds23V/whans_/flip-range"/>
+        <problem index="f" url="https://polygon.codeforces.com/p70qHG6/dohyonne/unique-range-easy"/>
+        <problem index="g" url="https://polygon.codeforces.com/p3PApld/whans_/evaluate"/>
+        <problem index="h" url="https://polygon.codeforces.com/p2HblF9/whans_/make-same"/>
+        <problem index="i" url="https://polygon.codeforces.com/p8t3Y9Y/whans_/god-of-trouble"/>
+        <problem index="j" url="https://polygon.codeforces.com/p7eJuGJ/m4ushold/scon-magic-graph"/>
+        <problem index="k" url="https://polygon.codeforces.com/p9PeC5y/dohyonne/xor-palindrome"/>
+        <problem index="l" url="https://polygon.codeforces.com/p7DECdb/egod1537/snake-seq"/>
+        <problem index="pa" url="https://polygon.codeforces.com/p4dz6KH/whans_/pspoker"/>
+        <problem index="pb" url="https://polygon.codeforces.com/p2hiwXD/whans_/unique-range"/>
+        <problem index="pc" url="https://polygon.codeforces.com/p1gTqjh/whans_/find"/>
+    </problems>
+</contest>

@@ -1,0 +1,19 @@
+길이 $N$인 이진 문자열 $T$가 주어진다.
+
+다음 연산을 원하는 만큼 사용할 수 있다.
+
+\begin{itemize}
+    \item 두 정수 $l, r$ ($1 \le l \le r \le N$)를 선택한다.
+    \item 부분 문자열 $T_l T_{l+1} \cdots T_r$의 모든 문자를 뒤집는다.
+    즉, \texttt{0}은 \texttt{1}로, \texttt{1}은 \texttt{0}으로 바뀐다.
+\end{itemize}
+
+문자열 $T$를 다음 조건을 만족하도록 바꾸고자 한다.
+
+\begin{itemize}
+    \item 모든 $1 \le i < N$에 대해 $T_i \ne T_{i+1}$
+\end{itemize}
+
+즉, 인접한 두 문자가 항상 서로 달라야 한다.
+
+조건을 만족시키기 위해 필요한 연산의 최소 횟수를 구하여라.

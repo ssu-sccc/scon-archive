@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<problem revision="16" short-name="n-way-intersection" url="https://polygon.codeforces.com/p1KsviW/rkaskan506/n-way-intersection">
+    <names>
+        <name language="korean" value="$N$거리 건너기"/>
+    </names>
+    <statements>
+        <statement charset="UTF-8" language="korean" mathjax="true" path="statements/korean/problem.tex" type="application/x-tex"/>
+        <statement charset="UTF-8" language="korean" mathjax="true" path="statements/.html/korean/problem.html" type="text/html"/>
+    </statements>
+    <judging cpu-name="Intel(R) Core(TM) i3-8100 CPU @ 3.60GHz" cpu-speed="3600" input-file="" output-file="" run-count="1">
+        <testset name="tests">
+            <time-limit>1000</time-limit>
+            <memory-limit>268435456</memory-limit>
+            <test-count>33</test-count>
+            <input-path-pattern>tests/%02d</input-path-pattern>
+            <answer-path-pattern>tests/%02d.a</answer-path-pattern>
+            <tests>
+                <test method="manual" sample="true"/>
+                <test method="manual" sample="true"/>
+                <test method="manual"/>
+                <test cmd="gen 10 4 tmp" method="generated"/>
+                <test cmd="gen 3 2" method="generated"/>
+                <test cmd="gen 3 3" method="generated"/>
+                <test cmd="gen-worst 5000 2500" method="generated"/>
+                <test cmd="gen-worst 10000 5000" method="generated"/>
+                <test cmd="gen-worst 100000 2" method="generated"/>
+                <test cmd="gen-worst 100000 50000" method="generated"/>
+                <test cmd="gen-worst 100000 100000" method="generated"/>
+                <test cmd="gen-rnd -N=100000 1" method="generated"/>
+                <test cmd="gen-rnd -N=100000 2" method="generated"/>
+                <test cmd="gen-rnd -N=100000 3" method="generated"/>
+                <test cmd="gen-rnd -N=100000 4" method="generated"/>
+                <test cmd="gen-rnd -N=100000 5" method="generated"/>
+                <test cmd="gen-rnd -N=100000 6" method="generated"/>
+                <test cmd="gen-rnd -N=100000 7" method="generated"/>
+                <test cmd="gen-rnd -N=100000 8" method="generated"/>
+                <test cmd="gen-rnd -N=100000 9" method="generated"/>
+                <test cmd="gen-rnd -N=100000 10" method="generated"/>
+                <test cmd="gen-monotone -N=100000 -M=2 -flag=0" method="generated"/>
+                <test cmd="gen-monotone -N=100000 -M=100000 -flag=0" method="generated"/>
+                <test cmd="gen-monotone -N=100000 -M=50000 -flag=0" method="generated"/>
+                <test cmd="gen-monotone -N=100000 -M=2 -flag=1" method="generated"/>
+                <test cmd="gen-monotone -N=100000 -M=100000 -flag=1" method="generated"/>
+                <test cmd="gen-monotone -N=100000 -M=50000 -flag=1" method="generated"/>
+                <test cmd="gen-monotone -N=100000 -M=2 -flag=2" method="generated"/>
+                <test cmd="gen-monotone -N=100000 -M=100000 -flag=2" method="generated"/>
+                <test cmd="gen-monotone -N=100000 -M=50000 -flag=2" method="generated"/>
+                <test cmd="gen-monotone -N=100000 -M=2 -flag=3" method="generated"/>
+                <test cmd="gen-monotone -N=100000 -M=100000 -flag=3" method="generated"/>
+                <test cmd="gen-monotone -N=100000 -M=50000 -flag=3" method="generated"/>
+            </tests>
+        </testset>
+    </judging>
+    <files>
+        <resources>
+            <file path="files/olymp.sty"/>
+            <file path="files/problem.tex"/>
+            <file path="files/statements.ftl"/>
+            <file path="files/testlib.h" type="h.g++"/>
+        </resources>
+        <executables>
+            <executable>
+                <source path="files/cwccw.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="files/cwccw.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/gen-monotone.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="files/gen-monotone.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/gen-rnd.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="files/gen-rnd.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/gen-worst.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="files/gen-worst.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/gen.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="files/gen.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/validator.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="files/validator.exe" type="exe.win32"/>
+            </executable>
+        </executables>
+    </files>
+    <assets>
+        <checker name="std::wcmp.cpp" type="testlib">
+            <source path="files/check.cpp" type="cpp.g++17"/>
+            <binary path="check.exe" type="exe.win32"/>
+            <copy path="check.cpp"/>
+            <testset>
+                <test-count>5</test-count>
+                <input-path-pattern>files/tests/checker-tests/%02d</input-path-pattern>
+                <output-path-pattern>files/tests/checker-tests/%02d.o</output-path-pattern>
+                <answer-path-pattern>files/tests/checker-tests/%02d.a</answer-path-pattern>
+                <tests>
+                    <test verdict="wrong-answer"/>
+                    <test verdict="wrong-answer"/>
+                    <test verdict="ok"/>
+                    <test verdict="ok"/>
+                    <test verdict="wrong-answer"/>
+                </tests>
+            </testset>
+        </checker>
+        <validators>
+            <validator>
+                <source path="files/validator.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="files/validator.exe" type="exe.win32"/>
+                <testset>
+                    <test-count>1</test-count>
+                    <input-path-pattern>files/tests/validator-tests/%02d</input-path-pattern>
+                    <tests>
+                        <test verdict="valid"/>
+                    </tests>
+                </testset>
+            </validator>
+        </validators>
+        <solutions>
+            <solution tag="time-limit-exceeded">
+                <source path="solutions/cologne-naive-2way.rs" type="rust"/>
+                <binary path="solutions/cologne-naive-2way.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="time-limit-exceeded">
+                <source path="solutions/cologne-naive.rs" type="rust"/>
+                <binary path="solutions/cologne-naive.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/cologne-soln.rs" type="rust"/>
+                <binary path="solutions/cologne-soln.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/dohyon_AC.java" type="java21"/>
+                <binary path="solutions/dohyon_AC.jar" type="jar"/>
+            </solution>
+            <solution tag="wrong-answer">
+                <source path="solutions/hui-index-1.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/hui-index-1.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="wrong-answer">
+                <source path="solutions/hui-index-2.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/hui-index-2.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="wrong-answer">
+                <source path="solutions/hui-index-3.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/hui-index-3.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="wrong-answer">
+                <source path="solutions/hui-index-4.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/hui-index-4.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="wrong-answer">
+                <source path="solutions/hui-index-5.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/hui-index-5.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="wrong-answer">
+                <source path="solutions/hui-index-6.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/hui-index-6.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="wrong-answer">
+                <source path="solutions/hui-index-7.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/hui-index-7.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="wrong-answer">
+                <source path="solutions/hui-index-8.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/hui-index-8.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/hui-ok.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/hui-ok.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="wrong-answer">
+                <source path="solutions/hui-wa-int.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/hui-wa-int.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/junseo.cpp" type="cpp.g++17"/>
+                <binary path="solutions/junseo.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/karuna-ac.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/karuna-ac.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/kyo20111-ac.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/kyo20111-ac.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/m4us_ac.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/m4us_ac.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/moonlit-ac.py" type="python.3"/>
+                <binary path="solutions/moonlit-ac.pys3" type="pythonx.3"/>
+            </solution>
+            <solution tag="main">
+                <source path="solutions/rkaskan506_AC.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/rkaskan506_AC.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="time-limit-exceeded">
+                <source path="solutions/rkaskan506_TL_brute.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/rkaskan506_TL_brute.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/ryute-ac.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/ryute-ac.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/whans_ac.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/whans_ac.exe" type="exe.win32"/>
+            </solution>
+        </solutions>
+    </assets>
+    <properties>
+        <property name="tests-wellformed" value="true"/>
+    </properties>
+    <stresses>
+        <stress-count>0</stress-count>
+        <stress-path-pattern>stresses/%03d</stress-path-pattern>
+        <list/>
+    </stresses>
+    <tags>
+        <tag value="implementation"/>
+    </tags>
+</problem>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<problem revision="13" short-name="lexicographical-minimum" url="https://polygon.codeforces.com/p3geykk/whans_/lexicographical-minimum">
+    <names>
+        <name language="korean" value="사전순 최소 "/>
+    </names>
+    <statements latex-pdf-mode="obsolete">
+        <statement charset="UTF-8" language="korean" mathjax="true" path="statements/korean/problem.tex" type="application/x-tex"/>
+        <statement charset="UTF-8" language="korean" mathjax="true" path="statements/.html/korean/problem.html" type="text/html"/>
+    </statements>
+    <judging cpu-name="Intel(R) Core(TM) i3-8100 CPU @ 3.60GHz" cpu-speed="3600" input-file="" output-file="" run-count="1">
+        <testset name="tests">
+            <time-limit>1000</time-limit>
+            <memory-limit>268435456</memory-limit>
+            <test-count>19</test-count>
+            <input-path-pattern>tests/%02d</input-path-pattern>
+            <answer-path-pattern>tests/%02d.a</answer-path-pattern>
+            <tests>
+                <test method="manual" sample="true"/>
+                <test method="manual" sample="true"/>
+                <test cmd="gen -n=1" method="generated"/>
+                <test cmd="gen -mode=1 -l=1 -r=20 -type=0" method="generated"/>
+                <test cmd="gen -mode=0 -n=20 -type=0" method="generated"/>
+                <test cmd="gen -mode=0 -n=200000 -type=0" method="generated"/>
+                <test cmd="gen -mode=1 -l=100000 -r=200000 -type=0" method="generated"/>
+                <test cmd="gen -mode=1 -l=1 -r=20 -type=1" method="generated"/>
+                <test cmd="gen -mode=0 -n=20 -type=1" method="generated"/>
+                <test cmd="gen -mode=0 -n=200000 -type=1" method="generated"/>
+                <test cmd="gen -mode=1 -l=100000 -r=200000 -type=1" method="generated"/>
+                <test cmd="gen -mode=1 -l=1 -r=20 -type=2" method="generated"/>
+                <test cmd="gen -mode=0 -n=20 -type=2" method="generated"/>
+                <test cmd="gen -mode=0 -n=200000 -type=2" method="generated"/>
+                <test cmd="gen -mode=1 -l=100000 -r=200000 -type=2" method="generated"/>
+                <test cmd="gen -mode=1 -l=1 -r=20 -type=3" method="generated"/>
+                <test cmd="gen -mode=0 -n=20 -type=3" method="generated"/>
+                <test cmd="gen -mode=0 -n=200000 -type=3" method="generated"/>
+                <test cmd="gen -mode=1 -l=100000 -r=200000 -type=3" method="generated"/>
+            </tests>
+        </testset>
+    </judging>
+    <files>
+        <resources>
+            <file path="files/constraints.h" type="h.g++"/>
+            <file path="files/olymp.sty"/>
+            <file path="files/problem.tex"/>
+            <file path="files/statements.ftl"/>
+            <file path="files/testlib.h" type="h.g++"/>
+        </resources>
+        <executables>
+            <executable>
+                <source path="files/gen.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="files/gen.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/val.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="files/val.exe" type="exe.win32"/>
+            </executable>
+        </executables>
+    </files>
+    <assets>
+        <checker name="std::lcmp.cpp" type="testlib">
+            <source path="files/check.cpp" type="cpp.g++17"/>
+            <binary path="check.exe" type="exe.win32"/>
+            <copy path="check.cpp"/>
+            <testset>
+                <test-count>0</test-count>
+                <input-path-pattern>files/tests/checker-tests/%02d</input-path-pattern>
+                <output-path-pattern>files/tests/checker-tests/%02d.o</output-path-pattern>
+                <answer-path-pattern>files/tests/checker-tests/%02d.a</answer-path-pattern>
+                <tests/>
+            </testset>
+        </checker>
+        <validators>
+            <validator>
+                <source path="files/val.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="files/val.exe" type="exe.win32"/>
+                <testset>
+                    <test-count>6</test-count>
+                    <input-path-pattern>files/tests/validator-tests/%02d</input-path-pattern>
+                    <tests>
+                        <test verdict="valid"/>
+                        <test verdict="invalid"/>
+                        <test verdict="valid"/>
+                        <test verdict="invalid"/>
+                        <test verdict="invalid"/>
+                        <test verdict="invalid"/>
+                    </tests>
+                </testset>
+            </validator>
+        </validators>
+        <solutions>
+            <solution tag="accepted">
+                <source path="solutions/chleee_ac_D.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/chleee_ac_D.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/chorogchip.cpp" type="cpp.g++14"/>
+                <binary path="solutions/chorogchip.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/cologne-soln.py" type="python.pypy3-64"/>
+                <binary path="solutions/cologne-soln.pypys3-64" type="pythonx.pypy3-64"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/dohyon_AC.java" type="java21"/>
+                <binary path="solutions/dohyon_AC.jar" type="jar"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/eg.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/eg.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/hui.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/hui.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/m4us_ac.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/m4us_ac.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="main">
+                <source path="solutions/mcs.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/mcs.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/whans_ac.java" type="java21"/>
+                <binary path="solutions/whans_ac.jar" type="jar"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/whans_ac_pypy.py" type="python.pypy3-64"/>
+                <binary path="solutions/whans_ac_pypy.pypys3-64" type="pythonx.pypy3-64"/>
+            </solution>
+            <solution tag="rejected">
+                <source path="solutions/whans_tle.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/whans_tle.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="wrong-answer">
+                <source path="solutions/whans_wa.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/whans_wa.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/yclock-cor.py" type="python.pypy3-64"/>
+                <binary path="solutions/yclock-cor.pypys3-64" type="pythonx.pypy3-64"/>
+            </solution>
+        </solutions>
+    </assets>
+    <properties>
+        <property name="tests-wellformed" value="true"/>
+    </properties>
+    <stresses>
+        <stress-count>1</stress-count>
+        <stress-path-pattern>stresses/%03d</stress-path-pattern>
+        <list>
+            <stress index="1" path="stresses/001"/>
+        </list>
+    </stresses>
+    <tags>
+        <tag value="greedy"/>
+    </tags>
+</problem>

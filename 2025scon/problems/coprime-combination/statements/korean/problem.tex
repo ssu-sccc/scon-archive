@@ -1,0 +1,23 @@
+\begin{problem}{서로소 조합}{standard input}{standard output}{1 second}{1024 megabytes}
+
+서로 다른 $n$개의 원소 중 순서를 구분하지 않고 $r$개를 선택하는 경우의 수 $C(n, r)$은 $C(n, r) = \frac{n!}{r!(n-r)!}$으로 구할 수 있다.
+
+$C(n_1, r_1)$과 $C(n_2, r_2)$이 주어졌을 때, 두 값이 서로소인지 구하는 프로그램을 작성하시오.
+
+\InputFile
+첫째 줄에 테스트 케이스의 수 $T$가 주어진다. $(1 \le T \le 5\,000)$
+
+이후 $T$줄에 걸쳐 네 개의 정수 $n_1, r_1, n_2, r_2$가 공백으로 구분되어 주어진다. $(0 < n_1, n_2 \leq 5000$, $0 \leq r_1 \leq n_1$, $0 \leq r_2 \leq n_2)$
+
+
+\OutputFile
+각 테스트 케이스마다 한 줄씩 $C(n_1, r_1)$과 $C(n_2, r_2)$가 서로소라면 1, 아니면 0을 출력한다.
+
+\Example
+
+\begin{example}
+\exmpfile{example.01}{example.01.a}%
+\end{example}
+
+\end{problem}
+

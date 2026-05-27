@@ -1,0 +1,1 @@
+{"id":"182496205c3e8429333f6350725e4290","index":1,"scriptPattern":"rand_gen","inputFile":"stdin","outputFile":"stdout","memoryLimit":256,"timeLimit":1000,"totalTimeLimit":60000,"solutionNames":["main_solution.cpp","wa_max_cnt.cpp"],"description":"","solutionNamesUid":"","ignoreValidators":false}

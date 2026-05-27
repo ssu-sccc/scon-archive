@@ -1,0 +1,1 @@
+{"id":"a6d3c4094c5ec313dfaa14f61ebc9eae","index":4,"scriptPattern":"gen_extreme 20 1","inputFile":"stdin","outputFile":"stdout","memoryLimit":1024,"timeLimit":2500,"totalTimeLimit":120000,"solutionNames":["eg-sol-opus.cpp","whans_ac.cpp"],"description":"","solutionNamesUid":"","ignoreValidators":false}

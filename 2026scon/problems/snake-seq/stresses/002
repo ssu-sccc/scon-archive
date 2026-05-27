@@ -1,0 +1,1 @@
+{"id":"e721d0c28bfa9b5c9e105e98600524fa","index":2,"scriptPattern":"gen_kill_n2a 200 [1..1000]","inputFile":"stdin","outputFile":"stdout","memoryLimit":1024,"timeLimit":15000,"totalTimeLimit":120000,"solutionNames":["eg-sol-opus.cpp","eg-tle-n3.cpp","eg-sol.cpp"],"description":"","solutionNamesUid":"","ignoreValidators":false}

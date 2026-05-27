@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<problem revision="32" short-name="delicious-scon" url="https://polygon.codeforces.com/p2MtQHb/dohyonne/delicious-scon">
+    <names>
+        <name language="korean" value="맛있는 스콘 만들기"/>
+    </names>
+    <statements>
+        <statement charset="UTF-8" language="korean" mathjax="true" path="statements/korean/problem.tex" type="application/x-tex"/>
+        <statement charset="UTF-8" language="korean" mathjax="true" path="statements/.html/korean/problem.html" type="text/html"/>
+    </statements>
+    <judging cpu-name="Intel(R) Core(TM) i3-8100 CPU @ 3.60GHz" cpu-speed="3600" input-file="" output-file="" run-count="1">
+        <testset name="tests">
+            <time-limit>3000</time-limit>
+            <memory-limit>1073741824</memory-limit>
+            <test-count>37</test-count>
+            <input-path-pattern>tests/%02d</input-path-pattern>
+            <answer-path-pattern>tests/%02d.a</answer-path-pattern>
+            <tests>
+                <test method="manual" sample="true"/>
+                <test description="Added from stress #e2de9edd6c17278995112a91f19d5577. Had script line &quot;gen_delicious_01 3 8 2 4 117920980131d552dbf69c4e87a4a932&quot;" method="manual" sample="true"/>
+                <test cmd="gen_delicious_01 1 1 1 1" method="generated"/>
+                <test cmd="gen_delicious_01 1 10 1 1" method="generated"/>
+                <test cmd="gen_delicious_01 5 10 1 10" method="generated"/>
+                <test cmd="gen_delicious_01 6 23 3 9" method="generated"/>
+                <test cmd="gen_delicious_01 17 1 1 1" method="generated"/>
+                <test cmd="gen_delicious_01 32 64 16 48" method="generated"/>
+                <test cmd="gen_delicious_01 71 25000 19 209" method="generated"/>
+                <test cmd="gen_delicious_01 99 17 8 16" method="generated"/>
+                <test cmd="gen_delicious_01 100 25000 2 100" method="generated"/>
+                <test cmd="gen_delicious_01 113 3 1 3" method="generated"/>
+                <test cmd="gen_delicious_01 119 501 6 6" method="generated"/>
+                <test cmd="gen_delicious_01 124 17 15 15" method="generated"/>
+                <test cmd="gen_delicious_01 200 19 5 15" method="generated"/>
+                <test cmd="gen_delicious_01 200 25000 1 1" method="generated"/>
+                <test cmd="gen_delicious_01 200 25000 1 25000" method="generated"/>
+                <test cmd="gen_delicious_01 200 25000 2 24930" method="generated"/>
+                <test cmd="gen_delicious_01 200 25000 5 23055" method="generated"/>
+                <test cmd="gen_delicious_01 200 25000 35 21035" method="generated"/>
+                <test cmd="gen_delicious_01 200 25000 247 741" method="generated"/>
+                <test cmd="gen_delicious_01 200 25000 353 353" method="generated"/>
+                <test cmd="gen_delicious_k_fixed 200 25000 3 24999 1" method="generated"/>
+                <test cmd="gen_delicious_k_fixed 200 25000 1 1 9" method="generated"/>
+                <test cmd="gen_delicious_k_zigzag 200 25000 2 24996" method="generated"/>
+                <test cmd="gen_delicious_k_zigzag 200 25000 1 1" method="generated"/>
+                <test cmd="gen_delicious_k_increase 200 23000 1 2" method="generated"/>
+                <test cmd="gen_delicious_k_increase 200 25000 1 24998" method="generated"/>
+                <test cmd="gen_delicious_01 200 25000 25000 25000" method="generated"/>
+                <test description="Added from stress #54ed7b01a655bf96287f18beb35b484f. Had script line &quot;gen_delicious_01 200 25000 25000 25000 f8098958c382091d013cd461c56f184c&quot;" method="manual"/>
+                <test method="manual"/>
+                <test cmd="gen_delicious_k_fixed 200 25000 25000 25000 12500" method="generated"/>
+                <test cmd="gen_delicious_k_zigzag 200 25000 24998 24998" method="generated"/>
+                <test cmd="gen_delicious_k_increase 200 25000 25000 25000" method="generated"/>
+                <test description="Added from stress #7af8553cfffd7baca5bda4af56959edd. Had script line &quot;gen_delicious_01 200 25000 42 21462 5741d3e108441b5fc931aff538661128&quot;" method="manual"/>
+                <test method="manual"/>
+                <test method="manual"/>
+            </tests>
+        </testset>
+    </judging>
+    <files>
+        <resources>
+            <file path="files/olymp.sty"/>
+            <file path="files/problem.tex"/>
+            <file path="files/statements.ftl"/>
+            <file path="files/testlib.h" type="h.g++"/>
+        </resources>
+        <executables>
+            <executable>
+                <source path="files/gen_delicious_01.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="files/gen_delicious_01.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/gen_delicious_k_fixed.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="files/gen_delicious_k_fixed.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/gen_delicious_k_increase.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="files/gen_delicious_k_increase.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/gen_delicious_k_zigzag.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="files/gen_delicious_k_zigzag.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/val_delicious.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="files/val_delicious.exe" type="exe.win32"/>
+            </executable>
+        </executables>
+    </files>
+    <assets>
+        <checker name="std::ncmp.cpp" type="testlib">
+            <source path="files/check.cpp" type="cpp.g++17"/>
+            <binary path="check.exe" type="exe.win32"/>
+            <copy path="check.cpp"/>
+            <testset>
+                <test-count>0</test-count>
+                <input-path-pattern>files/tests/checker-tests/%02d</input-path-pattern>
+                <output-path-pattern>files/tests/checker-tests/%02d.o</output-path-pattern>
+                <answer-path-pattern>files/tests/checker-tests/%02d.a</answer-path-pattern>
+                <tests/>
+            </testset>
+        </checker>
+        <validators>
+            <validator>
+                <source path="files/val_delicious.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="files/val_delicious.exe" type="exe.win32"/>
+                <testset>
+                    <test-count>3</test-count>
+                    <input-path-pattern>files/tests/validator-tests/%02d</input-path-pattern>
+                    <tests>
+                        <test verdict="valid"/>
+                        <test verdict="invalid"/>
+                        <test verdict="invalid"/>
+                    </tests>
+                </testset>
+            </validator>
+        </validators>
+        <solutions>
+            <solution tag="accepted">
+                <source path="solutions/cologne-soln-deque.rs" type="rust"/>
+                <binary path="solutions/cologne-soln-deque.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/cologne-soln-doublepq.rs" type="rust"/>
+                <binary path="solutions/cologne-soln-doublepq.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/cologne-soln.rs" type="rust"/>
+                <binary path="solutions/cologne-soln.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="time-limit-exceeded">
+                <source path="solutions/cologne-tle-naivecalc.rs" type="rust"/>
+                <binary path="solutions/cologne-tle-naivecalc.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="time-limit-exceeded">
+                <source path="solutions/cologne-tle-naivecut.rs" type="rust"/>
+                <binary path="solutions/cologne-tle-naivecut.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="wrong-answer">
+                <source path="solutions/cologne-wa-allow-0.rs" type="rust"/>
+                <binary path="solutions/cologne-wa-allow-0.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="main">
+                <source path="solutions/delicious_AC_deque.java" type="java21"/>
+                <binary path="solutions/delicious_AC_deque.jar" type="jar"/>
+            </solution>
+            <solution tag="time-limit-exceeded-or-accepted">
+                <source path="solutions/delicious_AC_map.java" type="java21"/>
+                <binary path="solutions/delicious_AC_map.jar" type="jar"/>
+            </solution>
+            <solution tag="time-limit-exceeded-or-accepted">
+                <source path="solutions/delicious_AC_pq.java" type="java21"/>
+                <binary path="solutions/delicious_AC_pq.jar" type="jar"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/delicious_AC_pq2.java" type="java21"/>
+                <binary path="solutions/delicious_AC_pq2.jar" type="jar"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/delicious_AC_pq_cpp.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/delicious_AC_pq_cpp.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="time-limit-exceeded-or-accepted">
+                <source path="solutions/delicious_AC_pq_py.py" type="python.pypy3-64"/>
+                <binary path="solutions/delicious_AC_pq_py.pypys3-64" type="pythonx.pypy3-64"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/delicious_AC_pq_py2.py" type="python.pypy3-64"/>
+                <binary path="solutions/delicious_AC_pq_py2.pypys3-64" type="pythonx.pypy3-64"/>
+            </solution>
+            <solution tag="time-limit-exceeded-or-accepted">
+                <source path="solutions/delicious_TLE_bruteforce_cpp.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/delicious_TLE_bruteforce_cpp.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="wrong-answer">
+                <source path="solutions/delicious_WA_greedy.java" type="java21"/>
+                <binary path="solutions/delicious_WA_greedy.jar" type="jar"/>
+            </solution>
+            <solution tag="wrong-answer">
+                <source path="solutions/delicious_gptTest_cpp.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/delicious_gptTest_cpp.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/hui-dq.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/hui-dq.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="time-limit-exceeded-or-accepted">
+                <source path="solutions/hui-nm-slow-2.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/hui-nm-slow-2.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/hui-nm-slow.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/hui-nm-slow.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="time-limit-exceeded-or-accepted">
+                <source path="solutions/hui-nm2-pragma.cpp" type="cpp.g++17"/>
+                <binary path="solutions/hui-nm2-pragma.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="time-limit-exceeded-or-accepted">
+                <source path="solutions/hui-nm2-simd-2.cpp" type="cpp.g++17"/>
+                <binary path="solutions/hui-nm2-simd-2.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="time-limit-exceeded-or-accepted">
+                <source path="solutions/hui-nm2-simd.cpp" type="cpp.g++17"/>
+                <binary path="solutions/hui-nm2-simd.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="time-limit-exceeded-or-accepted">
+                <source path="solutions/hui-nm2.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/hui-nm2.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/junseo.cpp" type="cpp.g++17"/>
+                <binary path="solutions/junseo.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/karuna-ac.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/karuna-ac.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/kyo20111-multiset.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/kyo20111-multiset.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="wrong-answer">
+                <source path="solutions/kyo20111-set.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/kyo20111-set.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="rejected">
+                <source path="solutions/llm-cluade-37-sonnet-reasoning.py" type="python.pypy3-64"/>
+                <binary path="solutions/llm-cluade-37-sonnet-reasoning.pypys3-64" type="pythonx.pypy3-64"/>
+            </solution>
+            <solution tag="rejected">
+                <source path="solutions/llm-deepseek-r1-distill.py" type="python.pypy3-64"/>
+                <binary path="solutions/llm-deepseek-r1-distill.pypys3-64" type="pythonx.pypy3-64"/>
+            </solution>
+            <solution tag="wrong-answer">
+                <source path="solutions/llm-gpt-45-preview-1st.py" type="python.pypy3-64"/>
+                <binary path="solutions/llm-gpt-45-preview-1st.pypys3-64" type="pythonx.pypy3-64"/>
+            </solution>
+            <solution tag="rejected">
+                <source path="solutions/llm-gpt-45-preview-2nd.py" type="python.pypy3-64"/>
+                <binary path="solutions/llm-gpt-45-preview-2nd.pypys3-64" type="pythonx.pypy3-64"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/llm-gpt-o3-mini-high.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/llm-gpt-o3-mini-high.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/ryute-ac.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/ryute-ac.exe" type="exe.win32"/>
+            </solution>
+        </solutions>
+    </assets>
+    <properties>
+        <property name="tests-wellformed" value="true"/>
+    </properties>
+    <stresses>
+        <stress-count>11</stress-count>
+        <stress-path-pattern>stresses/%03d</stress-path-pattern>
+        <list>
+            <stress index="11" path="stresses/011"/>
+            <stress index="10" path="stresses/010"/>
+            <stress index="9" path="stresses/009"/>
+            <stress index="8" path="stresses/008"/>
+            <stress index="7" path="stresses/007"/>
+            <stress index="6" path="stresses/006"/>
+            <stress index="5" path="stresses/005"/>
+            <stress index="4" path="stresses/004"/>
+            <stress index="3" path="stresses/003"/>
+            <stress index="2" path="stresses/002"/>
+            <stress index="1" path="stresses/001"/>
+        </list>
+    </stresses>
+    <tags>
+        <tag value="data structures"/>
+        <tag value="dp"/>
+    </tags>
+</problem>

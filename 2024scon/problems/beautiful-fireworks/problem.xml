@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<problem revision="11" short-name="beautiful-fireworks" url="https://polygon.codeforces.com/p15qlHn/nlog/beautiful-fireworks">
+    <names>
+        <name language="korean" value="불꽃놀이의 아름다움"/>
+    </names>
+    <statements>
+        <statement charset="UTF-8" language="korean" mathjax="true" path="statements/korean/problem.tex" type="application/x-tex"/>
+        <statement charset="UTF-8" language="korean" mathjax="true" path="statements/.html/korean/problem.html" type="text/html"/>
+    </statements>
+    <judging cpu-name="Intel(R) Core(TM) i3-8100 CPU @ 3.60GHz" cpu-speed="3600" input-file="" output-file="" run-count="1">
+        <testset name="tests">
+            <time-limit>3000</time-limit>
+            <memory-limit>1073741824</memory-limit>
+            <test-count>39</test-count>
+            <input-path-pattern>tests/%02d</input-path-pattern>
+            <answer-path-pattern>tests/%02d.a</answer-path-pattern>
+            <tests>
+                <test method="manual" sample="true"/>
+                <test cmd="gen_rnd 1" method="generated"/>
+                <test cmd="gen_rnd 2" method="generated"/>
+                <test cmd="gen_rnd 3" method="generated"/>
+                <test cmd="gen_rnd 4" method="generated"/>
+                <test cmd="gen_rnd 5" method="generated"/>
+                <test cmd="gen_rnd 6" method="generated"/>
+                <test cmd="gen_rnd 7" method="generated"/>
+                <test cmd="gen_rnd 8" method="generated"/>
+                <test cmd="gen_rnd 9" method="generated"/>
+                <test cmd="gen_rnd 10" method="generated"/>
+                <test cmd="gen_rnd 11" method="generated"/>
+                <test cmd="gen_rnd 12" method="generated"/>
+                <test cmd="gen_rnd 13" method="generated"/>
+                <test cmd="gen_rnd 14" method="generated"/>
+                <test cmd="gen_rnd 15" method="generated"/>
+                <test cmd="gen_rnd 16" method="generated"/>
+                <test cmd="gen_rnd 17" method="generated"/>
+                <test cmd="gen_rnd 18" method="generated"/>
+                <test cmd="gen_rnd 19" method="generated"/>
+                <test cmd="gen_rnd 20" method="generated"/>
+                <test cmd="gen_rnd -n=200000 1" method="generated"/>
+                <test cmd="gen_rnd -n=200000 2" method="generated"/>
+                <test cmd="gen_rnd -n=200000 3" method="generated"/>
+                <test cmd="gen_rnd -n=200000 4" method="generated"/>
+                <test cmd="gen_rnd -n=200000 5" method="generated"/>
+                <test cmd="gen_rnd -n=200000 6" method="generated"/>
+                <test cmd="gen_rnd -n=200000 7" method="generated"/>
+                <test cmd="gen_rnd -n=200000 8" method="generated"/>
+                <test cmd="gen_rnd -n=200000 9" method="generated"/>
+                <test cmd="gen_rnd -n=200000 10" method="generated"/>
+                <test cmd="gen-line -n=200000 1" method="generated"/>
+                <test cmd="gen-star -n=200000 1" method="generated"/>
+                <test cmd="gen-line -n=200000 2" method="generated"/>
+                <test cmd="gen-star -n=200000 2" method="generated"/>
+                <test cmd="gen-line -n=200000 3" method="generated"/>
+                <test cmd="gen-star -n=200000 3" method="generated"/>
+                <test cmd="gen-max -n=200000" method="generated"/>
+                <test cmd="gen_rnd -n=2" method="generated"/>
+            </tests>
+        </testset>
+    </judging>
+    <files>
+        <resources>
+            <file path="files/biko-91c2094d1d0d34ca641d1fefb85f38.txt"/>
+            <file path="files/olymp.sty"/>
+            <file path="files/problem.tex"/>
+            <file path="files/statements.ftl"/>
+            <file path="files/testlib.h" type="h.g++"/>
+        </resources>
+        <executables>
+            <executable>
+                <source path="files/gen-line.cpp" type="cpp.g++17"/>
+                <binary path="files/gen-line.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/gen-max.cpp" type="cpp.g++17"/>
+                <binary path="files/gen-max.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/gen-star.cpp" type="cpp.g++17"/>
+                <binary path="files/gen-star.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/gen_rnd.cpp" type="cpp.g++17"/>
+                <binary path="files/gen_rnd.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/validator.cpp" type="cpp.g++17"/>
+                <binary path="files/validator.exe" type="exe.win32"/>
+            </executable>
+        </executables>
+    </files>
+    <assets>
+        <checker name="std::ncmp.cpp" type="testlib">
+            <source path="files/check.cpp" type="cpp.g++17"/>
+            <binary path="check.exe" type="exe.win32"/>
+            <copy path="check.cpp"/>
+            <testset>
+                <test-count>1</test-count>
+                <input-path-pattern>files/tests/checker-tests/%02d</input-path-pattern>
+                <output-path-pattern>files/tests/checker-tests/%02d.o</output-path-pattern>
+                <answer-path-pattern>files/tests/checker-tests/%02d.a</answer-path-pattern>
+                <tests>
+                    <test verdict="ok"/>
+                </tests>
+            </testset>
+        </checker>
+        <validators>
+            <validator>
+                <source path="files/validator.cpp" type="cpp.g++17"/>
+                <binary path="files/validator.exe" type="exe.win32"/>
+                <testset>
+                    <test-count>2</test-count>
+                    <input-path-pattern>files/tests/validator-tests/%02d</input-path-pattern>
+                    <tests>
+                        <test verdict="valid"/>
+                        <test verdict="valid"/>
+                    </tests>
+                </testset>
+            </validator>
+        </validators>
+        <solutions>
+            <solution tag="time-limit-exceeded">
+                <source path="solutions/cologne-leafonly.rs" type="rust"/>
+                <binary path="solutions/cologne-leafonly.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/cologne-soln.rs" type="rust"/>
+                <binary path="solutions/cologne-soln.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/hui-cpp.cpp" type="cpp.g++17"/>
+                <binary path="solutions/hui-cpp.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/hui-fastio-py.py" type="python.3"/>
+                <binary path="solutions/hui-fastio-py.pys3" type="pythonx.3"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/hui-fastio-pypy.py" type="python.pypy3"/>
+                <binary path="solutions/hui-fastio-pypy.pypys3" type="pythonx.pypy3"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/hui-java.java" type="java11"/>
+                <binary path="solutions/hui-java.jar" type="jar"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/hui-py.py" type="python.3"/>
+                <binary path="solutions/hui-py.pys3" type="pythonx.3"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/hui-pypy.py" type="python.pypy3"/>
+                <binary path="solutions/hui-pypy.pypys3" type="pythonx.pypy3"/>
+            </solution>
+            <solution tag="main">
+                <source path="solutions/main-sol.cpp" type="cpp.g++17"/>
+                <binary path="solutions/main-sol.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/mingyu-ac.cpp" type="cpp.g++17"/>
+                <binary path="solutions/mingyu-ac.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="time-limit-exceeded">
+                <source path="solutions/naive-sol-tle.cpp" type="cpp.g++17"/>
+                <binary path="solutions/naive-sol-tle.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/yclock-sol.cpp" type="cpp.g++17"/>
+                <binary path="solutions/yclock-sol.exe" type="exe.win32"/>
+            </solution>
+        </solutions>
+    </assets>
+    <properties>
+        <property name="tests-wellformed" value="true"/>
+    </properties>
+    <stresses>
+        <stress-count>0</stress-count>
+        <stress-path-pattern>stresses/%03d</stress-path-pattern>
+        <list/>
+    </stresses>
+    <tags>
+        <tag value="2024scon"/>
+    </tags>
+</problem>

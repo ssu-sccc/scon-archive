@@ -1,0 +1,1 @@
+{"id":"a5d2fd07562384de43f5fb2d21b88698","index":5,"scriptPattern":"gen_delicious_01 1000 5000 2 2","inputFile":"stdin","outputFile":"stdout","memoryLimit":1024,"timeLimit":4000,"totalTimeLimit":120000,"solutionNames":["delicious_AC_deque.java","delicious_WA_greedy.java"],"description":"","solutionNamesUid":"","ignoreValidators":false}

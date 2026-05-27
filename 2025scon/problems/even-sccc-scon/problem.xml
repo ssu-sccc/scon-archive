@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<problem revision="21" short-name="even-sccc-scon" url="https://polygon.codeforces.com/p1vhsgf/whans_/even-sccc-scon">
+    <names>
+        <name language="korean" value="even하게 익은 SCON"/>
+    </names>
+    <statements>
+        <statement charset="UTF-8" language="korean" mathjax="true" path="statements/korean/problem.tex" type="application/x-tex"/>
+        <statement charset="UTF-8" language="korean" mathjax="true" path="statements/.html/korean/problem.html" type="text/html"/>
+    </statements>
+    <judging cpu-name="Intel(R) Core(TM) i3-8100 CPU @ 3.60GHz" cpu-speed="3600" input-file="" output-file="" run-count="1">
+        <testset name="tests">
+            <time-limit>1000</time-limit>
+            <memory-limit>268435456</memory-limit>
+            <test-count>23</test-count>
+            <input-path-pattern>tests/%02d</input-path-pattern>
+            <answer-path-pattern>tests/%02d.a</answer-path-pattern>
+            <tests>
+                <test method="manual" sample="true"/>
+                <test method="manual" sample="true"/>
+                <test cmd="gen 1" method="generated"/>
+                <test cmd="gen 2" method="generated"/>
+                <test cmd="gen 3" method="generated"/>
+                <test cmd="gen 4" method="generated"/>
+                <test cmd="gen 5" method="generated"/>
+                <test cmd="gen 6" method="generated"/>
+                <test cmd="gen 7" method="generated"/>
+                <test cmd="gen 8" method="generated"/>
+                <test cmd="gen 9" method="generated"/>
+                <test cmd="gen 10" method="generated"/>
+                <test cmd="gen 11" method="generated"/>
+                <test cmd="gen 12" method="generated"/>
+                <test cmd="gen 13" method="generated"/>
+                <test cmd="gen 14" method="generated"/>
+                <test cmd="gen 15" method="generated"/>
+                <test cmd="gen 16" method="generated"/>
+                <test cmd="gen 17" method="generated"/>
+                <test cmd="gen 18" method="generated"/>
+                <test cmd="gen 19" method="generated"/>
+                <test cmd="gen 20" method="generated"/>
+                <test cmd="gen -mn 1000000 -mx 1000000" method="generated"/>
+            </tests>
+        </testset>
+    </judging>
+    <files>
+        <resources>
+            <file path="files/olymp.sty"/>
+            <file path="files/problem.tex"/>
+            <file path="files/statements.ftl"/>
+            <file path="files/testlib.h" type="h.g++"/>
+        </resources>
+        <executables>
+            <executable>
+                <source path="files/gen.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="files/gen.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/val.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="files/val.exe" type="exe.win32"/>
+            </executable>
+        </executables>
+    </files>
+    <assets>
+        <checker name="std::ncmp.cpp" type="testlib">
+            <source path="files/check.cpp" type="cpp.g++17"/>
+            <binary path="check.exe" type="exe.win32"/>
+            <copy path="check.cpp"/>
+            <testset>
+                <test-count>2</test-count>
+                <input-path-pattern>files/tests/checker-tests/%02d</input-path-pattern>
+                <output-path-pattern>files/tests/checker-tests/%02d.o</output-path-pattern>
+                <answer-path-pattern>files/tests/checker-tests/%02d.a</answer-path-pattern>
+                <tests>
+                    <test verdict="ok"/>
+                    <test verdict="ok"/>
+                </tests>
+            </testset>
+        </checker>
+        <validators>
+            <validator>
+                <source path="files/val.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="files/val.exe" type="exe.win32"/>
+                <testset>
+                    <test-count>5</test-count>
+                    <input-path-pattern>files/tests/validator-tests/%02d</input-path-pattern>
+                    <tests>
+                        <test verdict="invalid"/>
+                        <test verdict="valid"/>
+                        <test verdict="invalid"/>
+                        <test verdict="invalid"/>
+                        <test verdict="valid"/>
+                    </tests>
+                </testset>
+            </validator>
+        </validators>
+        <solutions>
+            <solution tag="time-limit-exceeded-or-accepted">
+                <source path="solutions/cologne-finalmod.py" type="python.3"/>
+                <binary path="solutions/cologne-finalmod.pys3" type="pythonx.3"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/cologne-soln.py" type="python.3"/>
+                <binary path="solutions/cologne-soln.pys3" type="pythonx.3"/>
+            </solution>
+            <solution tag="wrong-answer">
+                <source path="solutions/cologne-wrongmod.py" type="python.3"/>
+                <binary path="solutions/cologne-wrongmod.pys3" type="pythonx.3"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/dohyon-comb.java" type="java21"/>
+                <binary path="solutions/dohyon-comb.jar" type="jar"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/dohyon-dp-exp.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/dohyon-dp-exp.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/dohyon-dp.java" type="java21"/>
+                <binary path="solutions/dohyon-dp.jar" type="jar"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/hui-dp.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/hui-dp.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/junseo.cpp" type="cpp.g++17"/>
+                <binary path="solutions/junseo.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/karuna-ac.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/karuna-ac.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="time-limit-exceeded-or-accepted">
+                <source path="solutions/kyo20111-N26-2.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/kyo20111-N26-2.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/kyo20111-ac.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/kyo20111-ac.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/m4us_ac.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/m4us_ac.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="main">
+                <source path="solutions/main_solution.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/main_solution.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/moonlit-ac-made-by-gpt.py" type="python.3"/>
+                <binary path="solutions/moonlit-ac-made-by-gpt.pys3" type="pythonx.3"/>
+            </solution>
+            <solution tag="time-limit-exceeded-or-accepted">
+                <source path="solutions/moonlit-tle-made-by-gpt.py" type="python.3"/>
+                <binary path="solutions/moonlit-tle-made-by-gpt.pys3" type="pythonx.3"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/py_solution.py" type="python.3"/>
+                <binary path="solutions/py_solution.pys3" type="pythonx.3"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/rkaskan506_ac.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/rkaskan506_ac.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/ryute-ac.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/ryute-ac.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/w8385_AC.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/w8385_AC.exe" type="exe.win32"/>
+            </solution>
+        </solutions>
+    </assets>
+    <properties>
+        <property name="tests-wellformed" value="true"/>
+    </properties>
+    <stresses>
+        <stress-count>0</stress-count>
+        <stress-path-pattern>stresses/%03d</stress-path-pattern>
+        <list/>
+    </stresses>
+    <tags>
+        <tag value="dp"/>
+    </tags>
+</problem>

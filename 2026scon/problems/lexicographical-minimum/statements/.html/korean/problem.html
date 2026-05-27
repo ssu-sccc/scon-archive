@@ -1,0 +1,27 @@
+<HTML><HEAD><META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <META content="no-cache" http-equiv="pragma">
+    <META content="-1" http-equiv="expires">
+    <META content="text/html;charset=UTF-8" http-equiv="content-type">
+    <LINK href="problem-statement.css" rel="stylesheet" type="text/css">
+    <TITLE>사전순 최소 </TITLE>
+    <SCRIPT type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+          tex2jax: {inlineMath: [['$$$','$$$']], displayMath: [['$$$$$$','$$$$$$']]}
+        });
+        </SCRIPT>
+        <SCRIPT async="" src="https://polygon.codeforces.com/lib/MathJax/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript">
+    </SCRIPT>
+</HEAD><BODY>
+    <DIV class="problem-statement"><DIV class="header"><DIV class="title">사전순 최소 </DIV><DIV class="time-limit"><DIV class="property-title">time limit per test</DIV>1 second</DIV><DIV class="memory-limit"><DIV class="property-title">memory limit per test</DIV>256 megabytes</DIV><DIV class="input-file input-standard"><DIV class="property-title">input</DIV>standard input</DIV><DIV class="output-file output-standard"><DIV class="property-title">output</DIV>standard output</DIV></DIV><DIV class="legend"><P>길이 $$$N$$$인 문자열 $$$T$$$가 주어진다. $$$T$$$는 알파벳 소문자로만 이루어져 있다.</P><P>당신은 다음 연산을 $$$0$$$회 이상 사용할 수 있다.</P><P></P><UL> <LI> 두 정수 $$$l, r$$$를 선택한다. ($$$1 \le l \le r \le |T|$$$) </LI><LI> 만약 부분 문자열 $$$T_l T_{l+1} \dots T_r$$$의 모든 문자가 서로 같다면, 그 구간에서 문자 하나만 남기고 나머지를 모두 제거한다. </LI></UL><P></P><P>즉, $$$T_l = T_{l+1} = \dots = T_r$$$인 경우, 문자열 $$$ T_1 T_2 \dots T_{l-1}\, T_l T_{l+1} \dots T_r\, T_{r+1} \dots T_{|T|} $$$ 를 $$$ T_1 T_2 \dots T_{l-1}\, T_l\, T_{r+1} \dots T_{|T|} $$$ 로 바꿀 수 있다.</P><P>이 연산을 적절히 사용하여 만들 수 있는 모든 문자열 중, 사전 순으로 가장 앞서는 문자열을 구하여라.</P></DIV><P></P><P></P><DIV class="input-specification"><DIV class="section-title">Input</DIV><P></P><P>첫째 줄에 문자열의 길이 $$$N$$$이 주어진다. ($$$1 \le N \le 200\,000$$$)</P><P>둘째 줄에 길이 $$$N$$$인 문자열 $$$T$$$가 주어진다. $$$T$$$는 알파벳 소문자로만 이루어져 있다.</P></DIV><P></P><P></P><DIV class="output-specification"><DIV class="section-title">Output</DIV><P></P><P>가능한 모든 결과 문자열 중 사전 순으로 가장 앞서는 문자열을 출력한다.</P></DIV><P></P><P></P><DIV class="sample-tests"><DIV class="section-title">Examples</DIV><P></P><P></P><DIV class="sample-test"><DIV class="input"><DIV class="title">Input</DIV><PRE class="content" data-content="5
+aabba
+">
+<DIV class="test-example-line test-example-line-even test-example-line-0">5</DIV><DIV class="test-example-line test-example-line-even test-example-line-0">aabba</DIV></PRE></DIV><DIV class="output"><DIV class="title">Output</DIV><PRE class="content">
+aaba
+</PRE></DIV><DIV class="input"><DIV class="title">Input</DIV><PRE class="content" data-content="5
+bbacc
+">
+<DIV class="test-example-line test-example-line-even test-example-line-0">5</DIV><DIV class="test-example-line test-example-line-even test-example-line-0">bbacc</DIV></PRE></DIV><DIV class="output"><DIV class="title">Output</DIV><PRE class="content">
+bac
+</PRE></DIV></DIV></DIV></DIV><P></P><P>  </P>
+
+</BODY></HTML>

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<problem revision="20" short-name="where-is-my-icp" url="https://polygon.codeforces.com/p2Khago/chleee/where-is-my-icp">
+    <names>
+        <name language="korean" value="Where is my ICP?"/>
+    </names>
+    <statements latex-pdf-mode="obsolete">
+        <statement charset="UTF-8" language="korean" mathjax="true" path="statements/korean/problem.tex" type="application/x-tex"/>
+        <statement charset="UTF-8" language="korean" mathjax="true" path="statements/.html/korean/problem.html" type="text/html"/>
+    </statements>
+    <tutorials latex-pdf-mode="obsolete">
+        <tutorial charset="UTF-8" language="korean" mathjax="true" path="statements/korean/tutorial.tex" type="application/x-tex"/>
+    </tutorials>
+    <judging cpu-name="Intel(R) Core(TM) i3-8100 CPU @ 3.60GHz" cpu-speed="3600" input-file="" output-file="" run-count="1">
+        <testset name="tests">
+            <time-limit>1000</time-limit>
+            <memory-limit>268435456</memory-limit>
+            <test-count>43</test-count>
+            <input-path-pattern>tests/%02d</input-path-pattern>
+            <answer-path-pattern>tests/%02d.a</answer-path-pattern>
+            <tests>
+                <test description="S 문자열인 &quot;CPC&quot;에는 I하나만 있으면 &quot;ICPC&quot;를 만들 수 있지만, &#13;&#10;T 문자열인 &quot;ABC&quot;에는 I가 없으므로 &quot;m4us sad&quot;를 출력한다." method="manual" sample="true"/>
+                <test description="S 문자열인 &quot;IC&quot;에는 'P', 'C'만 없는 상태고,&#13;&#10;T 문자열인 &quot;CPISTOOHARD&quot;에는 'P', 'C' 각각 1개 이상 존재한다.&#13;&#10;따라서 &quot;ICPC&quot; 문자열을 만들 수 있기 때문에 &quot;m4us happy&quot;를 출력한다." method="manual" sample="true"/>
+                <test cmd="gen 1 3" method="generated"/>
+                <test cmd="gen 1 4" method="generated"/>
+                <test cmd="gen 1 5" method="generated"/>
+                <test cmd="gen 1 6" method="generated"/>
+                <test cmd="gen 1 7" method="generated"/>
+                <test cmd="gen 1 8" method="generated"/>
+                <test cmd="gen 1 9" method="generated"/>
+                <test cmd="gen 1 10" method="generated"/>
+                <test cmd="gen 2 11" method="generated"/>
+                <test cmd="gen 2 12" method="generated"/>
+                <test cmd="gen 2 13" method="generated"/>
+                <test cmd="gen 2 14" method="generated"/>
+                <test cmd="gen 2 15" method="generated"/>
+                <test cmd="gen 2 16" method="generated"/>
+                <test cmd="gen 2 17" method="generated"/>
+                <test cmd="gen 2 18" method="generated"/>
+                <test cmd="gen 2 19" method="generated"/>
+                <test cmd="gen 2 20" method="generated"/>
+                <test cmd="gen 3 21" method="generated"/>
+                <test cmd="gen 3 22" method="generated"/>
+                <test cmd="gen 3 23" method="generated"/>
+                <test cmd="gen 3 24" method="generated"/>
+                <test cmd="gen 3 25" method="generated"/>
+                <test cmd="gen 3 26" method="generated"/>
+                <test cmd="gen 3 27" method="generated"/>
+                <test cmd="gen 3 28" method="generated"/>
+                <test cmd="gen 3 29" method="generated"/>
+                <test cmd="gen 3 30" method="generated"/>
+                <test cmd="gen 4 31" method="generated"/>
+                <test cmd="gen 4 32" method="generated"/>
+                <test cmd="gen 4 33" method="generated"/>
+                <test cmd="gen 4 34" method="generated"/>
+                <test cmd="gen 4 35" method="generated"/>
+                <test cmd="gen 4 36" method="generated"/>
+                <test cmd="gen 4 37" method="generated"/>
+                <test cmd="gen 4 38" method="generated"/>
+                <test cmd="gen 4 39" method="generated"/>
+                <test cmd="gen 4 40" method="generated"/>
+                <test method="manual"/>
+                <test method="manual"/>
+                <test method="manual"/>
+            </tests>
+        </testset>
+    </judging>
+    <files>
+        <resources>
+            <file path="files/olymp.sty"/>
+            <file path="files/problem.tex"/>
+            <file path="files/statements.ftl"/>
+            <file path="files/testlib.h" type="h.g++"/>
+            <file path="files/tutorial.tex"/>
+        </resources>
+        <executables>
+            <executable>
+                <source path="files/gen.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="files/gen.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/validator.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="files/validator.exe" type="exe.win32"/>
+            </executable>
+        </executables>
+    </files>
+    <assets>
+        <checker name="std::wcmp.cpp" type="testlib">
+            <source path="files/check.cpp" type="cpp.g++17"/>
+            <binary path="check.exe" type="exe.win32"/>
+            <copy path="check.cpp"/>
+            <testset>
+                <test-count>0</test-count>
+                <input-path-pattern>files/tests/checker-tests/%02d</input-path-pattern>
+                <output-path-pattern>files/tests/checker-tests/%02d.o</output-path-pattern>
+                <answer-path-pattern>files/tests/checker-tests/%02d.a</answer-path-pattern>
+                <tests/>
+            </testset>
+        </checker>
+        <validators>
+            <validator>
+                <source path="files/validator.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="files/validator.exe" type="exe.win32"/>
+                <testset>
+                    <test-count>10</test-count>
+                    <input-path-pattern>files/tests/validator-tests/%02d</input-path-pattern>
+                    <tests>
+                        <test verdict="valid"/>
+                        <test verdict="invalid"/>
+                        <test verdict="invalid"/>
+                        <test verdict="invalid"/>
+                        <test verdict="invalid"/>
+                        <test verdict="invalid"/>
+                        <test verdict="valid"/>
+                        <test verdict="invalid"/>
+                        <test verdict="invalid"/>
+                        <test verdict="invalid"/>
+                    </tests>
+                </testset>
+            </validator>
+        </validators>
+        <solutions>
+            <solution tag="accepted">
+                <source path="solutions/chleee.java" type="java21"/>
+                <binary path="solutions/chleee.jar" type="jar"/>
+            </solution>
+            <solution tag="main">
+                <source path="solutions/chleee_ac.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/chleee_ac.pys3" type="pythonx.3"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/chleee_ac.py" type="python.3"/>
+                <binary path="solutions/chleee_ac.pys3" type="pythonx.3"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/chorogcip.cpp" type="cpp.g++14"/>
+                <binary path="solutions/chorogcip.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="wrong-answer">
+                <source path="solutions/cologne-simulate-overflow-s.py" type="python.pypy3-64"/>
+                <binary path="solutions/cologne-simulate-overflow-s.pypys3-64" type="pythonx.pypy3-64"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/cologne-soln.py" type="python.pypy3-64"/>
+                <binary path="solutions/cologne-soln.pypys3-64" type="pythonx.pypy3-64"/>
+            </solution>
+            <solution tag="wrong-answer">
+                <source path="solutions/cologne-wa.py" type="python.pypy3-64"/>
+                <binary path="solutions/cologne-wa.pypys3-64" type="pythonx.pypy3-64"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/dohyon_AC.java" type="java21"/>
+                <binary path="solutions/dohyon_AC.jar" type="jar"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/eg.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/eg.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/hui.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/hui.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/m4us_ac.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/m4us_ac.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="wrong-answer">
+                <source path="solutions/whans_ac.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/whans_ac.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/yclock-cor.py" type="python.pypy3-64"/>
+                <binary path="solutions/yclock-cor.pypys3-64" type="pythonx.pypy3-64"/>
+            </solution>
+        </solutions>
+    </assets>
+    <properties>
+        <property name="tests-wellformed" value="true"/>
+    </properties>
+    <stresses>
+        <stress-count>2</stress-count>
+        <stress-path-pattern>stresses/%03d</stress-path-pattern>
+        <list>
+            <stress index="2" path="stresses/002"/>
+            <stress index="1" path="stresses/001"/>
+        </list>
+    </stresses>
+    <tags>
+        <tag value="implementation"/>
+    </tags>
+</problem>

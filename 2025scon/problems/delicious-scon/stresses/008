@@ -1,0 +1,1 @@
+{"id":"54ed7b01a655bf96287f18beb35b484f","index":8,"scriptPattern":"gen_delicious_01 200 25000 25000 25000","inputFile":"stdin","outputFile":"stdout","memoryLimit":1024,"timeLimit":3000,"totalTimeLimit":120000,"solutionNames":["delicious_AC_deque.java","hui-nm-slow-2.cpp"],"description":"","solutionNamesUid":"","ignoreValidators":false}

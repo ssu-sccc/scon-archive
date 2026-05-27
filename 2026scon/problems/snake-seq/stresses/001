@@ -1,0 +1,1 @@
+{"id":"2cdbe2a3f037385699c185e21203264d","index":1,"scriptPattern":"gen_noisy 200 [1..1000]","inputFile":"stdin","outputFile":"stdout","memoryLimit":1024,"timeLimit":15000,"totalTimeLimit":120000,"solutionNames":["eg-sol-opus.cpp","eg-tle-n3.cpp","eg-sol.cpp"],"description":"","solutionNamesUid":"","ignoreValidators":false}

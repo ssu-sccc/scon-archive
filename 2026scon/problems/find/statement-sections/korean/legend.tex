@@ -1,0 +1,23 @@
+이 문제는 인터랙티브 문제이다.
+
+분탕의 신 문성이는 SCCC 부원들이 SCON을 편하게 먹는 모습을 보고 싶지 않았다.
+그래서 가지고 있던 \texttt{SCON}을 \texttt{SC}와 \texttt{ON}으로 나눈 뒤, 어딘가에 숨겨 두었다.
+
+$1$ 이상 $n$ 이하의 정수 위치들 중 서로 다른 두 위치에 각각 \texttt{SC}와 \texttt{ON}이 하나씩 숨겨져 있다.
+당신의 목표는 이 두 위치를 모두 찾아 \texttt{SCON}을 다시 완성하는 것이다.
+
+당신은 최대 $25$번까지 질의할 수 있다.
+
+한 번의 질의에서는 서로 다른 $k$개의 위치
+$i_1, i_2, \dots, i_k$를 골라 다음 형식으로 출력한다.
+\begin{center}
+\texttt{? } $k$ $i_1$ $i_2$ \dots $i_k$
+\end{center}
+
+그러면 인터랙터는 다음과 같이 응답한다.
+\begin{itemize}
+\item \texttt{1}: 질의한 위치들 중 적어도 하나에 \texttt{SC} 또는 \texttt{ON}이 숨겨져 있는 경우
+\item \texttt{0}: 질의한 모든 위치에 아무것도 숨겨져 있지 않은 경우
+\end{itemize}
+
+최대 $25$번의 질의 안에 \texttt{SC}와 \texttt{ON}이 숨겨진 두 위치를 모두 찾아 출력하라.

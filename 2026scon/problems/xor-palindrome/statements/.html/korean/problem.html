@@ -1,0 +1,36 @@
+<HTML><HEAD><META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <META content="no-cache" http-equiv="pragma">
+    <META content="-1" http-equiv="expires">
+    <META content="text/html;charset=UTF-8" http-equiv="content-type">
+    <LINK href="problem-statement.css" rel="stylesheet" type="text/css">
+    <TITLE>XOR 팰린드롬</TITLE>
+    <SCRIPT type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+          tex2jax: {inlineMath: [['$$$','$$$']], displayMath: [['$$$$$$','$$$$$$']]}
+        });
+        </SCRIPT>
+        <SCRIPT async="" src="https://polygon.codeforces.com/lib/MathJax/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript">
+    </SCRIPT>
+</HEAD><BODY>
+    <DIV class="problem-statement"><DIV class="header"><DIV class="title">XOR 팰린드롬</DIV><DIV class="time-limit"><DIV class="property-title">time limit per test</DIV>2 seconds</DIV><DIV class="memory-limit"><DIV class="property-title">memory limit per test</DIV>1024 megabytes</DIV><DIV class="input-file input-standard"><DIV class="property-title">input</DIV>standard input</DIV><DIV class="output-file output-standard"><DIV class="property-title">output</DIV>standard output</DIV></DIV><DIV class="legend"><P>길이가 $$$M(M \le 20)$$$인 이진 문자열 $$$N(N \le 50\, 000)$$$개가 주어진다.</P><P>주어진 문자열 중 1개 이상을 선택하여, 선택한 모든 문자열을 비트별 배타적 논리합(bitwise XOR)한 결과 문자열이 팰린드롬이 되는 경우의 수를 구하여라.</P><P>단, 문자열을 선택하는 순서는 고려하지 않는다. 즉, 고르는 순서만 다르고 선택된 문자열의 구성이 같은 경우는 한 번만 센다. 또한, 입력으로 같은 이진 문자열이 여러 번 주어지더라도, 이들은 서로 구별되는 다른 문자열로 취급한다.</P><P>배타적 논리합(bitwise XOR) 또는 팰린드롬에 대한 설명은 하단의 노트를 참고하라.</P></DIV><P></P><P></P><DIV class="input-specification"><DIV class="section-title">Input</DIV><P></P><P>첫째 줄에 정수 $$$N$$$과 $$$M$$$이 공백으로 구분되어 주어진다.</P><P>이후 $$$N$$$개의 줄에 걸쳐 길이가 $$$M$$$인 이진 문자열이 주어진다.</P></DIV><P></P><P></P><DIV class="output-specification"><DIV class="section-title">Output</DIV><P></P><P>첫째 줄에 조건을 만족하도록 문자열을 선택하는 경우의 수를 출력한다. 단, 답이 매우 커질 수 있으므로 $$$1\, 000\, 000\, 007(=10^9+7)$$$로 나눈 나머지를 출력한다.</P></DIV><P></P><P></P><DIV class="sample-tests"><DIV class="section-title">Examples</DIV><P></P><P></P><DIV class="sample-test"><DIV class="input"><DIV class="title">Input</DIV><PRE class="content" data-content="5 4
+1100
+0011
+1010
+0101
+1110
+">
+<DIV class="test-example-line test-example-line-even test-example-line-0">5 4</DIV><DIV class="test-example-line test-example-line-even test-example-line-0">1100</DIV><DIV class="test-example-line test-example-line-even test-example-line-0">0011</DIV><DIV class="test-example-line test-example-line-even test-example-line-0">1010</DIV><DIV class="test-example-line test-example-line-even test-example-line-0">0101</DIV><DIV class="test-example-line test-example-line-even test-example-line-0">1110</DIV></PRE></DIV><DIV class="output"><DIV class="title">Output</DIV><PRE class="content">
+7
+</PRE></DIV><DIV class="input"><DIV class="title">Input</DIV><PRE class="content" data-content="6 5
+11010
+00000
+10101
+00101
+10000
+11111
+">
+<DIV class="test-example-line test-example-line-even test-example-line-0">6 5</DIV><DIV class="test-example-line test-example-line-even test-example-line-0">11010</DIV><DIV class="test-example-line test-example-line-even test-example-line-0">00000</DIV><DIV class="test-example-line test-example-line-even test-example-line-0">10101</DIV><DIV class="test-example-line test-example-line-even test-example-line-0">00101</DIV><DIV class="test-example-line test-example-line-even test-example-line-0">10000</DIV><DIV class="test-example-line test-example-line-even test-example-line-0">11111</DIV></PRE></DIV><DIV class="output"><DIV class="title">Output</DIV><PRE class="content">
+31
+</PRE></DIV></DIV></DIV><P></P><P></P><DIV class="note"><DIV class="section-title">Note</DIV><P></P><P>두 이진 문자열 $$$A, B$$$를 비트별 배타적 논리합(bitwise XOR)한 값 $$$A \oplus B$$$는 다음과 같이 정의된다. $$$A$$$의 $$$i$$$번째 자리 문자와 $$$B$$$의 $$$i$$$번째 자리 문자가 서로 다르면 $$$A \oplus B$$$의 $$$i$$$번째 자리 문자가 $$$1$$$이고, 서로 같으면 $$$A \oplus B$$$의 $$$i$$$번째 자리 문자는 $$$0$$$이다. 예를 들어 $$$A=\text{1100}$$$, $$$B=\text{1010}$$$이므로 $$$A \oplus B = \text{1100} \oplus \text{1010} = \text{0110}$$$으로 계산된다. $$$k$$$개의 이진 문자열 $$$S_1, S_2, \cdots, S_k$$$를 비트별 배타적 논리합한 결과는 $$$(\dots((S_1 \oplus S_2) \oplus S_3) \oplus \dots) \oplus S_k$$$로 정의된다. 이 연산의 결과는 $$$S_1, S_2, \cdots, S_k$$$의 순서를 바꾸더라도 변하지 않음을 증명할 수 있다.</P><P>팰린드롬이란, 앞에서부터 읽으나 뒤에서부터 읽으나 같은 문자열을 말한다. 예를 들어, <SPAN class="tex-font-style-tt">010</SPAN>, <SPAN class="tex-font-style-tt">0110</SPAN> 등은 팰린드롬이며 <SPAN class="tex-font-style-tt">011</SPAN>, <SPAN class="tex-font-style-tt">1011</SPAN> 등은 팰린드롬이 아니다.</P></DIV></DIV><P></P><P>  </P>
+
+</BODY></HTML>

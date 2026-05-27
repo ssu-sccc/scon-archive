@@ -1,0 +1,1 @@
+{"id":"8e4b7ae37551869f6245c91aaa344ab7","index":1,"scriptPattern":"gen_station","inputFile":"stdin","outputFile":"stdout","memoryLimit":1024,"timeLimit":1000,"totalTimeLimit":120000,"solutionNames":["dohyon_AC.java","dohyon_WA_greedy.cpp"],"description":"","solutionNamesUid":"","ignoreValidators":false}

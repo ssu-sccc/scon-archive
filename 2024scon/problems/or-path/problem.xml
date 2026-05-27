@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<problem revision="14" short-name="or-path" url="https://polygon.codeforces.com/p1ix8PV/kyo20111/or-path">
+    <names>
+        <name language="korean" value="Traveling SCCC President 2"/>
+    </names>
+    <statements latex-pdf-mode="obsolete">
+        <statement charset="UTF-8" language="korean" mathjax="true" path="statements/korean/problem.tex" type="application/x-tex"/>
+        <statement charset="UTF-8" language="korean" mathjax="true" path="statements/.html/korean/problem.html" type="text/html"/>
+        <statement language="korean" path="statements/.pdf/korean/problem.pdf" type="application/pdf"/>
+    </statements>
+    <judging cpu-name="Intel(R) Core(TM) i3-8100 CPU @ 3.60GHz" cpu-speed="3600" input-file="" output-file="" run-count="1">
+        <testset name="tests">
+            <time-limit>3000</time-limit>
+            <memory-limit>268435456</memory-limit>
+            <test-count>37</test-count>
+            <input-path-pattern>tests/%02d</input-path-pattern>
+            <answer-path-pattern>tests/%02d.a</answer-path-pattern>
+            <tests>
+                <test method="manual" sample="true"/>
+                <test method="manual" sample="true"/>
+                <test cmd="min_gen" method="generated"/>
+                <test cmd="max_gen" method="generated"/>
+                <test cmd="max_gen2" method="generated"/>
+                <test cmd="all_possible" method="generated"/>
+                <test cmd="kill_dijkstra" method="generated"/>
+                <test cmd="kill_dijkstra2 -N=150000" method="generated"/>
+                <test cmd="kill_dijkstra3" method="generated"/>
+                <test cmd="rand_gen -N=2" method="generated"/>
+                <test cmd="rand_gen -N=5" method="generated"/>
+                <test cmd="rand_gen -N=10" method="generated"/>
+                <test cmd="rand_gen -N=100" method="generated"/>
+                <test cmd="rand_gen -N=1000" method="generated"/>
+                <test cmd="rand_gen -N=10000" method="generated"/>
+                <test cmd="rand_gen -N=100000" method="generated"/>
+                <test cmd="rand_gen -N=150000" method="generated"/>
+                <test cmd="rand_gen -N=200000" method="generated"/>
+                <test cmd="rand_gen -N=299999" method="generated"/>
+                <test cmd="rand_gen -N=300000" method="generated"/>
+                <test cmd="rand_gen2 -N=10000" method="generated"/>
+                <test cmd="rand_gen2 -N=100000" method="generated"/>
+                <test cmd="rand_gen2 -N=150000" method="generated"/>
+                <test cmd="rand_gen2 -N=200000" method="generated"/>
+                <test cmd="rand_gen2 -N=300000" method="generated"/>
+                <test cmd="gen-line -n=300000 -type=0" method="generated"/>
+                <test cmd="gen-line -n=300000 -type=1" method="generated"/>
+                <test cmd="gen-line -n=300000 -type=2" method="generated"/>
+                <test cmd="gen-line -n=300000 -type=3" method="generated"/>
+                <test cmd="gen-star -n=300000 -type=0" method="generated"/>
+                <test cmd="gen-star -n=300000 -type=1" method="generated"/>
+                <test cmd="gen-star -n=300000 -type=2" method="generated"/>
+                <test cmd="gen-star -n=300000 -type=3" method="generated"/>
+                <test cmd="gen-star -n=300000 -type=4" method="generated"/>
+                <test cmd="gen-star -n=300000 -type=5" method="generated"/>
+                <test cmd="gen-star -n=300000 -type=6" method="generated"/>
+                <test cmd="gen-star -n=300000 -type=7" method="generated"/>
+            </tests>
+        </testset>
+    </judging>
+    <files>
+        <resources>
+            <file path="files/olymp.sty"/>
+            <file path="files/problem.tex"/>
+            <file path="files/statements.ftl"/>
+            <file path="files/testlib.h" type="h.g++"/>
+        </resources>
+        <executables>
+            <executable>
+                <source path="files/all_possible.cpp" type="cpp.g++17"/>
+                <binary path="files/all_possible.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/gen-line.cpp" type="cpp.g++17"/>
+                <binary path="files/gen-line.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/gen-star.cpp" type="cpp.g++17"/>
+                <binary path="files/gen-star.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/kill_dijkstra.cpp" type="cpp.g++17"/>
+                <binary path="files/kill_dijkstra.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/kill_dijkstra2.cpp" type="cpp.g++17"/>
+                <binary path="files/kill_dijkstra2.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/kill_dijkstra3.cpp" type="cpp.g++17"/>
+                <binary path="files/kill_dijkstra3.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/max_gen.cpp" type="cpp.g++17"/>
+                <binary path="files/max_gen.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/max_gen2.cpp" type="cpp.g++17"/>
+                <binary path="files/max_gen2.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/min_gen.cpp" type="cpp.g++17"/>
+                <binary path="files/min_gen.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/rand_gen.cpp" type="cpp.g++17"/>
+                <binary path="files/rand_gen.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/rand_gen2.cpp" type="cpp.g++17"/>
+                <binary path="files/rand_gen2.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/validator.cpp" type="cpp.g++17"/>
+                <binary path="files/validator.exe" type="exe.win32"/>
+            </executable>
+        </executables>
+    </files>
+    <assets>
+        <checker name="std::ncmp.cpp" type="testlib">
+            <source path="files/check.cpp" type="cpp.g++17"/>
+            <binary path="check.exe" type="exe.win32"/>
+            <copy path="check.cpp"/>
+            <testset>
+                <test-count>2</test-count>
+                <input-path-pattern>files/tests/checker-tests/%02d</input-path-pattern>
+                <output-path-pattern>files/tests/checker-tests/%02d.o</output-path-pattern>
+                <answer-path-pattern>files/tests/checker-tests/%02d.a</answer-path-pattern>
+                <tests>
+                    <test verdict="ok"/>
+                    <test verdict="ok"/>
+                </tests>
+            </testset>
+        </checker>
+        <validators>
+            <validator>
+                <source path="files/validator.cpp" type="cpp.g++17"/>
+                <binary path="files/validator.exe" type="exe.win32"/>
+                <testset>
+                    <test-count>3</test-count>
+                    <input-path-pattern>files/tests/validator-tests/%02d</input-path-pattern>
+                    <tests>
+                        <test verdict="invalid"/>
+                        <test verdict="valid"/>
+                        <test verdict="valid"/>
+                    </tests>
+                </testset>
+            </validator>
+        </validators>
+        <solutions>
+            <solution tag="time-limit-exceeded">
+                <source path="solutions/cologne-naive-ufd.rs" type="rust"/>
+                <binary path="solutions/cologne-naive-ufd.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/cologne-soln.rs" type="rust"/>
+                <binary path="solutions/cologne-soln.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="wrong-answer">
+                <source path="solutions/dijkstra-reverse.cpp" type="cpp.g++17"/>
+                <binary path="solutions/dijkstra-reverse.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="wrong-answer">
+                <source path="solutions/dijkstra.cpp" type="cpp.g++17"/>
+                <binary path="solutions/dijkstra.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/hui-bfs-cpp.cpp" type="cpp.g++17"/>
+                <binary path="solutions/hui-bfs-cpp.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="time-limit-exceeded-or-accepted">
+                <source path="solutions/hui-bfs-fastio-py.py" type="python.3"/>
+                <binary path="solutions/hui-bfs-fastio-py.pys3" type="pythonx.3"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/hui-bfs-fastio-pypy.py" type="python.pypy3"/>
+                <binary path="solutions/hui-bfs-fastio-pypy.pypys3" type="pythonx.pypy3"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/hui-bfs-java.java" type="java11"/>
+                <binary path="solutions/hui-bfs-java.jar" type="jar"/>
+            </solution>
+            <solution tag="time-limit-exceeded-or-accepted">
+                <source path="solutions/hui-bfs-py.py" type="python.3"/>
+                <binary path="solutions/hui-bfs-py.pys3" type="pythonx.3"/>
+            </solution>
+            <solution tag="time-limit-exceeded-or-accepted">
+                <source path="solutions/hui-bfs-pypy.py" type="python.pypy3"/>
+                <binary path="solutions/hui-bfs-pypy.pypys3" type="pythonx.pypy3"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/hui-dfs-cpp.cpp" type="cpp.g++17"/>
+                <binary path="solutions/hui-dfs-cpp.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/hui-uf-cpp.cpp" type="cpp.g++17"/>
+                <binary path="solutions/hui-uf-cpp.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="rejected">
+                <source path="solutions/hui-uf-tle-uv.cpp" type="cpp.g++17"/>
+                <binary path="solutions/hui-uf-tle-uv.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="rejected">
+                <source path="solutions/hui-uf-tle-vu.cpp" type="cpp.g++17"/>
+                <binary path="solutions/hui-uf-tle-vu.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/log2_solution.cpp" type="cpp.g++17"/>
+                <binary path="solutions/log2_solution.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="main">
+                <source path="solutions/mcs.cpp" type="cpp.g++17"/>
+                <binary path="solutions/mcs.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/mingyu-ac.cpp" type="cpp.g++17"/>
+                <binary path="solutions/mingyu-ac.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="rejected">
+                <source path="solutions/naive.cpp" type="cpp.g++17"/>
+                <binary path="solutions/naive.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="time-limit-exceeded-or-accepted">
+                <source path="solutions/no_uf_opt.cpp" type="cpp.g++17"/>
+                <binary path="solutions/no_uf_opt.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="time-limit-exceeded-or-accepted">
+                <source path="solutions/no_uf_opt2.cpp" type="cpp.g++17"/>
+                <binary path="solutions/no_uf_opt2.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/yclock-sol.cpp" type="cpp.g++17"/>
+                <binary path="solutions/yclock-sol.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="time-limit-exceeded-or-accepted">
+                <source path="solutions/yclock-tle-1.cpp" type="cpp.g++17"/>
+                <binary path="solutions/yclock-tle-1.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="time-limit-exceeded-or-accepted">
+                <source path="solutions/yclock-tle-2.cpp" type="cpp.g++17"/>
+                <binary path="solutions/yclock-tle-2.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="rejected">
+                <source path="solutions/yclock-wa-1.cpp" type="cpp.g++17"/>
+                <binary path="solutions/yclock-wa-1.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="rejected">
+                <source path="solutions/yclock-wa-2.cpp" type="cpp.g++17"/>
+                <binary path="solutions/yclock-wa-2.exe" type="exe.win32"/>
+            </solution>
+        </solutions>
+    </assets>
+    <properties>
+        <property name="tests-wellformed" value="true"/>
+    </properties>
+    <stresses>
+        <stress-count>0</stress-count>
+        <stress-path-pattern>stresses/%03d</stress-path-pattern>
+        <list/>
+    </stresses>
+    <tags>
+        <tag value="graphs"/>
+    </tags>
+</problem>

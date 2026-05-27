@@ -1,0 +1,33 @@
+<HTML><HEAD><META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <META content="no-cache" http-equiv="pragma">
+    <META content="-1" http-equiv="expires">
+    <META content="text/html;charset=UTF-8" http-equiv="content-type">
+    <LINK href="problem-statement.css" rel="stylesheet" type="text/css">
+    <TITLE>불꽃놀이의 아름다움 2</TITLE>
+    <SCRIPT type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+          tex2jax: {inlineMath: [['$$$','$$$']], displayMath: [['$$$$$$','$$$$$$']]}
+        });
+        </SCRIPT>
+        <SCRIPT async="" src="https://polygon.codeforces.com/lib/MathJax/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript">
+    </SCRIPT>
+</HEAD><BODY>
+    <DIV class="problem-statement"><DIV class="header"><DIV class="title">불꽃놀이의 아름다움 2</DIV><DIV class="time-limit"><DIV class="property-title">time limit per test</DIV>1 second</DIV><DIV class="memory-limit"><DIV class="property-title">memory limit per test</DIV>256 megabytes</DIV><DIV class="input-file input-standard"><DIV class="property-title">input</DIV>standard input</DIV><DIV class="output-file output-standard"><DIV class="property-title">output</DIV>standard output</DIV></DIV><DIV class="legend"><P>봄 축제 때 정보과학관에서는 아무 행사도 진행되지 않는다는 것에 화가 난 민성이는 정보과학관 입구 앞에서 직접 불꽃놀이 행사를 진행하려고 한다.</P><P>정보과학관 입구 앞에 폭죽을 설치할 수 있는 $$$N$$$개의 공간과, 서로 다른 두 공간을 연결하는 도화선 $$$N$$$개가 준비되어 있다. </P><P>$$$N$$$개의 공간은 도화선을 통해 모두 서로 연결되어 있다. 민성이는 도화선으로 직접 연결된 두 폭죽의 색이 다를 때 불꽃놀이가 아름답다고 생각한다. 하지만 불꽃놀이의 색의 종류를 늘리는 것은 비용이 많이 들기 때문에 최소한의 색을 사용하려고 한다. 아름다운 불꽃놀이를 만들기 위해 필요한 색의 개수의 최솟값을 구해보자.</P></DIV><P></P><P></P><DIV class="input-specification"><DIV class="section-title">Input</DIV><P></P><P>첫째 줄에 공간의 개수 $$$N$$$이 주어진다.</P><P>둘째 줄부터 $$$N$$$개의 줄에 걸쳐 도화선이 연결하는 두 공간의 번호 $$$a,b$$$가 공백으로 구분되어 주어진다.</P></DIV><P></P><P></P><DIV class="output-specification"><DIV class="section-title">Output</DIV><P></P><P>아름다운 불꽃놀이를 만들기 위해 필요한 폭죽 색 종류의 최솟값을 출력한다.</P></DIV><P></P><P></P><DIV class="sample-tests"><DIV class="section-title">Examples</DIV><P></P><P></P><DIV class="sample-test"><DIV class="input"><DIV class="title">Input</DIV><PRE class="content" data-content="5
+1 2
+2 3
+3 4
+4 5
+5 1
+">
+<DIV class="test-example-line test-example-line-even test-example-line-0">5</DIV><DIV class="test-example-line test-example-line-even test-example-line-0">1 2</DIV><DIV class="test-example-line test-example-line-even test-example-line-0">2 3</DIV><DIV class="test-example-line test-example-line-even test-example-line-0">3 4</DIV><DIV class="test-example-line test-example-line-even test-example-line-0">4 5</DIV><DIV class="test-example-line test-example-line-even test-example-line-0">5 1</DIV></PRE></DIV><DIV class="output"><DIV class="title">Output</DIV><PRE class="content">
+3</PRE></DIV><DIV class="input"><DIV class="title">Input</DIV><PRE class="content" data-content="5
+1 2
+2 3
+3 4
+4 1
+5 1
+">
+<DIV class="test-example-line test-example-line-even test-example-line-0">5</DIV><DIV class="test-example-line test-example-line-even test-example-line-0">1 2</DIV><DIV class="test-example-line test-example-line-even test-example-line-0">2 3</DIV><DIV class="test-example-line test-example-line-even test-example-line-0">3 4</DIV><DIV class="test-example-line test-example-line-even test-example-line-0">4 1</DIV><DIV class="test-example-line test-example-line-even test-example-line-0">5 1</DIV></PRE></DIV><DIV class="output"><DIV class="title">Output</DIV><PRE class="content">
+2</PRE></DIV></DIV></DIV><P></P><P></P><DIV class="note"><DIV class="section-title">Note</DIV><P></P><P>제한</P><P>$$$3\leq N\leq 200\, 000$$$ </P><P>$$$1\leq a,b\leq N$$$ </P><P>$$$N$$$개의 공간은 도화선을 통해 서로 연결되어 있다. 도화선은 서로 다른 두 공간을 연결하며, 다른 도화선이 같은 쌍을 연결하는 경우는 없다. </P><P>입력으로 주어지는 수는 모두 정수이다.</P><P><IMG class="tex-graphics" src="8e583f095683eec8b1db19bae3681687874c5756.png"></P><P>첫 번째 예시는 위 그림과 같이 3개의 색을 이용하면 아름다운 불꽃놀이를 만들 수 있고, 이보다 더 적은 색으로는 만들 수 없다.</P></DIV></DIV><P></P><P>  </P>
+
+</BODY></HTML>

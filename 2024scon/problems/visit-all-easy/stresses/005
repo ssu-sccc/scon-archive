@@ -1,0 +1,1 @@
+{"id":"6c154ef4ae758225116d72ff020ff8b8","index":5,"scriptPattern":"rand_gen -N\u003d[100000000..1000000000]","inputFile":"stdin","outputFile":"stdout","memoryLimit":256,"timeLimit":1000,"totalTimeLimit":120000,"solutionNames":["mcs.cpp","yclock-wa-8.py"],"description":"","solutionNamesUid":"","ignoreValidators":false}

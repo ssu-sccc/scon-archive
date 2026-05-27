@@ -1,0 +1,29 @@
+<HTML><HEAD><META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <META content="no-cache" http-equiv="pragma">
+    <META content="-1" http-equiv="expires">
+    <META content="text/html;charset=UTF-8" http-equiv="content-type">
+    <LINK href="problem-statement.css" rel="stylesheet" type="text/css">
+    <TITLE>알파벳 블록</TITLE>
+    <SCRIPT type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+          tex2jax: {inlineMath: [['$$$','$$$']], displayMath: [['$$$$$$','$$$$$$']]}
+        });
+        </SCRIPT>
+        <SCRIPT async="" src="https://polygon.codeforces.com/lib/MathJax/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript">
+    </SCRIPT>
+</HEAD><BODY>
+    <DIV class="problem-statement"><DIV class="header"><DIV class="title">알파벳 블록</DIV><DIV class="time-limit"><DIV class="property-title">time limit per test</DIV>1 second</DIV><DIV class="memory-limit"><DIV class="property-title">memory limit per test</DIV>1024 megabytes</DIV><DIV class="input-file input-standard"><DIV class="property-title">input</DIV>standard input</DIV><DIV class="output-file output-standard"><DIV class="property-title">output</DIV>standard output</DIV></DIV><DIV class="legend"><P>S, C, O, N 4종류의 알파벳 블록으로 문자열을 만들며 놀던 도현이는 두 가지 사실을 알아냈다.</P><P></P><UL> <LI> 알파벳 O 블록 1개를 반으로 자르면 알파벳 C 블록 2개로 사용할 수 있다. 알파벳 C 블록 2개를 합쳐서 알파벳 O 블록 1개로 사용하는 것도 가능하다. </LI><LI> 알파벳 S 블록 1개를 뒤집으면 알파벳 N 블록 1개로 사용할 수 있다. 알파벳 N 블록 1개를 뒤집어서 알파벳 S 블록 1개로 사용하는 것도 가능하다. </LI></UL><P></P><P>놀이를 마친 도현이는 블록들을 상자에 넣어 가져가려 한다. 상자에는 "SCON" 문자열을 넣을 수 있는 공간과 "SCCC" 문자열을 넣을 수 있는 공간이 하나씩 존재하며, 도현이는 두 문자열이 모두 들어간 상자만을 가져갈 수 있다.</P><P>각 알파벳 블록의 개수가 주어졌을 때, 도현이가 가져갈 수 있는 상자의 최댓값을 구해보자.</P></DIV><P></P><P></P><DIV class="input-specification"><DIV class="section-title">Input</DIV><P></P><P>첫째 줄에 알파벳 블록의 개수 $$$b_S$$$, $$$b_C$$$, $$$b_O$$$, $$$b_N$$$이 공백으로 구분되어 주어진다. $$$(0 &le; b_S, b_C, b_O, b_N &le; 1,000,000)$$$</P></DIV><P></P><P></P><DIV class="output-specification"><DIV class="section-title">Output</DIV><P></P><P>첫째 줄에 도현이가 가져갈 수 있는 상자 개수의 최댓값을 출력한다.</P></DIV><P></P><P></P><DIV class="sample-tests"><DIV class="section-title">Examples</DIV><P></P><P></P><DIV class="sample-test"><DIV class="input"><DIV class="title">Input</DIV><PRE class="content" data-content="2 4 1 1
+">
+<DIV class="test-example-line test-example-line-even test-example-line-0">2 4 1 1</DIV></PRE></DIV><DIV class="output"><DIV class="title">Output</DIV><PRE class="content">
+1
+</PRE></DIV><DIV class="input"><DIV class="title">Input</DIV><PRE class="content" data-content="1 2 2 2
+">
+<DIV class="test-example-line test-example-line-even test-example-line-0">1 2 2 2</DIV></PRE></DIV><DIV class="output"><DIV class="title">Output</DIV><PRE class="content">
+1
+</PRE></DIV><DIV class="input"><DIV class="title">Input</DIV><PRE class="content" data-content="20 24 20 25
+">
+<DIV class="test-example-line test-example-line-even test-example-line-0">20 24 20 25</DIV></PRE></DIV><DIV class="output"><DIV class="title">Output</DIV><PRE class="content">
+10
+</PRE></DIV></DIV></DIV></DIV><P></P><P>  </P>
+
+</BODY></HTML>
