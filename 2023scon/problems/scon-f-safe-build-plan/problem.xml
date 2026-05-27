@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<problem revision="5" short-name="scon-f-safe-build-plan" url="https://polygon.codeforces.com/p6ykejT/edenooo/scon-f-safe-build-plan">
+    <names>
+        <name language="korean" value="안전한 건설 계획"/>
+    </names>
+    <statements>
+        <statement charset="UTF-8" language="korean" mathjax="true" path="statements/korean/problem.tex" type="application/x-tex"/>
+        <statement charset="UTF-8" language="korean" mathjax="true" path="statements/.html/korean/problem.html" type="text/html"/>
+    </statements>
+    <judging cpu-name="Intel(R) Core(TM) i3-8100 CPU @ 3.60GHz" cpu-speed="3600" input-file="" output-file="" run-count="1">
+        <testset name="tests">
+            <time-limit>2000</time-limit>
+            <memory-limit>1073741824</memory-limit>
+            <test-count>50</test-count>
+            <input-path-pattern>tests/%02d</input-path-pattern>
+            <answer-path-pattern>tests/%02d.a</answer-path-pattern>
+            <tests>
+                <test method="manual" sample="true"/>
+                <test method="manual" sample="true"/>
+                <test method="manual" sample="true"/>
+                <test method="manual"/>
+                <test method="manual"/>
+                <test method="manual"/>
+                <test method="manual"/>
+                <test method="manual"/>
+                <test cmd="gen_trees 1 10 1" method="generated"/>
+                <test cmd="gen_trees 1 10 2" method="generated"/>
+                <test cmd="gen_trees 38 38 3" method="generated"/>
+                <test cmd="gen_trees 39 39 4" method="generated"/>
+                <test cmd="gen_trees 40 40 5" method="generated"/>
+                <test cmd="gen_trees 1 3 6" method="generated"/>
+                <test cmd="gen_trees 1 3 7" method="generated"/>
+                <test cmd="gen_trees 1 3 8" method="generated"/>
+                <test cmd="gen_trees 8 16 9" method="generated"/>
+                <test cmd="gen_trees 8 16 10" method="generated"/>
+                <test cmd="gen_trees 8 16 11" method="generated"/>
+                <test cmd="gen_components 1 10 1" method="generated"/>
+                <test cmd="gen_components 1 10 2" method="generated"/>
+                <test cmd="gen_components 38 38 3" method="generated"/>
+                <test cmd="gen_components 39 39 4" method="generated"/>
+                <test cmd="gen_components 40 40 5" method="generated"/>
+                <test cmd="gen_components 1 3 6" method="generated"/>
+                <test cmd="gen_components 1 3 7" method="generated"/>
+                <test cmd="gen_components 1 3 8" method="generated"/>
+                <test cmd="gen_components 8 16 9" method="generated"/>
+                <test cmd="gen_components 8 16 10" method="generated"/>
+                <test cmd="gen_components 8 16 11" method="generated"/>
+                <test cmd="gen_dense_graphs 1 10 1" method="generated"/>
+                <test cmd="gen_dense_graphs 1 10 2" method="generated"/>
+                <test cmd="gen_dense_graphs 38 38 3" method="generated"/>
+                <test cmd="gen_dense_graphs 39 39 4" method="generated"/>
+                <test cmd="gen_dense_graphs 40 40 5" method="generated"/>
+                <test cmd="gen_dense_graphs 1 3 6" method="generated"/>
+                <test cmd="gen_dense_graphs 1 3 7" method="generated"/>
+                <test cmd="gen_dense_graphs 1 3 8" method="generated"/>
+                <test cmd="gen_dense_graphs 8 16 9" method="generated"/>
+                <test cmd="gen_dense_graphs 8 16 10" method="generated"/>
+                <test cmd="gen_dense_graphs 8 16 11" method="generated"/>
+                <test description="star" method="manual"/>
+                <test description="path" method="manual"/>
+                <test method="manual"/>
+                <test method="manual"/>
+                <test method="manual"/>
+                <test method="manual"/>
+                <test method="manual"/>
+                <test method="manual"/>
+                <test method="manual"/>
+            </tests>
+        </testset>
+    </judging>
+    <files>
+        <resources>
+            <file path="files/olymp.sty"/>
+            <file path="files/problem.tex"/>
+            <file path="files/statements.ftl"/>
+            <file path="files/testlib.h" type="h.g++"/>
+        </resources>
+        <executables>
+            <executable>
+                <source path="files/gen_components.cpp" type="cpp.g++17"/>
+                <binary path="files/gen_components.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/gen_dense_graphs.cpp" type="cpp.g++17"/>
+                <binary path="files/gen_dense_graphs.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/gen_trees.cpp" type="cpp.g++17"/>
+                <binary path="files/gen_trees.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/vali.cpp" type="cpp.g++17"/>
+                <binary path="files/vali.exe" type="exe.win32"/>
+            </executable>
+        </executables>
+    </files>
+    <assets>
+        <checker name="std::ncmp.cpp" type="testlib">
+            <source path="files/check.cpp" type="cpp.g++17"/>
+            <binary path="check.exe" type="exe.win32"/>
+            <copy path="check.cpp"/>
+            <testset>
+                <test-count>0</test-count>
+                <input-path-pattern>files/tests/checker-tests/%02d</input-path-pattern>
+                <output-path-pattern>files/tests/checker-tests/%02d.o</output-path-pattern>
+                <answer-path-pattern>files/tests/checker-tests/%02d.a</answer-path-pattern>
+                <tests/>
+            </testset>
+        </checker>
+        <validators>
+            <validator>
+                <source path="files/vali.cpp" type="cpp.g++17"/>
+                <binary path="files/vali.exe" type="exe.win32"/>
+                <testset>
+                    <test-count>11</test-count>
+                    <input-path-pattern>files/tests/validator-tests/%02d</input-path-pattern>
+                    <tests>
+                        <test verdict="valid"/>
+                        <test verdict="invalid"/>
+                        <test verdict="invalid"/>
+                        <test verdict="invalid"/>
+                        <test verdict="invalid"/>
+                        <test verdict="invalid"/>
+                        <test verdict="invalid"/>
+                        <test verdict="invalid"/>
+                        <test verdict="invalid"/>
+                        <test verdict="invalid"/>
+                        <test verdict="invalid"/>
+                    </tests>
+                </testset>
+            </validator>
+        </validators>
+        <solutions>
+            <solution tag="accepted">
+                <source path="solutions/edenoo-main2.cpp" type="cpp.g++17"/>
+                <binary path="solutions/edenoo-main2.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="main">
+                <source path="solutions/edenooo-main.cpp" type="cpp.g++17"/>
+                <binary path="solutions/edenooo-main.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/hui-ok-graph-cpp.cpp" type="cpp.g++17"/>
+                <binary path="solutions/hui-ok-graph-cpp.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/hui-ok-graph-java.java" type="java11"/>
+                <binary path="solutions/hui-ok-graph-java.jar" type="jar"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/hui-ok-graph-py.py" type="python.3"/>
+                <binary path="solutions/hui-ok-graph-py.pys3" type="pythonx.3"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/hui-ok-greedy-cpp.cpp" type="cpp.g++17"/>
+                <binary path="solutions/hui-ok-greedy-cpp.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/hui-ok-greedy-java.java" type="java11"/>
+                <binary path="solutions/hui-ok-greedy-java.jar" type="jar"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/hui-ok-greedy-py.py" type="python.pypy3"/>
+                <binary path="solutions/hui-ok-greedy-py.pypys3" type="pythonx.pypy3"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/hui-slow-java.java" type="java11"/>
+                <binary path="solutions/hui-slow-java.jar" type="jar"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/hui-slow-py.py" type="python.pypy3"/>
+                <binary path="solutions/hui-slow-py.pypys3" type="pythonx.pypy3"/>
+            </solution>
+        </solutions>
+    </assets>
+    <properties>
+        <property name="tests-wellformed" value="true"/>
+    </properties>
+    <stresses>
+        <stress-count>0</stress-count>
+        <stress-path-pattern>stresses/%03d</stress-path-pattern>
+        <list/>
+    </stresses>
+    <tags>
+        <tag value="2023scon"/>
+    </tags>
+</problem>

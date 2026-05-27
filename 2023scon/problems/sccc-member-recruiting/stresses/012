@@ -1,0 +1,1 @@
+{"id":"65a028ab38d93c3a7d2137ce655a5012","index":12,"scriptPattern":"gen_rnd -n\u003d15 -k\u003d15 [3000..9999]\t","inputFile":"stdin","outputFile":"stdout","memoryLimit":1024,"timeLimit":2000,"totalTimeLimit":120000,"solutionNames":["hui-brute-force.cpp"],"description":"","solutionNamesUid":"","ignoreValidators":false}

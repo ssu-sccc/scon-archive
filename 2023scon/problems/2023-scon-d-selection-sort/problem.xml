@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<problem revision="6" short-name="2023-scon-d-selection-sort" url="https://polygon.codeforces.com/p8Pnkot/Justice_Hui/2023-scon-d-selection-sort">
+    <names>
+        <name language="korean" value="selection sort"/>
+    </names>
+    <statements>
+        <statement charset="UTF-8" language="korean" mathjax="true" path="statements/korean/problem.tex" type="application/x-tex"/>
+        <statement charset="UTF-8" language="korean" mathjax="true" path="statements/.html/korean/problem.html" type="text/html"/>
+        <statement language="korean" path="statements/.pdf/korean/problem.pdf" type="application/pdf"/>
+    </statements>
+    <judging cpu-name="Intel(R) Core(TM) i3-8100 CPU @ 3.60GHz" cpu-speed="3600" input-file="" output-file="" run-count="1">
+        <testset name="tests">
+            <time-limit>5000</time-limit>
+            <memory-limit>1073741824</memory-limit>
+            <test-count>28</test-count>
+            <input-path-pattern>tests/%02d</input-path-pattern>
+            <answer-path-pattern>tests/%02d.a</answer-path-pattern>
+            <tests>
+                <test method="manual" sample="true"/>
+                <test method="manual" sample="true"/>
+                <test cmd="gen-rnd -n1=1 -n2=1 3" method="generated"/>
+                <test cmd="gen-rnd -n1=2 -n2=2 4" method="generated"/>
+                <test cmd="gen-rnd -n1=3 -n2=3 5" method="generated"/>
+                <test cmd="gen-rnd -n1=2000 -n2=5000 6" method="generated"/>
+                <test cmd="gen-rnd -n1=2000 -n2=5000 7" method="generated"/>
+                <test cmd="gen-rnd -n1=2000 -n2=5000 8" method="generated"/>
+                <test cmd="gen-rnd -n1=2000 -n2=5000 9" method="generated"/>
+                <test cmd="gen-rnd -n1=2000 -n2=5000 10" method="generated"/>
+                <test cmd="gen-rnd -n1=200000 -n2=500000 11" method="generated"/>
+                <test cmd="gen-rnd -n1=200000 -n2=500000 12" method="generated"/>
+                <test cmd="gen-rnd -n1=200000 -n2=500000 13" method="generated"/>
+                <test cmd="gen-rnd -n1=200000 -n2=500000 14" method="generated"/>
+                <test cmd="gen-rnd -n1=200000 -n2=500000 15" method="generated"/>
+                <test cmd="gen-rnd -n1=500000 -n2=500000 16" method="generated"/>
+                <test cmd="gen-rnd -n1=500000 -n2=500000 17" method="generated"/>
+                <test cmd="gen-rnd -n1=500000 -n2=500000 18" method="generated"/>
+                <test cmd="gen-rnd -n1=500000 -n2=500000 19" method="generated"/>
+                <test cmd="gen-rnd -n1=500000 -n2=500000 20" method="generated"/>
+                <test cmd="gen-shift -n=500000 -inc=1 -sft=0 21" method="generated"/>
+                <test cmd="gen-shift -n=500000 -inc=1 -sft=1 22" method="generated"/>
+                <test cmd="gen-shift -n=500000 -inc=1 -sft=499999 23" method="generated"/>
+                <test cmd="gen-shift -n=500000 -inc=1 -sft=250000 24" method="generated"/>
+                <test cmd="gen-shift -n=500000 -inc=0 -sft=0 25" method="generated"/>
+                <test cmd="gen-shift -n=500000 -inc=0 -sft=1 26" method="generated"/>
+                <test cmd="gen-shift -n=500000 -inc=0 -sft=499999 27" method="generated"/>
+                <test cmd="gen-shift -n=500000 -inc=0 -sft=250000 28" method="generated"/>
+            </tests>
+        </testset>
+    </judging>
+    <files>
+        <resources>
+            <file path="files/olymp.sty"/>
+            <file path="files/problem.tex"/>
+            <file path="files/statements.ftl"/>
+            <file path="files/testlib.h" type="h.g++"/>
+        </resources>
+        <executables>
+            <executable>
+                <source path="files/gen-rnd.cpp" type="cpp.g++17"/>
+                <binary path="files/gen-rnd.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/gen-shift.cpp" type="cpp.g++17"/>
+                <binary path="files/gen-shift.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/val.cpp" type="cpp.g++17"/>
+                <binary path="files/val.exe" type="exe.win32"/>
+            </executable>
+        </executables>
+    </files>
+    <assets>
+        <checker name="std::ncmp.cpp" type="testlib">
+            <source path="files/check.cpp" type="cpp.g++17"/>
+            <binary path="check.exe" type="exe.win32"/>
+            <copy path="check.cpp"/>
+            <testset>
+                <test-count>0</test-count>
+                <input-path-pattern>files/tests/checker-tests/%02d</input-path-pattern>
+                <output-path-pattern>files/tests/checker-tests/%02d.o</output-path-pattern>
+                <answer-path-pattern>files/tests/checker-tests/%02d.a</answer-path-pattern>
+                <tests/>
+            </testset>
+        </checker>
+        <validators>
+            <validator>
+                <source path="files/val.cpp" type="cpp.g++17"/>
+                <binary path="files/val.exe" type="exe.win32"/>
+                <testset>
+                    <test-count>2</test-count>
+                    <input-path-pattern>files/tests/validator-tests/%02d</input-path-pattern>
+                    <tests>
+                        <test verdict="valid"/>
+                        <test verdict="invalid"/>
+                    </tests>
+                </testset>
+            </validator>
+        </validators>
+        <solutions>
+            <solution tag="accepted">
+                <source path="solutions/cologne_java.java" type="java11"/>
+                <binary path="solutions/cologne_java.jar" type="jar"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/cologne_py.py" type="python.pypy3"/>
+                <binary path="solutions/cologne_py.pypys3" type="pythonx.pypy3"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/edenooo.cpp" type="cpp.g++17"/>
+                <binary path="solutions/edenooo.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/hui-ok-cpp.cpp" type="cpp.msys2-mingw64-9-g++17"/>
+                <binary path="solutions/hui-ok-cpp.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/hui-ok-java.java" type="java11"/>
+                <binary path="solutions/hui-ok-java.jar" type="jar"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/hui-ok-py.py" type="python.pypy3"/>
+                <binary path="solutions/hui-ok-py.pypys3" type="pythonx.pypy3"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/kyo20111_solution.cpp" type="cpp.g++17"/>
+                <binary path="solutions/kyo20111_solution.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="time-limit-exceeded-or-accepted">
+                <source path="solutions/n2.cpp" type="cpp.msys2-mingw64-9-g++17"/>
+                <binary path="solutions/n2.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="main">
+                <source path="solutions/seg.cpp" type="cpp.msys2-mingw64-9-g++17"/>
+                <binary path="solutions/seg.exe" type="exe.win32"/>
+            </solution>
+        </solutions>
+    </assets>
+    <properties>
+        <property name="tests-wellformed" value="true"/>
+    </properties>
+    <stresses>
+        <stress-count>0</stress-count>
+        <stress-path-pattern>stresses/%03d</stress-path-pattern>
+        <list/>
+    </stresses>
+    <tags>
+        <tag value="2023scon"/>
+    </tags>
+</problem>

@@ -1,0 +1,1 @@
+{"id":"e9801c70ea1eaf8f278e286a0f0fc4c3","index":4,"scriptPattern":"gen_rnd -n\u003d15 -k\u003d15 [3000..9999]\t","inputFile":"stdin","outputFile":"stdout","memoryLimit":1024,"timeLimit":2000,"totalTimeLimit":120000,"solutionNames":["hui-brute-force-5e6-shuffle.cpp"],"description":"","solutionNamesUid":"","ignoreValidators":false}

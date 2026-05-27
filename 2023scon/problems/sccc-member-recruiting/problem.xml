@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<problem revision="21" short-name="sccc-member-recruiting" url="https://polygon.codeforces.com/p5LRsnA/nlog/sccc-member-recruiting">
+    <names>
+        <name language="korean" value="SCCC 신입 부원 모집하기"/>
+    </names>
+    <statements>
+        <statement charset="UTF-8" language="korean" mathjax="true" path="statements/korean/problem.tex" type="application/x-tex"/>
+        <statement charset="UTF-8" language="korean" mathjax="true" path="statements/.html/korean/problem.html" type="text/html"/>
+    </statements>
+    <judging cpu-name="Intel(R) Core(TM) i3-8100 CPU @ 3.60GHz" cpu-speed="3600" input-file="" output-file="" run-count="1">
+        <testset name="tests">
+            <time-limit>2000</time-limit>
+            <memory-limit>1073741824</memory-limit>
+            <test-count>71</test-count>
+            <input-path-pattern>tests/%02d</input-path-pattern>
+            <answer-path-pattern>tests/%02d.a</answer-path-pattern>
+            <tests>
+                <test method="manual" sample="true"/>
+                <test cmd="gen_rnd 1" method="generated"/>
+                <test cmd="gen_rnd 2" method="generated"/>
+                <test cmd="gen_rnd 3" method="generated"/>
+                <test cmd="gen_rnd 4" method="generated"/>
+                <test cmd="gen_rnd 5" method="generated"/>
+                <test cmd="gen_rnd 6" method="generated"/>
+                <test cmd="gen_rnd 7" method="generated"/>
+                <test cmd="gen_rnd 8" method="generated"/>
+                <test cmd="gen_rnd 9" method="generated"/>
+                <test cmd="gen_rnd 10" method="generated"/>
+                <test cmd="gen_rnd -n=15 -k=15 1" method="generated"/>
+                <test cmd="gen_rnd -n=15 -k=15 2" method="generated"/>
+                <test cmd="gen_rnd -n=15 -k=15 3" method="generated"/>
+                <test cmd="gen_rnd -n=15 -k=15 4" method="generated"/>
+                <test cmd="gen_rnd -n=15 -k=15 5" method="generated"/>
+                <test cmd="gen_rnd -n=15 -k=15 6" method="generated"/>
+                <test cmd="gen_rnd -n=15 -k=15 7" method="generated"/>
+                <test cmd="gen_rnd -n=15 -k=15 8" method="generated"/>
+                <test cmd="gen_rnd -n=15 -k=15 9" method="generated"/>
+                <test cmd="gen_rnd -n=15 -k=15 10" method="generated"/>
+                <test cmd="gen_rnd_dense -n=15 -k=15" method="generated"/>
+                <test description="Added from stress #1. Had script line &quot;gen_rnd -n=15 -k=15 5231 2b73bfc2be16921d0a1b8856f7ab2a5b&quot;" method="manual"/>
+                <test description="Added from stress #1. Had script line &quot;gen_rnd -n=15 -k=15 8169 07c79bb81b49acfe9b8d7f1c65d2c262&quot;" method="manual"/>
+                <test description="Added from stress #2. Had script line &quot;gen_rnd -n=15 -k=15 4780 389c6eb5d34564f501ec7ea6241b85be&quot;" method="manual"/>
+                <test description="Added from stress #3. Had script line &quot;gen_rnd -n=15 -k=15 9048 71299b8862638d5a00cc37cb18f44df5&quot;" method="manual"/>
+                <test description="Added from stress #4. Had script line &quot;gen_rnd -n=15 -k=15 9092 e49d02e7a04bf272f725134cf4491921&quot;" method="manual"/>
+                <test description="Added from stress #2. Had script line &quot;gen_rnd -n=15 -k=15 7463 462c8a721944e2d39e8f050a5d1adb9a&quot;" method="manual"/>
+                <test description="Added from stress #3. Had script line &quot;gen_rnd -n=15 -k=15 3482 cb942a2a9320362bdb124fd31fc1ad6c&quot;" method="manual"/>
+                <test description="Added from stress #4. Had script line &quot;gen_rnd -n=15 -k=15 3931 fa096c9fcf947c3a870b9f23781e2243&quot;" method="manual"/>
+                <test description="Added from stress #5. Had script line &quot;gen_rnd -n=15 -k=15 6754 0ad7e8faf64f7f942320ea87fa5900f9&quot;" method="manual"/>
+                <test cmd="gen_rnd -n=15 -k=1 -x=15" method="generated"/>
+                <test description="Added from stress #1. Had script line &quot;gen_rnd -n=15 -k=15 9304 5bcdf480bc7db76f17728a000c6fd73f&quot;" method="manual"/>
+                <test description="Added from stress #2. Had script line &quot;gen_rnd -n=15 -k=15 7788 b0bd6eb55d20cb010749ddb8b8ac695d&quot;" method="manual"/>
+                <test description="Added from stress #3. Had script line &quot;gen_rnd -n=15 -k=15 7614 499e056faa41ae6485fc9984a2e2e2a4&quot;" method="manual"/>
+                <test description="Added from stress #4. Had script line &quot;gen_rnd -n=15 -k=15 7504 0619afacab88c7a375270226791b9b04&quot;" method="manual"/>
+                <test cmd="gen_rnd_dense -n=15 -k=1" method="generated"/>
+                <test cmd="gen_rnd_dense -n=15 -k=2" method="generated"/>
+                <test cmd="gen_rnd_dense -n=15 -k=3" method="generated"/>
+                <test cmd="gen_rnd_dense -n=15 -k=4" method="generated"/>
+                <test cmd="gen_rnd_dense -n=15 -k=5" method="generated"/>
+                <test cmd="gen_rnd_dense -n=15 -k=6" method="generated"/>
+                <test cmd="gen_rnd_dense -n=15 -k=7" method="generated"/>
+                <test cmd="gen_rnd_dense -n=15 -k=8" method="generated"/>
+                <test cmd="gen_rnd_dense -n=15 -k=9" method="generated"/>
+                <test cmd="gen_rnd_dense -n=15 -k=10" method="generated"/>
+                <test cmd="gen_rnd_dense -n=15 -k=11" method="generated"/>
+                <test cmd="gen_rnd_dense -n=15 -k=12" method="generated"/>
+                <test cmd="gen_rnd_dense -n=15 -k=13" method="generated"/>
+                <test cmd="gen_rnd_dense -n=15 -k=14" method="generated"/>
+                <test description="Added from stress #6. Had script line &quot;gen_rnd -n=15 -k=15 7995 f568de78ad2c1b13defba84c98682b9c&quot;" method="manual"/>
+                <test description="Added from stress #8. Had script line &quot;gen_rnd -n=15 -k=15 7337 ecf26a480fc1d49dc0906d0dda2a919b&quot;" method="manual"/>
+                <test description="Added from stress #10. Had script line &quot;gen_rnd -n=15 -k=15 5994 35b4b667f4760d04b66888708b3169b4&quot;" method="manual"/>
+                <test description="Added from stress #11. Had script line &quot;gen_rnd -n=15 -k=15 6093 e4c2f89f88427c56b0d24e683f983f60&quot;" method="manual"/>
+                <test description="Added from stress #12. Had script line &quot;gen_rnd -n=15 -k=15 6328 a05dc60da4eea51ac5aad957d58b7b34&quot;" method="manual"/>
+                <test description="Added from stress #23. Had script line &quot;gen_rnd -n=15 -k=15 7515 d706763a6362717ef55b8d48eb33ac27&quot;" method="manual"/>
+                <test description="Added from stress #30. Had script line &quot;gen_rnd -n=15 -k=15 7456 681c6c36c27a01291eea0ee3daa95d3d&quot;" method="manual"/>
+                <test description="Added from stress #28. Had script line &quot;gen_rnd -n=15 -k=15 4302 4a5541b28edad7518ab72295c587efc4&quot;" method="manual"/>
+                <test description="Added from stress #26. Had script line &quot;gen_rnd -n=15 -k=15 7532 4f4ae56b57afd805d2a6bffd03ef95ed&quot;" method="manual"/>
+                <test description="Added from stress #25. Had script line &quot;gen_rnd -n=15 -k=15 5067 17b4d97607720dda6491c159caa8c0ce&quot;" method="manual"/>
+                <test description="Added from stress #12. Had script line &quot;gen_rnd -n=15 -k=15 4964 e7abc1de7e7290666cd62eb4ea683ff8&quot;" method="manual"/>
+                <test description="Added from stress #11. Had script line &quot;gen_rnd -n=15 -k=15 4467 cb6976b8c7d10b8501f0e0d0d829fbb7&quot;" method="manual"/>
+                <test description="Added from stress #10. Had script line &quot;gen_rnd -n=15 -k=15 4520 4d5b59e93f5bf9e66888b7b0e359f7c7&quot;" method="manual"/>
+                <test description="Added from stress #9. Had script line &quot;gen_rnd -n=15 -k=15 4302 0e213e44fb141a45c846c78a0d756013&quot;" method="manual"/>
+                <test description="Added from stress #8. Had script line &quot;gen_rnd -n=15 -k=15 8566 456697dc77fe40f3e8265dbbd5fb9ba7&quot;" method="manual"/>
+                <test description="Added from stress #7. Had script line &quot;gen_rnd -n=15 -k=15 5977 58a6adc02665c56962e602ec867d1e97&quot;" method="manual"/>
+                <test description="Added from stress #6. Had script line &quot;gen_rnd -n=15 -k=15 9199 f2d33e2950f35f4d053bf4e30e40f386&quot;" method="manual"/>
+                <test description="Added from stress #4. Had script line &quot;gen_rnd -n=15 -k=15 6442 b5730369f0c491227175325dd4cade4a&quot;" method="manual"/>
+                <test description="Added from stress #3. Had script line &quot;gen_rnd -n=15 -k=15 4931 4a64d11e83b59d6184e5b237fc0a7b9b&quot;" method="manual"/>
+                <test description="Added from stress #2. Had script line &quot;gen_rnd -n=15 -k=15 9740 ffb21dc45c3829ac6c5632282101de77&quot;" method="manual"/>
+                <test method="manual"/>
+            </tests>
+        </testset>
+    </judging>
+    <files>
+        <resources>
+            <file path="files/biko-c4ee78880e919e3206e2dcc7d00548.txt"/>
+            <file path="files/olymp.sty"/>
+            <file path="files/problem.tex"/>
+            <file path="files/statements.ftl"/>
+            <file path="files/testlib.h" type="h.g++"/>
+        </resources>
+        <executables>
+            <executable>
+                <source path="files/checker.cpp" type="cpp.g++17"/>
+                <binary path="files/checker.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/gen_rnd.cpp" type="cpp.g++17"/>
+                <binary path="files/gen_rnd.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/gen_rnd_dense.cpp" type="cpp.g++17"/>
+                <binary path="files/gen_rnd_dense.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/validator.cpp" type="cpp.g++17"/>
+                <binary path="files/validator.exe" type="exe.win32"/>
+            </executable>
+        </executables>
+    </files>
+    <assets>
+        <checker type="testlib">
+            <source path="files/checker.cpp" type="cpp.g++17"/>
+            <binary path="check.exe" type="exe.win32"/>
+            <copy path="check.cpp" type="cpp.g++17"/>
+            <testset>
+                <test-count>1</test-count>
+                <input-path-pattern>files/tests/checker-tests/%02d</input-path-pattern>
+                <output-path-pattern>files/tests/checker-tests/%02d.o</output-path-pattern>
+                <answer-path-pattern>files/tests/checker-tests/%02d.a</answer-path-pattern>
+                <tests>
+                    <test verdict="ok"/>
+                </tests>
+            </testset>
+        </checker>
+        <validators>
+            <validator>
+                <source path="files/validator.cpp" type="cpp.g++17"/>
+                <binary path="files/validator.exe" type="exe.win32"/>
+                <testset>
+                    <test-count>1</test-count>
+                    <input-path-pattern>files/tests/validator-tests/%02d</input-path-pattern>
+                    <tests>
+                        <test verdict="valid"/>
+                    </tests>
+                </testset>
+            </validator>
+        </validators>
+        <solutions>
+            <solution tag="time-limit-exceeded">
+                <source path="solutions/edenooo-backtracking.cpp" type="cpp.g++17"/>
+                <binary path="solutions/edenooo-backtracking.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="wrong-answer">
+                <source path="solutions/edenooo-dfs-rand.cpp" type="cpp.g++17"/>
+                <binary path="solutions/edenooo-dfs-rand.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="wrong-answer">
+                <source path="solutions/edenooo-dfs-rev.cpp" type="cpp.g++17"/>
+                <binary path="solutions/edenooo-dfs-rev.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="wrong-answer">
+                <source path="solutions/edenooo-dfs.cpp" type="cpp.g++17"/>
+                <binary path="solutions/edenooo-dfs.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/edenooo-dinic.cpp" type="cpp.g++17"/>
+                <binary path="solutions/edenooo-dinic.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="wrong-answer">
+                <source path="solutions/edenooo-dp-wrong-order.cpp" type="cpp.g++17"/>
+                <binary path="solutions/edenooo-dp-wrong-order.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/edenooo-dp.cpp" type="cpp.g++17"/>
+                <binary path="solutions/edenooo-dp.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/hui-bipartite-matching.cpp" type="cpp.g++17"/>
+                <binary path="solutions/hui-bipartite-matching.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="rejected">
+                <source path="solutions/hui-brute-force-1e7.cpp" type="cpp.g++17"/>
+                <binary path="solutions/hui-brute-force-1e7.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="rejected">
+                <source path="solutions/hui-brute-force-5e6-shuffle.cpp" type="cpp.g++17"/>
+                <binary path="solutions/hui-brute-force-5e6-shuffle.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="rejected">
+                <source path="solutions/hui-brute-force-5e6.cpp" type="cpp.g++17"/>
+                <binary path="solutions/hui-brute-force-5e6.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="rejected">
+                <source path="solutions/hui-brute-force-5e7-shuffle.cpp" type="cpp.g++17"/>
+                <binary path="solutions/hui-brute-force-5e7-shuffle.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="rejected">
+                <source path="solutions/hui-brute-force-5e7.cpp" type="cpp.g++17"/>
+                <binary path="solutions/hui-brute-force-5e7.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="time-limit-exceeded-or-accepted">
+                <source path="solutions/hui-brute-force-shuffle.cpp" type="cpp.g++17"/>
+                <binary path="solutions/hui-brute-force-shuffle.exe" type="exe.win32"/>
+            </solution>
+            <solution note="O(N^(K+1))" tag="time-limit-exceeded-or-accepted">
+                <source path="solutions/hui-brute-force.cpp" type="cpp.g++17"/>
+                <binary path="solutions/hui-brute-force.exe" type="exe.win32"/>
+            </solution>
+            <solution note="이분 매칭 2^n번" tag="accepted">
+                <source path="solutions/hui-matching-2-power-n.cpp" type="cpp.g++17"/>
+                <binary path="solutions/hui-matching-2-power-n.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/hui-mcmf.cpp" type="cpp.g++17"/>
+                <binary path="solutions/hui-mcmf.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/hui-ok-brute-array-cpp.cpp" type="cpp.g++17"/>
+                <binary path="solutions/hui-ok-brute-array-cpp.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/hui-ok-brute-array-java.java" type="java11"/>
+                <binary path="solutions/hui-ok-brute-array-java.jar" type="jar"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/hui-ok-brute-array-py.py" type="python.pypy3"/>
+                <binary path="solutions/hui-ok-brute-array-py.pypys3" type="pythonx.pypy3"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/hui-ok-brute-map-cpp.cpp" type="cpp.g++17"/>
+                <binary path="solutions/hui-ok-brute-map-cpp.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/nlog-java-sol.java" type="java11"/>
+                <binary path="solutions/nlog-java-sol.jar" type="jar"/>
+            </solution>
+            <solution tag="main">
+                <source path="solutions/nlog-sol.cpp" type="cpp.g++17"/>
+                <binary path="solutions/nlog-sol.exe" type="exe.win32"/>
+            </solution>
+        </solutions>
+    </assets>
+    <properties>
+        <property name="tests-wellformed" value="true"/>
+    </properties>
+    <stresses>
+        <stress-count>25</stress-count>
+        <stress-path-pattern>stresses/%03d</stress-path-pattern>
+        <list>
+            <stress index="25" path="stresses/025"/>
+            <stress index="24" path="stresses/024"/>
+            <stress index="23" path="stresses/023"/>
+            <stress index="22" path="stresses/022"/>
+            <stress index="21" path="stresses/021"/>
+            <stress index="20" path="stresses/020"/>
+            <stress index="19" path="stresses/019"/>
+            <stress index="18" path="stresses/018"/>
+            <stress index="17" path="stresses/017"/>
+            <stress index="16" path="stresses/016"/>
+            <stress index="15" path="stresses/015"/>
+            <stress index="14" path="stresses/014"/>
+            <stress index="13" path="stresses/013"/>
+            <stress index="12" path="stresses/012"/>
+            <stress index="11" path="stresses/011"/>
+            <stress index="10" path="stresses/010"/>
+            <stress index="9" path="stresses/009"/>
+            <stress index="8" path="stresses/008"/>
+            <stress index="7" path="stresses/007"/>
+            <stress index="6" path="stresses/006"/>
+            <stress index="5" path="stresses/005"/>
+            <stress index="4" path="stresses/004"/>
+            <stress index="3" path="stresses/003"/>
+            <stress index="2" path="stresses/002"/>
+            <stress index="1" path="stresses/001"/>
+        </list>
+    </stresses>
+    <tags>
+        <tag value="2023scon"/>
+    </tags>
+</problem>

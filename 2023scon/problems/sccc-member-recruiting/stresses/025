@@ -1,0 +1,1 @@
+{"id":"04208eb3412d2f2f842a8dce2691cf26","index":25,"scriptPattern":"gen_rnd -n\u003d15 -k\u003d[1..15] [3000..9999]\t","inputFile":"stdin","outputFile":"stdout","memoryLimit":1024,"timeLimit":2000,"totalTimeLimit":120000,"solutionNames":["edenooo-dfs-rev.cpp"],"description":"","solutionNamesUid":"","ignoreValidators":false}

@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<problem revision="9" short-name="2023-scon-c" url="https://polygon.codeforces.com/p1BdnAT/kyo20111/2023-scon-c">
+    <names>
+        <name language="korean" value="등차수열의 합"/>
+    </names>
+    <statements>
+        <statement charset="UTF-8" language="korean" mathjax="true" path="statements/korean/problem.tex" type="application/x-tex"/>
+        <statement charset="UTF-8" language="korean" mathjax="true" path="statements/.html/korean/problem.html" type="text/html"/>
+    </statements>
+    <judging cpu-name="Intel(R) Core(TM) i3-8100 CPU @ 3.60GHz" cpu-speed="3600" input-file="" output-file="" run-count="1">
+        <testset name="tests">
+            <time-limit>2000</time-limit>
+            <memory-limit>268435456</memory-limit>
+            <test-count>33</test-count>
+            <input-path-pattern>tests/%02d</input-path-pattern>
+            <answer-path-pattern>tests/%02d.a</answer-path-pattern>
+            <tests>
+                <test method="manual" sample="true"/>
+                <test method="manual" sample="true"/>
+                <test method="manual" sample="true"/>
+                <test cmd="same_gen 1 -1000000000" method="generated"/>
+                <test cmd="same_gen 1 1000000000" method="generated"/>
+                <test cmd="same_gen 100000 -1000000000" method="generated"/>
+                <test cmd="same_gen 100000 0" method="generated"/>
+                <test cmd="same_gen 100000 1000000000" method="generated"/>
+                <test cmd="rand_gen 2" method="generated"/>
+                <test cmd="rand_gen 10" method="generated"/>
+                <test cmd="rand_gen 10000" method="generated"/>
+                <test cmd="rand_gen 100000" method="generated"/>
+                <test cmd="sp_gen" method="generated"/>
+                <test cmd="yes_gen 3" method="generated"/>
+                <test cmd="yes_gen 5" method="generated"/>
+                <test cmd="yes_gen 10" method="generated"/>
+                <test cmd="yes_gen 1000" method="generated"/>
+                <test cmd="yes_gen 100000 1" method="generated"/>
+                <test cmd="yes_gen 100000 2" method="generated"/>
+                <test cmd="yes_gen 100000 3" method="generated"/>
+                <test cmd="yes_gen 100000 4" method="generated"/>
+                <test cmd="yes_gen 100000 5" method="generated"/>
+                <test cmd="almost_yes_gen 3 1" method="generated"/>
+                <test cmd="almost_yes_gen 3 2" method="generated"/>
+                <test cmd="almost_yes_gen 3 3" method="generated"/>
+                <test cmd="almost_yes_gen 3 4" method="generated"/>
+                <test cmd="almost_yes_gen 4 1" method="generated"/>
+                <test cmd="almost_yes_gen 4 2" method="generated"/>
+                <test cmd="almost_yes_gen 5 1" method="generated"/>
+                <test cmd="almost_yes_gen 5 2" method="generated"/>
+                <test cmd="almost_yes_gen 10" method="generated"/>
+                <test cmd="almost_yes_gen 1000" method="generated"/>
+                <test cmd="almost_yes_gen 100000" method="generated"/>
+            </tests>
+        </testset>
+    </judging>
+    <files>
+        <resources>
+            <file path="files/olymp.sty"/>
+            <file path="files/problem.tex"/>
+            <file path="files/statements.ftl"/>
+            <file path="files/testlib.h" type="h.g++"/>
+        </resources>
+        <executables>
+            <executable>
+                <source path="files/almost_yes_gen.cpp" type="cpp.g++17"/>
+                <binary path="files/almost_yes_gen.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/checker.cpp" type="cpp.g++17"/>
+                <binary path="files/checker.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/rand_gen.cpp" type="cpp.g++17"/>
+                <binary path="files/rand_gen.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/same_gen.cpp" type="cpp.g++17"/>
+                <binary path="files/same_gen.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/sp_gen.cpp" type="cpp.g++17"/>
+                <binary path="files/sp_gen.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/validator.cpp" type="cpp.g++17"/>
+                <binary path="files/validator.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/yes_gen.cpp" type="cpp.g++17"/>
+                <binary path="files/yes_gen.exe" type="exe.win32"/>
+            </executable>
+        </executables>
+    </files>
+    <assets>
+        <checker type="testlib">
+            <source path="files/checker.cpp" type="cpp.g++17"/>
+            <binary path="check.exe" type="exe.win32"/>
+            <copy path="check.cpp" type="cpp.g++17"/>
+            <testset>
+                <test-count>4</test-count>
+                <input-path-pattern>files/tests/checker-tests/%02d</input-path-pattern>
+                <output-path-pattern>files/tests/checker-tests/%02d.o</output-path-pattern>
+                <answer-path-pattern>files/tests/checker-tests/%02d.a</answer-path-pattern>
+                <tests>
+                    <test verdict="ok"/>
+                    <test verdict="wrong-answer"/>
+                    <test verdict="wrong-answer"/>
+                    <test verdict="wrong-answer"/>
+                </tests>
+            </testset>
+        </checker>
+        <validators>
+            <validator>
+                <source path="files/validator.cpp" type="cpp.g++17"/>
+                <binary path="files/validator.exe" type="exe.win32"/>
+                <testset>
+                    <test-count>3</test-count>
+                    <input-path-pattern>files/tests/validator-tests/%02d</input-path-pattern>
+                    <tests>
+                        <test verdict="invalid"/>
+                        <test verdict="invalid"/>
+                        <test verdict="valid"/>
+                    </tests>
+                </testset>
+            </validator>
+        </validators>
+        <solutions>
+            <solution tag="accepted">
+                <source path="solutions/cologne_cpp.cpp" type="cpp.g++17"/>
+                <binary path="solutions/cologne_cpp.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/cologne_java.java" type="java11"/>
+                <binary path="solutions/cologne_java.jar" type="jar"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/cologne_py.py" type="python.3"/>
+                <binary path="solutions/cologne_py.pys3" type="pythonx.3"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/edenooo-998244353.cpp" type="cpp.g++17"/>
+                <binary path="solutions/edenooo-998244353.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/hui-no-trailing-space.cpp" type="cpp.g++17"/>
+                <binary path="solutions/hui-no-trailing-space.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/hui-ok-cpp.cpp" type="cpp.g++17"/>
+                <binary path="solutions/hui-ok-cpp.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/hui-ok-java.java" type="java11"/>
+                <binary path="solutions/hui-ok-java.jar" type="jar"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/hui-ok-py.py" type="python.3"/>
+                <binary path="solutions/hui-ok-py.pys3" type="pythonx.3"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/hui-two-line.cpp" type="cpp.g++17"/>
+                <binary path="solutions/hui-two-line.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/java_solution.java" type="java11"/>
+                <binary path="solutions/java_solution.jar" type="jar"/>
+            </solution>
+            <solution tag="main">
+                <source path="solutions/main_solution.cpp" type="cpp.g++17"/>
+                <binary path="solutions/main_solution.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="wrong-answer">
+                <source path="solutions/print_NO.cpp" type="cpp.g++17"/>
+                <binary path="solutions/print_NO.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/python_solution.py" type="python.3"/>
+                <binary path="solutions/python_solution.pys3" type="pythonx.3"/>
+            </solution>
+            <solution tag="rejected">
+                <source path="solutions/wa-hui-1e18.cpp" type="cpp.g++17"/>
+                <binary path="solutions/wa-hui-1e18.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="rejected">
+                <source path="solutions/wa-hui-one-line.cpp" type="cpp.g++17"/>
+                <binary path="solutions/wa-hui-one-line.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="rejected">
+                <source path="solutions/wa-hui-print-trash.cpp" type="cpp.g++17"/>
+                <binary path="solutions/wa-hui-print-trash.exe" type="exe.win32"/>
+            </solution>
+        </solutions>
+    </assets>
+    <properties>
+        <property name="tests-wellformed" value="true"/>
+    </properties>
+    <stresses>
+        <stress-count>0</stress-count>
+        <stress-path-pattern>stresses/%03d</stress-path-pattern>
+        <list/>
+    </stresses>
+    <tags>
+        <tag value="constructive"/>
+        <tag value="math"/>
+    </tags>
+</problem>

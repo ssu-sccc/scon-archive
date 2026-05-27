@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<problem revision="10" short-name="it-college-transportation" url="https://polygon.codeforces.com/p3hFtsU/nlog/it-college-transportation">
+    <names>
+        <name language="korean" value="정보섬의 대중교통"/>
+    </names>
+    <statements>
+        <statement charset="UTF-8" language="korean" mathjax="true" path="statements/korean/problem.tex" type="application/x-tex"/>
+        <statement charset="UTF-8" language="korean" mathjax="true" path="statements/.html/korean/problem.html" type="text/html"/>
+    </statements>
+    <judging cpu-name="Intel(R) Core(TM) i3-8100 CPU @ 3.60GHz" cpu-speed="3600" input-file="" output-file="" run-count="1">
+        <testset name="tests">
+            <time-limit>1000</time-limit>
+            <memory-limit>1073741824</memory-limit>
+            <test-count>35</test-count>
+            <input-path-pattern>tests/%02d</input-path-pattern>
+            <answer-path-pattern>tests/%02d.a</answer-path-pattern>
+            <tests>
+                <test method="manual" sample="true"/>
+                <test method="manual" sample="true"/>
+                <test method="manual" sample="true"/>
+                <test cmd="gen_rnd 1" method="generated"/>
+                <test cmd="gen_rnd_equal 1" method="generated"/>
+                <test cmd="gen_rnd 2" method="generated"/>
+                <test cmd="gen_rnd_equal 2" method="generated"/>
+                <test cmd="gen_rnd 3" method="generated"/>
+                <test cmd="gen_rnd_equal 3" method="generated"/>
+                <test cmd="gen_rnd 4" method="generated"/>
+                <test cmd="gen_rnd_equal 4" method="generated"/>
+                <test cmd="gen_rnd 5" method="generated"/>
+                <test cmd="gen_rnd_equal 5" method="generated"/>
+                <test cmd="gen_rnd -a=1 1" method="generated"/>
+                <test cmd="gen_rnd -a=1000000 1" method="generated"/>
+                <test cmd="gen_rnd -a=1 2" method="generated"/>
+                <test cmd="gen_rnd -a=1000000 2" method="generated"/>
+                <test cmd="gen_rnd -a=1 3" method="generated"/>
+                <test cmd="gen_rnd -a=1000000 3" method="generated"/>
+                <test cmd="gen_rnd -a=1 4" method="generated"/>
+                <test cmd="gen_rnd -a=1000000 4" method="generated"/>
+                <test cmd="gen_rnd -a=1 5" method="generated"/>
+                <test cmd="gen_rnd -a=1000000 5" method="generated"/>
+                <test cmd="gen_rnd -b=1 1" method="generated"/>
+                <test cmd="gen_rnd -b=1000000 1" method="generated"/>
+                <test cmd="gen_rnd -b=1 2" method="generated"/>
+                <test cmd="gen_rnd -b=1000000 2" method="generated"/>
+                <test cmd="gen_rnd -b=1 3" method="generated"/>
+                <test cmd="gen_rnd -b=1000000 3" method="generated"/>
+                <test cmd="gen_rnd -b=1 4" method="generated"/>
+                <test cmd="gen_rnd -b=1000000 4" method="generated"/>
+                <test cmd="gen_rnd -b=1 5" method="generated"/>
+                <test cmd="gen_rnd -b=1000000 5" method="generated"/>
+                <test cmd="gen_rnd -a=1000000 -b=1000000" method="generated"/>
+                <test cmd="gen_rnd -a=1000000 -b=1000000 -n=1000000" method="generated"/>
+            </tests>
+        </testset>
+    </judging>
+    <files>
+        <resources>
+            <file path="files/olymp.sty"/>
+            <file path="files/problem.tex"/>
+            <file path="files/statements.ftl"/>
+            <file path="files/testlib.h" type="h.g++"/>
+        </resources>
+        <executables>
+            <executable>
+                <source path="files/gen_rnd.cpp" type="cpp.g++17"/>
+                <binary path="files/gen_rnd.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/gen_rnd_equal.cpp" type="cpp.g++17"/>
+                <binary path="files/gen_rnd_equal.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/validator.cpp" type="cpp.g++17"/>
+                <binary path="files/validator.exe" type="exe.win32"/>
+            </executable>
+        </executables>
+    </files>
+    <assets>
+        <checker name="std::fcmp.cpp" type="testlib">
+            <source path="files/check.cpp" type="cpp.g++17"/>
+            <binary path="check.exe" type="exe.win32"/>
+            <copy path="check.cpp"/>
+            <testset>
+                <test-count>0</test-count>
+                <input-path-pattern>files/tests/checker-tests/%02d</input-path-pattern>
+                <output-path-pattern>files/tests/checker-tests/%02d.o</output-path-pattern>
+                <answer-path-pattern>files/tests/checker-tests/%02d.a</answer-path-pattern>
+                <tests/>
+            </testset>
+        </checker>
+        <validators>
+            <validator>
+                <source path="files/validator.cpp" type="cpp.g++17"/>
+                <binary path="files/validator.exe" type="exe.win32"/>
+                <testset>
+                    <test-count>3</test-count>
+                    <input-path-pattern>files/tests/validator-tests/%02d</input-path-pattern>
+                    <tests>
+                        <test verdict="valid"/>
+                        <test verdict="valid"/>
+                        <test verdict="valid"/>
+                    </tests>
+                </testset>
+            </validator>
+        </validators>
+        <solutions>
+            <solution tag="accepted">
+                <source path="solutions/cologne_cpp.cpp" type="cpp.g++17"/>
+                <binary path="solutions/cologne_cpp.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/cologne_java.java" type="java11"/>
+                <binary path="solutions/cologne_java.jar" type="jar"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/cologne_py.py" type="python.3"/>
+                <binary path="solutions/cologne_py.pys3" type="pythonx.3"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/edenooo.cpp" type="cpp.g++17"/>
+                <binary path="solutions/edenooo.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/hui-ok-cpp.cpp" type="cpp.g++17"/>
+                <binary path="solutions/hui-ok-cpp.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/hui-ok-java.java" type="java11"/>
+                <binary path="solutions/hui-ok-java.jar" type="jar"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/hui-ok-py.py" type="python.3"/>
+                <binary path="solutions/hui-ok-py.pys3" type="pythonx.3"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/java_solution.java" type="java11"/>
+                <binary path="solutions/java_solution.jar" type="jar"/>
+            </solution>
+            <solution tag="main">
+                <source path="solutions/nlog-sol.cpp" type="cpp.g++17"/>
+                <binary path="solutions/nlog-sol.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/python_solution.py" type="python.3"/>
+                <binary path="solutions/python_solution.pys3" type="pythonx.3"/>
+            </solution>
+            <solution tag="wrong-answer">
+                <source path="solutions/wa-anything.py" type="python.3"/>
+                <binary path="solutions/wa-anything.pys3" type="pythonx.3"/>
+            </solution>
+            <solution tag="wrong-answer">
+                <source path="solutions/wa-bus.py" type="python.3"/>
+                <binary path="solutions/wa-bus.pys3" type="pythonx.3"/>
+            </solution>
+            <solution tag="wrong-answer">
+                <source path="solutions/wa-subway.py" type="python.3"/>
+                <binary path="solutions/wa-subway.pys3" type="pythonx.3"/>
+            </solution>
+        </solutions>
+    </assets>
+    <properties>
+        <property name="tests-wellformed" value="true"/>
+    </properties>
+    <stresses>
+        <stress-count>0</stress-count>
+        <stress-path-pattern>stresses/%03d</stress-path-pattern>
+        <list/>
+    </stresses>
+    <tags>
+        <tag value="2023scon"/>
+    </tags>
+</problem>

@@ -1,0 +1,67 @@
+\documentclass [11pt, a4paper, oneside] {article}
+
+\usepackage [T2A] {fontenc}
+\usepackage [utf8] {inputenc}
+\usepackage [english, russian] {babel}
+\usepackage {amsmath}
+\usepackage {amssymb}
+\usepackage {olymp}
+\usepackage {comment}
+\usepackage {epigraph}
+\usepackage {expdlist}
+\usepackage {graphicx}
+\usepackage {multirow}
+\usepackage {siunitx}
+\usepackage {ulem}
+%\usepackage {hyperref}
+\usepackage {import}
+\usepackage {ifpdf}
+\ifpdf
+  \DeclareGraphicsRule{*}{mps}{*}{}
+\fi
+
+\begin {document}
+
+\contest
+{2023 SCON}%
+{}%
+{}%
+
+\binoppenalty=10000
+\relpenalty=10000
+
+\renewcommand{\t}{\texttt}
+
+
+\graphicspath{{../../problems/it-college-transportation/statements/korean/}}
+  \def\ProblemIndex{A}
+\import{../../problems/it-college-transportation/statements/korean/}{./problem.tex}
+\graphicspath{{../../problems/2023-scon-b-team-name/statements/korean/}}
+  \def\ProblemIndex{B}
+\import{../../problems/2023-scon-b-team-name/statements/korean/}{./problem.tex}
+\graphicspath{{../../problems/2023-scon-c/statements/korean/}}
+  \def\ProblemIndex{C}
+\import{../../problems/2023-scon-c/statements/korean/}{./problem.tex}
+\graphicspath{{../../problems/2023-scon-d-selection-sort/statements/korean/}}
+  \def\ProblemIndex{D}
+\import{../../problems/2023-scon-d-selection-sort/statements/korean/}{./problem.tex}
+\graphicspath{{../../problems/scon-e-prlonglongf/statements/korean/}}
+  \def\ProblemIndex{E}
+\import{../../problems/scon-e-prlonglongf/statements/korean/}{./problem.tex}
+\graphicspath{{../../problems/scon-f-safe-build-plan/statements/korean/}}
+  \def\ProblemIndex{F}
+\import{../../problems/scon-f-safe-build-plan/statements/korean/}{./problem.tex}
+\graphicspath{{../../problems/2023-scon-g-tsp/statements/korean/}}
+  \def\ProblemIndex{G}
+\import{../../problems/2023-scon-g-tsp/statements/korean/}{./problem.tex}
+\graphicspath{{../../problems/sccc-member-recruiting/statements/korean/}}
+  \def\ProblemIndex{H}
+\import{../../problems/sccc-member-recruiting/statements/korean/}{./problem.tex}
+\graphicspath{{../../problems/scon-i-walk-query/statements/korean/}}
+  \def\ProblemIndex{I}
+\import{../../problems/scon-i-walk-query/statements/korean/}{./problem.tex}
+\graphicspath{{../../problems/2023-scon-j-item/statements/korean/}}
+  \def\ProblemIndex{J}
+\import{../../problems/2023-scon-j-item/statements/korean/}{./problem.tex}
+
+\end {document}

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<problem revision="7" short-name="2023-scon-b-team-name" url="https://polygon.codeforces.com/p1FyJgF/Justice_Hui/2023-scon-b-team-name">
+    <names>
+        <name language="korean" value="team name"/>
+    </names>
+    <statements>
+        <statement charset="UTF-8" language="korean" mathjax="true" path="statements/korean/problem.tex" type="application/x-tex"/>
+        <statement charset="UTF-8" language="korean" mathjax="true" path="statements/.html/korean/problem.html" type="text/html"/>
+        <statement language="korean" path="statements/.pdf/korean/problem.pdf" type="application/pdf"/>
+    </statements>
+    <judging cpu-name="Intel(R) Core(TM) i3-8100 CPU @ 3.60GHz" cpu-speed="3600" input-file="" output-file="" run-count="1">
+        <testset name="tests">
+            <time-limit>2000</time-limit>
+            <memory-limit>1073741824</memory-limit>
+            <test-count>39</test-count>
+            <input-path-pattern>tests/%02d</input-path-pattern>
+            <answer-path-pattern>tests/%02d.a</answer-path-pattern>
+            <tests>
+                <test method="manual" sample="true"/>
+                <test method="manual" sample="true"/>
+                <test cmd="gen-rnd -len=1 -ord1=0 -ord2=0" method="generated"/>
+                <test cmd="gen-rnd -len=1 -ord1=0 -ord2=1" method="generated"/>
+                <test cmd="gen-rnd -len=1 -ord1=0 -ord2=2" method="generated"/>
+                <test cmd="gen-rnd -len=1 -ord1=0 -ord2=3" method="generated"/>
+                <test cmd="gen-rnd -len=1 -ord1=0 -ord2=4" method="generated"/>
+                <test cmd="gen-rnd -len=1 -ord1=0 -ord2=5" method="generated"/>
+                <test cmd="gen-rnd -len=1 -ord1=1 -ord2=0" method="generated"/>
+                <test cmd="gen-rnd -len=1 -ord1=1 -ord2=1" method="generated"/>
+                <test cmd="gen-rnd -len=1 -ord1=1 -ord2=2" method="generated"/>
+                <test cmd="gen-rnd -len=1 -ord1=1 -ord2=3" method="generated"/>
+                <test cmd="gen-rnd -len=1 -ord1=1 -ord2=4" method="generated"/>
+                <test cmd="gen-rnd -len=1 -ord1=1 -ord2=5" method="generated"/>
+                <test cmd="gen-rnd -len=2 -ord1=2 -ord2=0" method="generated"/>
+                <test cmd="gen-rnd -len=2 -ord1=2 -ord2=1" method="generated"/>
+                <test cmd="gen-rnd -len=2 -ord1=2 -ord2=2" method="generated"/>
+                <test cmd="gen-rnd -len=2 -ord1=2 -ord2=3" method="generated"/>
+                <test cmd="gen-rnd -len=2 -ord1=2 -ord2=4" method="generated"/>
+                <test cmd="gen-rnd -len=2 -ord1=2 -ord2=5" method="generated"/>
+                <test cmd="gen-rnd -len=3 -ord1=3 -ord2=0" method="generated"/>
+                <test cmd="gen-rnd -len=3 -ord1=3 -ord2=1" method="generated"/>
+                <test cmd="gen-rnd -len=3 -ord1=3 -ord2=2" method="generated"/>
+                <test cmd="gen-rnd -len=3 -ord1=3 -ord2=3" method="generated"/>
+                <test cmd="gen-rnd -len=3 -ord1=3 -ord2=4" method="generated"/>
+                <test cmd="gen-rnd -len=3 -ord1=3 -ord2=5" method="generated"/>
+                <test cmd="gen-rnd -len=4 -ord1=4 -ord2=0" method="generated"/>
+                <test cmd="gen-rnd -len=4 -ord1=4 -ord2=1" method="generated"/>
+                <test cmd="gen-rnd -len=4 -ord1=4 -ord2=2" method="generated"/>
+                <test cmd="gen-rnd -len=4 -ord1=4 -ord2=3" method="generated"/>
+                <test cmd="gen-rnd -len=4 -ord1=4 -ord2=4" method="generated"/>
+                <test cmd="gen-rnd -len=4 -ord1=4 -ord2=5" method="generated"/>
+                <test cmd="gen-rnd -len=5 -ord1=5 -ord2=0" method="generated"/>
+                <test cmd="gen-rnd -len=5 -ord1=5 -ord2=1" method="generated"/>
+                <test cmd="gen-rnd -len=5 -ord1=5 -ord2=2" method="generated"/>
+                <test cmd="gen-rnd -len=5 -ord1=5 -ord2=3" method="generated"/>
+                <test cmd="gen-rnd -len=5 -ord1=5 -ord2=4" method="generated"/>
+                <test cmd="gen-rnd -len=5 -ord1=5 -ord2=5" method="generated"/>
+                <test method="manual"/>
+            </tests>
+        </testset>
+    </judging>
+    <files>
+        <resources>
+            <file path="files/olymp.sty"/>
+            <file path="files/problem.tex"/>
+            <file path="files/statements.ftl"/>
+            <file path="files/testlib.h" type="h.g++"/>
+        </resources>
+        <executables>
+            <executable>
+                <source path="files/gen-rnd.cpp" type="cpp.g++17"/>
+                <binary path="files/gen-rnd.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/val.cpp" type="cpp.g++17"/>
+                <binary path="files/val.exe" type="exe.win32"/>
+            </executable>
+        </executables>
+    </files>
+    <assets>
+        <checker name="std::lcmp.cpp" type="testlib">
+            <source path="files/check.cpp" type="cpp.g++17"/>
+            <binary path="check.exe" type="exe.win32"/>
+            <copy path="check.cpp"/>
+            <testset>
+                <test-count>0</test-count>
+                <input-path-pattern>files/tests/checker-tests/%02d</input-path-pattern>
+                <output-path-pattern>files/tests/checker-tests/%02d.o</output-path-pattern>
+                <answer-path-pattern>files/tests/checker-tests/%02d.a</answer-path-pattern>
+                <tests/>
+            </testset>
+        </checker>
+        <validators>
+            <validator>
+                <source path="files/val.cpp" type="cpp.g++17"/>
+                <binary path="files/val.exe" type="exe.win32"/>
+                <testset>
+                    <test-count>2</test-count>
+                    <input-path-pattern>files/tests/validator-tests/%02d</input-path-pattern>
+                    <tests>
+                        <test verdict="valid"/>
+                        <test verdict="invalid"/>
+                    </tests>
+                </testset>
+            </validator>
+        </validators>
+        <solutions>
+            <solution tag="accepted">
+                <source path="solutions/cologne_cpp.cpp" type="cpp.g++17"/>
+                <binary path="solutions/cologne_cpp.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/cologne_java.java" type="java11"/>
+                <binary path="solutions/cologne_java.jar" type="jar"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/cologne_py.py" type="python.3"/>
+                <binary path="solutions/cologne_py.pys3" type="pythonx.3"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/edenooo.cpp" type="cpp.g++17"/>
+                <binary path="solutions/edenooo.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/hui-ok-if-cpp.cpp" type="cpp.g++17"/>
+                <binary path="solutions/hui-ok-if-cpp.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/hui-ok-if-java.java" type="java11"/>
+                <binary path="solutions/hui-ok-if-java.jar" type="jar"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/hui-ok-if-py.py" type="python.3"/>
+                <binary path="solutions/hui-ok-if-py.pys3" type="pythonx.3"/>
+            </solution>
+            <solution tag="main">
+                <source path="solutions/hui-ok-sort-cpp.cpp" type="cpp.g++17"/>
+                <binary path="solutions/hui-ok-sort-cpp.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/hui-ok-sort-java.java" type="java11"/>
+                <binary path="solutions/hui-ok-sort-java.jar" type="jar"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/hui-ok-sort-py.py" type="python.3"/>
+                <binary path="solutions/hui-ok-sort-py.pys3" type="pythonx.3"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/kyo20111_solution.cpp" type="cpp.g++17"/>
+                <binary path="solutions/kyo20111_solution.exe" type="exe.win32"/>
+            </solution>
+        </solutions>
+    </assets>
+    <properties>
+        <property name="tests-wellformed" value="true"/>
+    </properties>
+    <stresses>
+        <stress-count>0</stress-count>
+        <stress-path-pattern>stresses/%03d</stress-path-pattern>
+        <list/>
+    </stresses>
+    <tags>
+        <tag value="2023scon"/>
+    </tags>
+</problem>

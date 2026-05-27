@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<problem revision="10" short-name="2023-scon-j-item" url="https://polygon.codeforces.com/p0cgPh9/kyo20111/2023-scon-j-item">
+    <names>
+        <name language="korean" value="아이템"/>
+    </names>
+    <statements latex-pdf-mode="obsolete">
+        <statement charset="UTF-8" language="korean" mathjax="true" path="statements/korean/problem.tex" type="application/x-tex"/>
+        <statement charset="UTF-8" language="korean" mathjax="true" path="statements/.html/korean/problem.html" type="text/html"/>
+    </statements>
+    <judging cpu-name="Intel(R) Core(TM) i3-8100 CPU @ 3.60GHz" cpu-speed="3600" input-file="" output-file="" run-count="1">
+        <testset name="tests">
+            <time-limit>10000</time-limit>
+            <memory-limit>1073741824</memory-limit>
+            <test-count>47</test-count>
+            <input-path-pattern>tests/%02d</input-path-pattern>
+            <answer-path-pattern>tests/%02d.a</answer-path-pattern>
+            <tests>
+                <test method="manual" sample="true"/>
+                <test method="manual" sample="true"/>
+                <test method="manual" sample="true"/>
+                <test method="manual"/>
+                <test method="manual"/>
+                <test method="manual"/>
+                <test cmd="rand_gen 1" method="generated"/>
+                <test cmd="rand_gen 2" method="generated"/>
+                <test cmd="rand_gen 3" method="generated"/>
+                <test cmd="rand_gen 4" method="generated"/>
+                <test cmd="rand_gen 5" method="generated"/>
+                <test cmd="rand_gen 200000 1" method="generated"/>
+                <test cmd="rand_gen 200000 2" method="generated"/>
+                <test cmd="rand_gen 200000 3" method="generated"/>
+                <test cmd="rand_gen 200000 4" method="generated"/>
+                <test cmd="rand_gen 200000 5" method="generated"/>
+                <test cmd="rand_gen 200000 6" method="generated"/>
+                <test cmd="rand_gen 200000 7" method="generated"/>
+                <test cmd="rand_gen 200000 8" method="generated"/>
+                <test cmd="rand_gen 200000 9" method="generated"/>
+                <test cmd="rand_gen 200000 10" method="generated"/>
+                <test cmd="rand_gen 200000 11" method="generated"/>
+                <test cmd="rand_gen 200000 12" method="generated"/>
+                <test cmd="rand_gen 200000 13" method="generated"/>
+                <test cmd="rand_gen 200000 14" method="generated"/>
+                <test cmd="rand_gen 200000 15" method="generated"/>
+                <test cmd="rand_gen 200000 16" method="generated"/>
+                <test cmd="rand_gen 200000 17" method="generated"/>
+                <test cmd="rand_gen 200000 18" method="generated"/>
+                <test cmd="rand_gen 200000 19" method="generated"/>
+                <test cmd="rand_gen 200000 20" method="generated"/>
+                <test cmd="sp_gen1 1" method="generated"/>
+                <test cmd="sp_gen1 2" method="generated"/>
+                <test cmd="sp_gen1 3" method="generated"/>
+                <test cmd="sp_gen2" method="generated"/>
+                <test cmd="sp_gen3" method="generated"/>
+                <test cmd="same_gen" method="generated"/>
+                <test cmd="max_gen 200000 1" method="generated"/>
+                <test cmd="max_gen 200000 2" method="generated"/>
+                <test cmd="max_gen 200000 3" method="generated"/>
+                <test cmd="max_gen 200000 4" method="generated"/>
+                <test cmd="max_gen 200000 5" method="generated"/>
+                <test cmd="max_gen 58" method="generated"/>
+                <test cmd="max_gen 59" method="generated"/>
+                <test cmd="max_gen 60" method="generated"/>
+                <test cmd="max_gen 61" method="generated"/>
+                <test cmd="max_gen 62" method="generated"/>
+            </tests>
+        </testset>
+    </judging>
+    <files>
+        <resources>
+            <file path="files/olymp.sty"/>
+            <file path="files/problem.tex"/>
+            <file path="files/statements.ftl"/>
+            <file path="files/testlib.h" type="h.g++"/>
+        </resources>
+        <executables>
+            <executable>
+                <source path="files/max_gen.cpp" type="cpp.g++17"/>
+                <binary path="files/max_gen.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/rand_gen.cpp" type="cpp.g++17"/>
+                <binary path="files/rand_gen.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/same_gen.cpp" type="cpp.g++17"/>
+                <binary path="files/same_gen.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/sp_gen1.cpp" type="cpp.g++17"/>
+                <binary path="files/sp_gen1.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/sp_gen2.cpp" type="cpp.g++17"/>
+                <binary path="files/sp_gen2.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/sp_gen3.cpp" type="cpp.g++17"/>
+                <binary path="files/sp_gen3.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/validator.cpp" type="cpp.g++17"/>
+                <binary path="files/validator.exe" type="exe.win32"/>
+            </executable>
+        </executables>
+    </files>
+    <assets>
+        <checker name="std::ncmp.cpp" type="testlib">
+            <source path="files/check.cpp" type="cpp.g++17"/>
+            <binary path="check.exe" type="exe.win32"/>
+            <copy path="check.cpp"/>
+            <testset>
+                <test-count>0</test-count>
+                <input-path-pattern>files/tests/checker-tests/%02d</input-path-pattern>
+                <output-path-pattern>files/tests/checker-tests/%02d.o</output-path-pattern>
+                <answer-path-pattern>files/tests/checker-tests/%02d.a</answer-path-pattern>
+                <tests/>
+            </testset>
+        </checker>
+        <validators>
+            <validator>
+                <source path="files/validator.cpp" type="cpp.g++17"/>
+                <binary path="files/validator.exe" type="exe.win32"/>
+                <testset>
+                    <test-count>3</test-count>
+                    <input-path-pattern>files/tests/validator-tests/%02d</input-path-pattern>
+                    <tests>
+                        <test verdict="invalid"/>
+                        <test verdict="invalid"/>
+                        <test verdict="valid"/>
+                    </tests>
+                </testset>
+            </validator>
+        </validators>
+        <solutions>
+            <solution tag="accepted">
+                <source path="solutions/edenooo.cpp" type="cpp.g++17"/>
+                <binary path="solutions/edenooo.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/hui-ok-array-1d-py-fastio.py" type="python.pypy3"/>
+                <binary path="solutions/hui-ok-array-1d-py-fastio.pypys3" type="pythonx.pypy3"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/hui-ok-array-1d-py.py" type="python.pypy3"/>
+                <binary path="solutions/hui-ok-array-1d-py.pypys3" type="pythonx.pypy3"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/hui-ok-array-cpp.cpp" type="cpp.g++17"/>
+                <binary path="solutions/hui-ok-array-cpp.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/hui-ok-array-java-fastio.java" type="java11"/>
+                <binary path="solutions/hui-ok-array-java-fastio.jar" type="jar"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/hui-ok-array-java.java" type="java11"/>
+                <binary path="solutions/hui-ok-array-java.jar" type="jar"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/hui-ok-array-py-fastio.py" type="python.pypy3"/>
+                <binary path="solutions/hui-ok-array-py-fastio.pypys3" type="pythonx.pypy3"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/hui-ok-array-py.py" type="python.pypy3"/>
+                <binary path="solutions/hui-ok-array-py.pypys3" type="pythonx.pypy3"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/hui-ok-class-cpp.cpp" type="cpp.g++17"/>
+                <binary path="solutions/hui-ok-class-cpp.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/hui-ok-class-java-fastio.java" type="java11"/>
+                <binary path="solutions/hui-ok-class-java-fastio.jar" type="jar"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/hui-ok-class-java.java" type="java11"/>
+                <binary path="solutions/hui-ok-class-java.jar" type="jar"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/hui-ok-class-py-fastio.py" type="python.pypy3"/>
+                <binary path="solutions/hui-ok-class-py-fastio.pypys3" type="pythonx.pypy3"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/hui-ok-class-py.py" type="python.pypy3"/>
+                <binary path="solutions/hui-ok-class-py.pypys3" type="pythonx.pypy3"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/java_solution.java" type="java11"/>
+                <binary path="solutions/java_solution.jar" type="jar"/>
+            </solution>
+            <solution tag="main">
+                <source path="solutions/mcs.cpp" type="cpp.g++17"/>
+                <binary path="solutions/mcs.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="time-limit-exceeded-or-accepted">
+                <source path="solutions/naive1.cpp" type="cpp.g++17"/>
+                <binary path="solutions/naive1.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="time-limit-exceeded-or-accepted">
+                <source path="solutions/naive2.cpp" type="cpp.g++17"/>
+                <binary path="solutions/naive2.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/python_solution.py" type="python.pypy3"/>
+                <binary path="solutions/python_solution.pypys3" type="pythonx.pypy3"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/wa1.cpp" type="cpp.g++17"/>
+                <binary path="solutions/wa1.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="wrong-answer">
+                <source path="solutions/wa2.cpp" type="cpp.g++17"/>
+                <binary path="solutions/wa2.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="wrong-answer">
+                <source path="solutions/wa3.cpp" type="cpp.g++17"/>
+                <binary path="solutions/wa3.exe" type="exe.win32"/>
+            </solution>
+        </solutions>
+    </assets>
+    <properties>
+        <property name="tests-wellformed" value="true"/>
+    </properties>
+    <stresses>
+        <stress-count>0</stress-count>
+        <stress-path-pattern>stresses/%03d</stress-path-pattern>
+        <list/>
+    </stresses>
+    <tags>
+        <tag value="binary trie"/>
+        <tag value="dfs"/>
+    </tags>
+</problem>

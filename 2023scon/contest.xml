@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<contest url="https://polygon.codeforces.com/c/34365">
+    <names>
+        <name language="korean" value="2023 SCON"/>
+    </names>
+    <problems>
+        <problem index="a" url="https://polygon.codeforces.com/p3hFtsU/nlog/it-college-transportation"/>
+        <problem index="b" url="https://polygon.codeforces.com/p1FyJgF/Justice_Hui/2023-scon-b-team-name"/>
+        <problem index="c" url="https://polygon.codeforces.com/p1BdnAT/kyo20111/2023-scon-c"/>
+        <problem index="d" url="https://polygon.codeforces.com/p8Pnkot/Justice_Hui/2023-scon-d-selection-sort"/>
+        <problem index="e" url="https://polygon.codeforces.com/p3OkIaV/edenooo/scon-e-prlonglongf"/>
+        <problem index="f" url="https://polygon.codeforces.com/p6ykejT/edenooo/scon-f-safe-build-plan"/>
+        <problem index="g" url="https://polygon.codeforces.com/p0JnhPD/Justice_Hui/2023-scon-g-tsp"/>
+        <problem index="h" url="https://polygon.codeforces.com/p5LRsnA/nlog/sccc-member-recruiting"/>
+        <problem index="i" url="https://polygon.codeforces.com/p0sfeQ3/edenooo/scon-i-walk-query"/>
+        <problem index="j" url="https://polygon.codeforces.com/p0cgPh9/kyo20111/2023-scon-j-item"/>
+    </problems>
+</contest>
