@@ -1,1 +1,0 @@
-{"id":"ccb8b96e183d48eae9580510c75fe887","index":1,"scriptPattern":"rand_gen -N\u003d[2..6]","inputFile":"stdin","outputFile":"stdout","memoryLimit":256,"timeLimit":1000,"totalTimeLimit":120000,"solutionNames":["cologne-dijkstra.rs","mcs.cpp","cologne-soln.rs"],"description":"","solutionNamesUid":"c60a785306facb1ddfa8edc12424338c","ignoreValidators":false}
